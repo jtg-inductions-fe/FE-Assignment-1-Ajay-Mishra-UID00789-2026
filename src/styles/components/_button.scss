@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.btn {
+    border: none;
+    border-radius: rem(100);
+    box-shadow: $btn-shadow-1;
+    font-family: $ff-primary;
+    font-weight: $fw-bold;
+    padding: rem(24) rem(32);
+    width: 100%;
+    line-height: 1.2;
+    border-width: 1px;
+    border-style: solid;
+
+    &__icon {
+        height: rem(24);
+        width: rem(24);
+    }
+
+    &--primary {
+        border-color: $primary-btn-border-color;
+        color: $primary-btn-text-color;
+        background-color: $primary-color;
+    }
+
+    &--secondary {
+        border-color: $secondary-btn-border-color;
+        color: $secondary-btn-text-color;
+        background-color: $neutral-color;
+        box-shadow: $btn-shadow-2;
+    }
+
+    &--icon {
+        aspect-ratio: 1/1;
+        padding: 0;
+        border-radius: 100%;
+    }
+
+    &--icon-md {
+        height: rem(64);
+        width: rem(64);
+    }
+
+    &--icon-lg {
+        height: rem(100);
+        height: rem(100);
+    }
+
+    @include tablet {
+        width: fit-content;
+    }
+
+    &__icon {
+        width: rem(24);
+        height: rem(24);
+    }
+}

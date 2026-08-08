@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.text-sm {
+    font-size: $fs-sm;
+}
+
+.text-base {
+    font-size: $fs-base;
+}
+
+.text-lg {
+    font-size: $fs-lg;
+}
+
+.text-xl {
+    font-size: $fs-xl;
+}
+
+.text-2xl {
+    font-size: $fs-2xl;
+}
+
+.text-3xl {
+    font-size: $fs-3xl;
+}
+
+.text-4xl {
+    font-size: $fs-4xl;
+}
+
+.text-thin {
+    font-weight: $fw-thin;
+}
+
+.text-reg {
+    font-weight: $fw-reg;
+}
+
+.text-medium {
+    font-weight: $fw-medium;
+}
+
+.text-semibold {
+    font-weight: $fw-semibold;
+}
+
+.text-bold {
+    font-weight: $fw-bold;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-seccondary {
+    color: $secondary-color;
+}

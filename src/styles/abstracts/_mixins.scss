@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin tablet {
+    @media screen and (width > $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (width > $desktop) {
+        @content;
+    }
+}

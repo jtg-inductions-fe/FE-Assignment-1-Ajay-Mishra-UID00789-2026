@@ -1,0 +1,20 @@
+@use '../abstractgit s/' as *;
+
+.container {
+    max-width: rem(396.29);
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablet {
+        max-width: rem(896);
+    }
+
+    @include desktop {
+        max-width: rem(1192.65);
+    }
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
