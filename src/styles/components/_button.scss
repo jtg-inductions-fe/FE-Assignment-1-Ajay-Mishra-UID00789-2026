@@ -3,7 +3,6 @@
 .btn {
     border: none;
     border-radius: rem(100);
-    box-shadow: $btn-shadow-1;
     font-family: $ff-primary;
     font-weight: $fw-bold;
     padding: rem(16) rem(32);
@@ -28,6 +27,12 @@
         color: $secondary-btn-text-color;
         background-color: transparent;
         box-shadow: none;
+    }
+
+    &--ghost {
+        background-color: transparent;
+        color: $secondary-btn-text-color;
+        border-color: transparent;
     }
 
     &--icon {
