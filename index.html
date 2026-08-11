@@ -21,28 +21,52 @@
     <body>
         <!-- Header -->
         <header class="header container">
-            <div class="header__logo">
-                <img src="./public/assets/images/logo.png" alt="logo image" />
+            <div class="header__logo-wrapper">
+                <div class="header__logo">
+                    <img
+                        src="./public/assets/images/logo.png"
+                        alt="logo image"
+                    />
+                </div>
             </div>
             <div class="header__nav-overlay"></div>
-            <nav class="header__nav">
-                <button class="header__nav-close-btn">
-                    <img
-                        src="./assets/images/icons/close.svg"
-                        alt="close icon"
-                    />
-                </button>
+
+            <nav
+                class="header__nav"
+                id="main-navigation"
+                aria-label="Main navigation"
+            >
+                <div class="header__menu-wrapper">
+                    <button
+                        class="header__nav-close-btn"
+                        aria-label="Close navigation menu"
+                        aria-expanded="true"
+                        aria-controls="main-navigation"
+                    >
+                        <img
+                            src="./assets/images/icons/close.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </button>
+                </div>
                 <a href="#hero" class="header__nav-link">Home</a>
                 <a href="#" class="header__nav-link">Discover</a>
                 <a href="#" class="header__nav-link">Special Deals</a>
                 <a href="#" class="header__nav-link">Contacts</a>
             </nav>
 
-            <div class="header__menu">
-                <div class="header__menu-line header__menu-line--1"></div>
-                <div class="header__menu-line header__menu-line--2"></div>
-                <div class="header__menu-line header__menu-line--3"></div>
-            </div>
+            <button
+                class="header__menu"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+                <span class="header__menu-line header__menu-line--1"></span>
+                <span class="header__menu-line header__menu-line--2"></span>
+                <span class="header__menu-line header__menu-line--3"></span>
+            </button>
 
             <div class="header__actions hidden md:block">
                 <button class="btn btn--ghost">Log in</button>

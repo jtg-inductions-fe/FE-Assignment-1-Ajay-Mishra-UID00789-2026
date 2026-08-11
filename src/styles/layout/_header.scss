@@ -7,8 +7,13 @@
     padding: 2rem 0;
 }
 
+.header__logo-wrapper,
+.header__menu-wrapper {
+    padding: 0.25rem;
+}
+
 .header__logo {
-    height: rem(40);
+    height: 40px;
 }
 
 .header__menu {
@@ -23,6 +28,14 @@
     background-color: $primary-color;
     border-radius: rem(8);
     flex-direction: column;
+
+    &:focus {
+        outline: 0;
+    }
+    &:focus-visible {
+        outline: 2px dotted $primary-color;
+        outline-offset: 4px;
+    }
 }
 
 .header__menu-line {
@@ -82,6 +95,14 @@
     height: 2rem;
     aspect-ratio: 1/1;
     border-radius: 0.4rem;
+
+    &:focus {
+        outline: 0;
+    }
+    &:focus-visible {
+        outline: 2px dotted $dark-color;
+        outline-offset: 4px;
+    }
 }
 
 @include tablet {
