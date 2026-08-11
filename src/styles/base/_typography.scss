@@ -1,57 +1,40 @@
 @use '../abstracts' as *;
 
-.text-sm {
-    font-size: $fs-sm;
-}
-
-.text-base {
-    font-size: $fs-base;
-}
-
-.text-lg {
-    font-size: $fs-lg;
-}
-
-.text-xl {
-    font-size: $fs-xl;
-}
-
-.text-2xl {
-    font-size: $fs-2xl;
-}
-
-.text-3xl {
-    font-size: $fs-3xl;
-}
-
-.text-4xl {
-    font-size: $fs-4xl;
-}
-
-.text-thin {
-    font-weight: $fw-thin;
-}
-
-.text-reg {
-    font-weight: $fw-reg;
-}
-
-.text-medium {
-    font-weight: $fw-medium;
-}
-
-.text-semibold {
-    font-weight: $fw-semibold;
-}
-
-.text-bold {
+.heading-1 {
+    font-size: rem(40);
     font-weight: $fw-bold;
+    line-height: 1.2;
+
+    @include tablet {
+        font-size: rem(56);
+    }
+
+    @include desktop {
+        font-size: rem(69);
+    }
 }
 
-.text-primary {
-    color: $primary-color;
+.heading-2 {
+    font-size: rem(32);
+    font-weight: $fw-bold;
+    line-height: 1.2;
+
+    @include tablet {
+        font-size: rem(40);
+    }
+
+    @include desktop {
+        font-size: rem(44);
+    }
 }
 
-.text-seccondary {
-    color: $secondary-color;
+.heading-3 {
+    font-size: rem(16);
+    font-weight: $fw-bold;
+    line-height: 1.2;
+    letter-spacing: 2em;
+
+    @include tablet {
+        font-size: rem(23);
+    }
 }
