@@ -6,52 +6,47 @@
     box-shadow: $btn-shadow-1;
     font-family: $ff-primary;
     font-weight: $fw-bold;
-    padding: rem(24) rem(32);
+    padding: rem(16) rem(32);
     width: 100%;
     line-height: 1.2;
     border-width: 1px;
     border-style: solid;
 
     &__icon {
-        height: rem(24);
         width: rem(24);
+        height: rem(24);
     }
 
     &--primary {
-        border-color: $primary-btn-border-color;
+        border-color: $primary-color;
         color: $primary-btn-text-color;
         background-color: $primary-color;
     }
 
-    &--secondary {
-        border-color: $secondary-btn-border-color;
+    &--outline {
+        border-color: $gray-color;
         color: $secondary-btn-text-color;
-        background-color: $neutral-color;
-        box-shadow: $btn-shadow-2;
+        background-color: transparent;
+        box-shadow: none;
     }
 
     &--icon {
-        aspect-ratio: 1/1;
-        padding: 0;
-        border-radius: 100%;
-    }
-
-    &--icon-md {
-        height: rem(64);
         width: rem(64);
-    }
+        height: rem(64);
+        padding: 0;
+        border-radius: 50%;
 
-    &--icon-lg {
-        height: rem(100);
-        height: rem(100);
+        .btn__icon {
+            font-size: rem(16);
+        }
     }
 
     @include tablet {
         width: fit-content;
-    }
 
-    &__icon {
-        width: rem(24);
-        height: rem(24);
+        &--icon {
+            width: rem(100);
+            height: rem(100);
+        }
     }
 }

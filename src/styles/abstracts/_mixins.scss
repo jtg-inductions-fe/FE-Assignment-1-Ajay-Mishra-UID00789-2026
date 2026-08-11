@@ -7,13 +7,13 @@
 }
 
 @mixin tablet {
-    @media screen and (width > $tablet) {
+    @media screen and (min-width: $tablet) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (width > $desktop) {
+    @media screen and (min-width: $desktop) {
         @content;
     }
 }

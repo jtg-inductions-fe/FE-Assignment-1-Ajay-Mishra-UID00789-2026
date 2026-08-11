@@ -28,11 +28,16 @@
     }
 }
 
-.heading-3 {
+.h3 {
+    font-size: rem(24);
+    font-weight: $fw-bold;
+}
+
+.label {
     font-size: rem(16);
     font-weight: $fw-bold;
     line-height: 1.2;
-    letter-spacing: 2em;
+    letter-spacing: 0.2em;
 
     @include tablet {
         font-size: rem(23);
