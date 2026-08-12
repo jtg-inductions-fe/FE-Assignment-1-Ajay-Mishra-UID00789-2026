@@ -17,10 +17,6 @@
 }
 
 .header__menu {
-    justify-self: end;
-}
-
-.header__menu {
     @include flex-center;
     gap: 6px;
     height: rem(40);
@@ -28,7 +24,8 @@
     background-color: $primary-color;
     border-radius: rem(8);
     flex-direction: column;
-
+    justify-self: flex-end;
+    order: 0;
     &:focus {
         outline: 0;
     }
