@@ -83,6 +83,55 @@
 
         <main>
             <!-- Hero -->
+            <section class="hero">
+                <div class="circle" aria-label="hidden"></div>
+                <div class="hero__container container">
+                    <div class="hero__img-wrapper">
+                        <picture>
+                            <source
+                                srcset="assets/images/hero.webp"
+                                media="(min-width:1024px)"
+                            />
+                            <source
+                                srcset="assets/images/hero.webp"
+                                media="(min-width:430px)"
+                            />
+                            <img
+                                src="assets/images/hero.webp"
+                                alt="hero image"
+                            />
+                        </picture>
+                    </div>
+                    <div class="hero__text-content">
+                        <div class="hero__tag btn">
+                            <span>Explore the world</span>
+                            <i
+                                class="color-secondary fa-solid fa-briefcase"
+                            ></i>
+                        </div>
+                        <h1 class="hero__title heading-1">
+                            Travel <span>top destination </span>of the world
+                        </h1>
+
+                        <p class="hero__description">
+                            We always make our customer happy by providing as
+                            many choices as possible
+                        </p>
+
+                        <div class="hero__cta">
+                            <button class="btn btn--primary">
+                                Get Started
+                            </button>
+                            <button class="btn btn--outline flex-center">
+                                <i
+                                    class="btn__icon fa-solid fa-circle-play"
+                                ></i>
+                                Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <script type="module" src="./src/script/index.js"></script>
     </body>
