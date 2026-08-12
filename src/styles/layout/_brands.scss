@@ -1,26 +1,42 @@
 @use '../abstracts' as *;
-.brands__container {
-    padding: 64px 0;
-    list-style: none;
 
-    li {
-        height: 20px;
-        img {
-            height: 100%;
-            width: auto;
-        }
-    }
-
-    @include tablet {
-        li {
-            height: 32px;
-            margin-top: 32px;
-        }
+.brands {
+    &__container {
+        padding: 64px 0;
     }
 }
 
 .brands-list {
-    @include flex-center;
+    display: flex;
+    justify-content: center;
+    column-gap: 27px;
+    row-gap: 32px;
+    list-style: none;
     flex-wrap: wrap;
-    gap: 27px;
+
+    &__item {
+        height: 20px;
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @include tablet {
+        max-width: 70%;
+        margin: 0 auto;
+        &__item {
+            height: 32px;
+        }
+    }
+
+    @include desktop {
+        max-width: 100%;
+        grid-template-columns: repeat(5, auto);
+        justify-content: space-between;
+        column-gap: 0;
+        row-gap: 0;
+    }
 }
