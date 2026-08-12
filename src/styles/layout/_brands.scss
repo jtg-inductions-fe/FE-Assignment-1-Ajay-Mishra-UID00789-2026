@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+.brands__container {
+    padding: 64px 0;
+    list-style: none;
+
+    li {
+        height: 20px;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    @include tablet {
+        li {
+            height: 32px;
+            margin-top: 32px;
+        }
+    }
+}
+
+.brands-list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 27px;
+}
