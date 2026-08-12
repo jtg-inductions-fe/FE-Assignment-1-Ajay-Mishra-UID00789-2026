@@ -78,8 +78,24 @@
         }
 
         &__img-wrapper {
-            max-width: 100%;
-            margin: 0 auto;
+            width: 100%;
+            aspect-ratio: 772/713;
+            max-width: 772px;
+            max-height: 713px;
+
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
         }
 
         &__text-content {
@@ -87,6 +103,7 @@
             flex-direction: column;
             gap: 43px;
             align-items: center;
+            margin-top: 64px;
         }
 
         &__title {
@@ -96,11 +113,6 @@
         &__description {
             max-width: 47ch;
             margin-top: 0;
-        }
-
-        &__image-wrapper {
-            max-width: 772px;
-            max-height: 713px;
         }
 
         &__cta {
@@ -124,14 +136,28 @@
         }
 
         &__img-wrapper {
-            max-width: 772px;
-            max-height: 713px;
-            object-fit: cover;
-            object-position: center;
+            flex: 0 0 772px;
+            width: 772px;
+            height: 713px;
             order: 1;
+
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-position: top;
+            }
         }
 
         &__text-content {
+            align-self: center;
+            margin-top: 0;
             align-items: flex-start;
             text-align: left;
         }
@@ -156,6 +182,20 @@
     position: fixed;
     left: -33px;
     top: -36px;
-    filter: blur(180px);
+    filter: blur(250px);
     opacity: 0.5;
+
+    @include tablet {
+        height: 500px;
+        width: 500px;
+        left: -163px;
+        top: -174px;
+    }
+
+    @include desktop {
+        top: 34px;
+        left: -71px;
+        height: 294px;
+        width: 503px;
+    }
 }
