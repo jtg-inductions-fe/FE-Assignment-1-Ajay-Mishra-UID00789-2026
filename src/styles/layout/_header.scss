@@ -102,11 +102,6 @@
     }
 }
 
-.hero__cta button {
-    padding-top: rem(24);
-    padding-bottom: rem(24);
-}
-
 @include tablet {
     .header {
         grid-template-columns: 1fr auto 1fr;
