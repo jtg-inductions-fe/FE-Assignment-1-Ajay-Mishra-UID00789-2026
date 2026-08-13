@@ -171,7 +171,26 @@
                     </ul>
                 </div>
             </section>
-            <section class="travel-point"></section>
+            <section class="travel-point">
+                <div class="travelpoint__container">
+                    <div class="travelpoint__img-wrapper">
+                        <picture class="travelpoint__img">
+                            <source
+                                srcset="assets/images/travelpoint-desktop.webp"
+                                media="(min-width:1024px)"
+                            />
+                            <source
+                                srcset="assets/images/travelpoint-tablet.webp"
+                                media="(min-width:430px)"
+                            />
+                            <img
+                                src="assets/images/travelpoint-mobile.webp"
+                                alt="hero image"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </section>
         </main>
         <script type="module" src="./src/script/index.js"></script>
     </body>
