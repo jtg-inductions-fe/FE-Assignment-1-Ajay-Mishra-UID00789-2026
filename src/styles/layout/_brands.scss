@@ -13,6 +13,7 @@
     row-gap: 32px;
     list-style: none;
     flex-wrap: wrap;
+    padding: 0;
 
     &__item {
         height: 20px;
@@ -38,6 +39,5 @@
         justify-content: space-between;
         column-gap: 0;
         row-gap: 0;
-        padding: 0;
     }
 }
