@@ -2,7 +2,7 @@
 @use '../components' as *;
 
 .hero {
-    padding: 64px 0;
+    padding: 64px 16px;
     padding-bottom: 0;
     &__container {
         max-width: 398px;
