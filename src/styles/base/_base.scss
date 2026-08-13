@@ -1,17 +1,9 @@
 @use '../abstracts/' as *;
 
 .container {
-    max-width: rem(396.29);
+    max-width: rem(1440);
     width: 100%;
     margin: 0 auto;
-
-    @include tablet {
-        max-width: rem(896);
-    }
-
-    @include desktop {
-        max-width: rem(1192.65);
-    }
 }
 
 img {
@@ -22,9 +14,4 @@ img {
 button {
     border: none;
     background: none;
-}
-
-ul,
-ol {
-    list-style: none;
 }
