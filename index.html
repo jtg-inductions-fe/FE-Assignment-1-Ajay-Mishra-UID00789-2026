@@ -20,54 +20,64 @@
 
     <body>
         <!-- Header -->
-        <header class="header container">
-            <div class="header__logo-wrapper">
-                <a href="/" class="header__logo" aria-label="Go to home page">
-                    <img src="./public/assets/images/logo.svg" alt="Travlog" />
-                </a>
-            </div>
-            <div class="header__nav-overlay" aria-hidden="true"></div>
-
-            <nav
-                class="header__nav"
-                id="main-navigation"
-                aria-label="Main navigation"
-            >
-                <div class="header__menu-wrapper">
-                    <button
-                        class="header__nav-close-btn"
-                        aria-label="Close navigation menu"
-                        aria-expanded="true"
-                        aria-controls="main-navigation"
+        <header class="header">
+            <div class="header__container">
+                <div class="header__decoration" aria-hidden="true"></div>
+                <div class="header__logo-wrapper">
+                    <a
+                        href="/"
+                        class="header__logo"
+                        aria-label="Go to home page"
                     >
                         <img
-                            src="./assets/images/icons/close.svg"
-                            alt=""
-                            aria-hidden="true"
+                            src="./public/assets/images/logo.svg"
+                            alt="Travlog"
                         />
-                    </button>
+                    </a>
                 </div>
-                <a href="#hero" class="header__nav-link">Home</a>
-                <a href="#" class="header__nav-link">Discover</a>
-                <a href="#" class="header__nav-link">Special Deals</a>
-                <a href="#" class="header__nav-link">Contact</a>
-            </nav>
+                <div class="header__nav-overlay" aria-hidden="true"></div>
 
-            <button
-                class="header__menu"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="main-navigation"
-            >
-                <span class="header__menu-line header__menu-line--1"></span>
-                <span class="header__menu-line header__menu-line--2"></span>
-                <span class="header__menu-line header__menu-line--3"></span>
-            </button>
+                <nav
+                    class="header__nav"
+                    id="main-navigation"
+                    aria-label="Main navigation"
+                >
+                    <div class="header__menu-wrapper">
+                        <button
+                            class="header__nav-close-btn"
+                            aria-label="Close navigation menu"
+                            aria-expanded="true"
+                            aria-controls="main-navigation"
+                        >
+                            <img
+                                src="./assets/images/icons/close.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </button>
+                    </div>
+                    <a href="#hero" class="header__nav-link">Home</a>
+                    <a href="#" class="header__nav-link">Discover</a>
+                    <a href="#" class="header__nav-link">Special Deals</a>
+                    <a href="#" class="header__nav-link">Contact</a>
+                </nav>
 
-            <div class="header__cta hidden md:block">
-                <button class="btn btn--ghost">Log in</button>
-                <button class="btn btn--primary">Sign up</button>
+                <button
+                    class="header__menu"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                >
+                    <span class="header__menu-line header__menu-line--1"></span>
+                    <span class="header__menu-line header__menu-line--2"></span>
+                    <span class="header__menu-line header__menu-line--3"></span>
+                </button>
+
+                <div class="header__cta">
+                    <button class="btn btn--ghost">Log in</button>
+                    <button class="btn btn--primary">Sign up</button>
+                </div>
             </div>
         </header>
 
