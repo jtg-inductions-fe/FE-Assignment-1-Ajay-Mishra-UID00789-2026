@@ -5,6 +5,9 @@
     position: relative;
     overflow: hidden;
     padding: rem(29) rem(16) 0;
+
+    overflow: visible;
+
     &__triangles {
         display: none;
     }
