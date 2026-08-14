@@ -2,21 +2,22 @@
 
 .brands {
     &__container {
-        padding: 64px 0;
+        padding-block: rem(64);
     }
 }
 
 .brands-list {
     display: flex;
-    justify-content: center;
-    column-gap: 27px;
-    row-gap: 32px;
-    list-style: none;
     flex-wrap: wrap;
+    justify-content: center;
+    column-gap: rem(27);
+    row-gap: rem(32);
+
     padding: 0;
+    list-style: none;
 
     &__item {
-        height: 20px;
+        height: rem(20);
 
         img {
             display: block;
@@ -27,16 +28,17 @@
 
     @include tablet {
         max-width: 70%;
-        margin: 0 auto;
+        margin-inline: auto;
+
         &__item {
-            height: 32px;
+            height: rem(32);
         }
     }
 
     @include desktop {
-        max-width: 100%;
-        grid-template-columns: repeat(5, auto);
+        max-width: none;
         justify-content: space-between;
+
         column-gap: 0;
         row-gap: 0;
     }
