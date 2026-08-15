@@ -17,3 +17,19 @@
         @content;
     }
 }
+
+@mixin font-face(
+    $name,
+    $path,
+    $weight: normal,
+    $style: normal,
+    $display: swap
+) {
+    @font-face {
+        font-family: quote($name);
+        src: url('../assets/fonts/#{$path}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: $display;
+    }
+}
