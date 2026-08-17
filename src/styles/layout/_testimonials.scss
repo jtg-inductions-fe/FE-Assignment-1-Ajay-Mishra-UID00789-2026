@@ -3,6 +3,7 @@
 .testimonials {
     padding-block: rem(64);
     padding-inline: 1rem;
+    overflow: clip;
 
     &__container {
         max-width: rem(430);
@@ -126,18 +127,20 @@
 
         position: relative;
 
-        &::after {
-            position: absolute;
-            content: '';
-            background-image: url('../../assets/images/testimonial-bg.webp');
-            background-position: center;
-            background-size: cover;
-            inset: 0;
-        }
-
         &__container {
             max-width: rem(1024);
             gap: 4rem;
+
+            overflow: hidden;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background-image: url('../../assets/images/testimonial-bg.webp');
+                background-position: center;
+                background-size: cover;
+                inset: 0;
+            }
         }
 
         &__content {
@@ -171,14 +174,6 @@
     }
 
     @include desktop {
-        &::after {
-            position: absolute;
-            content: '';
-            background-image: url('../../assets/images/testimonial-bg.webp');
-            background-position: center;
-            background-size: cover;
-        }
-
         &__container {
             max-width: rem(1440);
         }
