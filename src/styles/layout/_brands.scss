@@ -10,8 +10,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 2rem;
     column-gap: rem(27);
-    row-gap: rem(32);
 
     padding: 0;
     list-style: none;
@@ -27,19 +27,15 @@
     }
 
     @include tablet {
-        max-width: 70%;
+        max-width: 60%;
         margin-inline: auto;
-
         &__item {
             height: rem(32);
         }
     }
 
     @include desktop {
-        max-width: none;
+        max-width: rem(1192);
         justify-content: space-between;
-
-        column-gap: 0;
-        row-gap: 0;
     }
 }
