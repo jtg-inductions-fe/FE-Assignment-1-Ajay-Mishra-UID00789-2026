@@ -2,7 +2,7 @@
 
 .heading-1 {
     font-size: rem(40);
-    font-weight: $fw-bold;
+    font-weight: $font-bold;
     line-height: 1.2;
 
     @include tablet {
@@ -16,7 +16,7 @@
 
 .heading-2 {
     font-size: rem(32);
-    font-weight: $fw-bold;
+    font-weight: $font-bold;
     line-height: 1.2;
 
     @include tablet {
@@ -30,12 +30,12 @@
 
 .heading-3 {
     font-size: rem(24);
-    font-weight: $fw-bold;
+    font-weight: $font-bold;
 }
 
 .label {
     font-size: rem(16);
-    font-weight: $fw-bold;
+    font-weight: $font-bold;
     line-height: 1.2;
     letter-spacing: 0.2em;
 

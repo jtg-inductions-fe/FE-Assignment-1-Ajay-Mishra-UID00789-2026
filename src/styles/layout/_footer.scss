@@ -3,11 +3,18 @@
     a {
         color: $text-color;
     }
+
+    &__decoration {
+        display: none;
+    }
+
     &__container {
         max-width: rem(1440);
         margin-inline: auto;
         padding-inline: 2rem;
         padding-block: 4rem;
+
+        padding-block-start: 5rem;
     }
 
     &__brand {
@@ -25,15 +32,15 @@
     }
 
     &__brand-name {
-        font-family: $ff-primary;
-        font-weight: $fw-bold;
-        font-size: $fs-xl;
+        font-family: $font-primary;
+        font-weight: $font-bold;
+        font-size: $font-xl;
         color: $gray-dark-color;
     }
 
     &__brand-description {
         line-height: 1.6em;
-        font-size: $fs-base;
+        font-size: $font-base;
         margin-block-start: 2rem;
         color: $text-color;
     }
@@ -57,49 +64,105 @@
 
     &__navigation {
         margin-block-start: rem(79);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(79);
+
+        h4 {
+            font-family: $font-primary;
+            font-weight: $font-bold;
+            color: $gray-dark-color;
+            font-size: rem(23);
+        }
+
+        ul {
+            margin-block-start: 2rem;
+            display: none;
+            flex-direction: column;
+            gap: 2rem;
+
+            li,
+            a {
+                line-height: 1.6em;
+                color: $footer-nav-link-color;
+            }
+        }
+
+        div:has(.accordian-btn) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .accordian-btn {
+        @include flex-center;
+        height: rem(24);
+        width: rem(24);
+        border-radius: 100%;
+        border: 1px solid $accordian-btn-border-color;
+        color: $accordian-btn-text-color;
     }
 
     @include tablet {
+        margin-block-start: 6.5rem;
+
+        &__decoration {
+            display: block;
+        }
+
         &__container {
+            position: relative;
             padding-inline: 4rem;
         }
 
+        &__decoration {
+            position: absolute;
+            right: 0;
+            bottom: 7rem;
+        }
+
         &__brand-description {
-            font-size: $fs-xl;
+            font-size: $font-xl;
         }
 
         &__navigation {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
             row-gap: 2rem;
-
-            h4 {
-                font-family: $ff-primary;
-                font-weight: $fw-bold;
-                color: $gray-dark-color;
-                font-size: rem(23);
-            }
 
             ul {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
                 margin-block-start: 2rem;
-                font-size: $fs-lg;
+                font-size: $font-lg;
                 color: $text-color;
             }
+        }
+
+        .accordian-btn {
+            display: none;
         }
     }
 
     @include desktop {
+        margin-block-start: 9rem;
+
         &__container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            padding-inline: 8rem;
         }
 
         &__navigation {
             margin-block-start: 0;
+        }
+
+        &__social-links {
+            margin-block-start: 4rem;
         }
     }
 }

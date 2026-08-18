@@ -1,16 +1,16 @@
 @use '../abstracts' as *;
 
 .btn {
-    border: none;
     border-radius: rem(100);
-    font-family: $ff-primary;
-    font-weight: $fw-bold;
-    font-size: $fs-sm;
+    font-family: $font-primary;
+    font-weight: $font-bold;
+    font-size: $font-sm;
     padding: rem(16) rem(32);
     width: 100%;
     line-height: 1.2;
     border-width: 1px;
     border-style: solid;
+    cursor: pointer;
 
     &__icon {
         @include flex-center;
