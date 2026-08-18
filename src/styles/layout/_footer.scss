@@ -1,0 +1,105 @@
+@use '../abstracts/' as *;
+.footer {
+    a {
+        color: $text-color;
+    }
+    &__container {
+        max-width: rem(1440);
+        margin-inline: auto;
+        padding-inline: 2rem;
+        padding-block: 4rem;
+    }
+
+    &__brand {
+        text-align: left;
+    }
+
+    &__logo {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: 1rem;
+        img {
+            width: rem(40);
+            height: rem(40);
+        }
+    }
+
+    &__brand-name {
+        font-family: $ff-primary;
+        font-weight: $fw-bold;
+        font-size: $fs-xl;
+        color: $gray-dark-color;
+    }
+
+    &__brand-description {
+        line-height: 1.6em;
+        font-size: $fs-base;
+        margin-block-start: 2rem;
+        color: $text-color;
+    }
+
+    &__social-links {
+        display: flex;
+        gap: 2rem;
+        margin-block-start: 2rem;
+    }
+
+    &__social-item {
+        @include flex-center;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 100%;
+        background-color: $primary-color;
+        i {
+            color: $neutral-color;
+        }
+    }
+
+    &__navigation {
+        margin-block-start: rem(79);
+    }
+
+    @include tablet {
+        &__container {
+            padding-inline: 4rem;
+        }
+
+        &__brand-description {
+            font-size: $fs-xl;
+        }
+
+        &__navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 2rem;
+
+            h4 {
+                font-family: $ff-primary;
+                font-weight: $fw-bold;
+                color: $gray-dark-color;
+                font-size: rem(23);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-block-start: 2rem;
+                font-size: $fs-lg;
+                color: $text-color;
+            }
+        }
+    }
+
+    @include desktop {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        &__navigation {
+            margin-block-start: 0;
+        }
+    }
+}
