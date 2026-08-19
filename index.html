@@ -17,6 +17,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
+        <link rel="icon" type="image/x-icon" href="/assets/images/logo.svg" />
     </head>
 
     <body>
@@ -30,7 +31,10 @@
                         class="header__logo"
                         aria-label="Go to home page"
                     >
-                        <img src="/assets/images/logo.svg" alt="Travlog" />
+                        <img
+                            src="/assets/images/logos/logo.svg"
+                            alt="Travlog"
+                        />
                     </a>
                 </div>
                 <div class="header__nav-overlay" aria-hidden="true"></div>
@@ -47,17 +51,19 @@
                             aria-expanded="true"
                             aria-controls="main-navigation"
                         >
-                            <img
-                                src="./assets/images/icons/close.svg"
-                                alt=""
-                                aria-hidden="true"
-                            />
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <a href="#hero" class="header__nav-link">Home</a>
-                    <a href="#" class="header__nav-link">Discover</a>
-                    <a href="#" class="header__nav-link">Special Deals</a>
-                    <a href="#" class="header__nav-link">Contact</a>
+                    <a href="#hero" class="header__nav-link text-link">Home</a>
+                    <a href="#discover" class="header__nav-link text-link"
+                        >Discover</a
+                    >
+                    <a href="#" class="header__nav-link text-link"
+                        >Special Deals</a
+                    >
+                    <a href="#contact" class="header__nav-link text-link"
+                        >Contact</a
+                    >
                 </nav>
 
                 <button
@@ -111,11 +117,11 @@
                             ></i>
                         </div>
 
-                        <h1 class="hero__title heading-1">
+                        <h1 class="hero__title text-display">
                             Travel <span>top destination</span> of the world
                         </h1>
 
-                        <p class="hero__description">
+                        <p class="hero__description text-section">
                             We always make our customer happy by
                             <span>providing</span> as many choices as possible
                         </p>
@@ -180,7 +186,7 @@
             </section>
 
             <!-- Travel point -->
-            <section class="travelpoint">
+            <section id="discover" class="travelpoint">
                 <div class="travelpoint__container">
                     <div class="travelpoint__decoration"></div>
                     <div class="travelpoint__media">
@@ -201,8 +207,8 @@
                     </div>
 
                     <div class="travelpoint__content">
-                        <div class="travelpoint__heading">
-                            <h3 class="label travelpoint__label">
+                        <div class="travelpoint__heading text-heading-lg">
+                            <h3 class="label travelpoint__label text-label">
                                 TRAVEL POINT
                             </h3>
 
@@ -211,7 +217,7 @@
                             </h2>
                         </div>
 
-                        <p class="travelpoint__description">
+                        <p class="travelpoint__description text-section">
                             Contrary to popular belief, Lorem Ipsum is not
                             simply random text. It has roots in a piece of
                             classical Latin Literature from 45 BC.
@@ -219,8 +225,10 @@
 
                         <ul class="stats">
                             <li class="stats__item">
-                                <span class="stats__value">500+</span>
-                                <span class="stats__label"
+                                <span class="stats__value text-stat-value"
+                                    >500+</span
+                                >
+                                <span class="stats__label text-stat-label"
                                     >Holiday Package</span
                                 >
                             </li>
@@ -232,21 +240,29 @@
                                     alt=""
                                     aria-hidden="true"
                                 />
-                                <span class="stats__value">100</span>
-                                <span class="stats__label">Luxury Hotel</span>
+                                <span class="stats__value text-stat-value"
+                                    >100</span
+                                >
+                                <span class="stats__label text-stat-label"
+                                    >Luxury Hotel</span
+                                >
                             </li>
 
                             <li class="stats__item">
-                                <span class="stats__value">7</span>
-                                <span class="stats__label"
+                                <span class="stats__value text-stat-value"
+                                    >7</span
+                                >
+                                <span class="stats__label text-stat-label"
                                     >Premium Airlines</span
                                 >
                             </li>
 
                             <li class="stats__item">
-                                <span class="stats__value">2k+</span>
-                                <span class="stats__label"
-                                    >Happy Customers</span
+                                <span class="stats__value text-stat-value"
+                                    >2k+</span
+                                >
+                                <span class="stats__label text-stat-label"
+                                    >Happy Customer</span
                                 >
                             </li>
                         </ul>
@@ -258,11 +274,13 @@
             <section class="testimonials" aria-labelledby="testimonials-title">
                 <div class="testimonials__container">
                     <div class="testimonials__content">
-                        <p class="testimonials__label label">TESTIMONIALS</p>
+                        <p class="testimonials__label text-label">
+                            TESTIMONIALS
+                        </p>
 
                         <h2
                             id="testimonials-title"
-                            class="testimonials__title heading-2"
+                            class="testimonials__title text-heading-lg"
                         >
                             Trust our clients
                         </h2>
@@ -303,10 +321,14 @@
                                     />
 
                                     <figcaption class="testimonial__author">
-                                        <span class="testimonial__name">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
                                             Mark Smith
                                         </span>
-                                        <span class="testimonial__role">
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
                                             / Travel Enthusiast
                                         </span>
                                     </figcaption>
@@ -341,7 +363,7 @@
                                     </div>
 
                                     <blockquote
-                                        class="testimonial__description"
+                                        class="testimonial__description text-testimonial"
                                     >
                                         Contrary to popular belief, Lorem Ipsum
                                         is not simply random text. It has roots
@@ -350,6 +372,7 @@
                                     </blockquote>
                                 </figure>
                             </article>
+
                             <article class="testimonial">
                                 <figure class="testimonial__content">
                                     <img
@@ -361,10 +384,14 @@
                                     />
 
                                     <figcaption class="testimonial__author">
-                                        <span class="testimonial__name">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
                                             Mark Smith
                                         </span>
-                                        <span class="testimonial__role">
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
                                             / Travel Enthusiast
                                         </span>
                                     </figcaption>
@@ -399,7 +426,7 @@
                                     </div>
 
                                     <blockquote
-                                        class="testimonial__description"
+                                        class="testimonial__description text-testimonial"
                                     >
                                         Contrary to popular belief, Lorem Ipsum
                                         is not simply random text. It has roots
@@ -408,6 +435,7 @@
                                     </blockquote>
                                 </figure>
                             </article>
+
                             <article class="testimonial">
                                 <figure class="testimonial__content">
                                     <img
@@ -419,10 +447,14 @@
                                     />
 
                                     <figcaption class="testimonial__author">
-                                        <span class="testimonial__name">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
                                             Mark Smith
                                         </span>
-                                        <span class="testimonial__role">
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
                                             / Travel Enthusiast
                                         </span>
                                     </figcaption>
@@ -457,7 +489,7 @@
                                     </div>
 
                                     <blockquote
-                                        class="testimonial__description"
+                                        class="testimonial__description text-testimonial"
                                     >
                                         Contrary to popular belief, Lorem Ipsum
                                         is not simply random text. It has roots
@@ -486,7 +518,7 @@
                 >
                     <a href="/" class="footer__logo">
                         <img
-                            src="/assets/images/logo.svg"
+                            src="/assets/images/logos/logo.svg"
                             alt=""
                             width="32"
                             height="32"
@@ -496,7 +528,7 @@
                         </span>
                     </a>
 
-                    <p class="footer__brand-description">
+                    <p class="footer__brand-description text-footer">
                         Contrary to popular belief, Lorem Ipsum is not simply
                         random text. It has roots in a piece of classical Latin
                         literature from 45 BC.
@@ -551,32 +583,58 @@
                         </div>
 
                         <ul id="company">
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/careers">Career</a></li>
-                            <li><a href="/mobile">Mobile</a></li>
+                            <li>
+                                <a class="text-footer-link" href="/about"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-footer-link" href="/careers"
+                                    >Career</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-footer-link" href="/mobile"
+                                    >Mobile</a
+                                >
+                            </li>
                         </ul>
                     </section>
 
-                    <section class="footer__group">
+                    <section id="contact" class="footer__group">
                         <div>
                             <h4>Contact</h4>
                             <button
                                 aria-expanded="false"
                                 class="accordian-btn"
-                                aria-controls="contact"
+                                aria-controls="contact-links"
                             >
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
                         </div>
-                        <ul id="contact">
-                            <li><a href="/why-travlog">Why Travlog?</a></li>
-                            <li><a href="/partners">Partner with us</a></li>
-                            <li><a href="/faq">FAQs</a></li>
-                            <li><a href="/blog">Blog</a></li>
+                        <ul id="contact-links">
+                            <li>
+                                <a class="text-footer-link" href="/why-travlog"
+                                    >Why Travlog?</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-footer-link" href="/partners"
+                                    >Partner with us</a
+                                >
+                            </li>
+                            <li>
+                                <a class="text-footer-link" href="/faq">FAQs</a>
+                            </li>
+                            <li>
+                                <a class="text-footer-link" href="/blog"
+                                    >Blog</a
+                                >
+                            </li>
                         </ul>
                     </section>
 
-                    <section class="footer__group">
+                    <address class="footer__group">
                         <div>
                             <h4>Meet Us</h4>
                             <button
@@ -589,22 +647,26 @@
                         </div>
                         <ul id="meetus">
                             <li>
-                                <a href="tel:+0092123456789"
+                                <a
+                                    class="text-footer-link"
+                                    href="tel:+0092123456789"
                                     >+00 92 1234 56789</a
                                 >
                             </li>
                             <li>
-                                <a href="mailto:info@travlog.com"
+                                <a
+                                    class="text-footer-link"
+                                    href="mailto:info@travlog.com"
                                     >info@travlog.com</a
                                 >
                             </li>
-                            <li>
+                            <li class="text-footer-link">
                                 205. R Street,<br />
                                 New York<br />
                                 BD23200
                             </li>
                         </ul>
-                    </section>
+                    </address>
                 </nav>
             </div>
         </footer>

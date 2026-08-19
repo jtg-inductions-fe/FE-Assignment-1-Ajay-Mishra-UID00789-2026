@@ -27,9 +27,33 @@
 ) {
     @font-face {
         font-family: $name;
-        src: url('../assets/fonts/#{$path}.woff2') format('woff2');
+        src: url('/assets/fonts/#{$path}.woff2') format('woff2');
         font-weight: $weight;
         font-style: $style;
         font-display: $display;
+    }
+}
+
+@mixin typography(
+    $family: null,
+    $size: null,
+    $height: null,
+    $weight: null,
+    $color: null
+) {
+    @if $family {
+        font-family: $family;
+    }
+    @if $size {
+        font-size: $size;
+    }
+    @if $height {
+        line-height: $height;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $color {
+        color: $color;
     }
 }

@@ -5,8 +5,9 @@
     overflow: clip;
 
     &__container {
-        padding-inline: 1rem;
         max-width: rem(1440);
+
+        padding-inline: 1rem;
         margin-inline: auto;
 
         text-align: center;
@@ -28,19 +29,20 @@
     }
 
     &__control {
+        background-color: $neutral-color;
+
         border-color: $travel-point-card-border-color;
+
         position: absolute;
         top: 20%;
+        transform: translateY(50%);
         z-index: 10;
-
-        background-color: $neutral-color;
 
         &:hover {
             background-color: $primary-color;
+
             color: $neutral-color;
         }
-
-        transform: translateY(50%);
 
         &--prev {
             left: 1rem;
@@ -54,6 +56,7 @@
     .rating {
         @include flex-center;
         gap: rem(18.6);
+
         height: 2rem;
 
         &__star {
@@ -73,7 +76,9 @@
         li {
             height: rem(24);
             aspect-ratio: 1/1;
+
             border-radius: 100%;
+
             background-color: $travel-point-card-border-color;
         }
 
@@ -101,18 +106,6 @@
             display: block;
             margin-block: 4rem;
             margin-inline: auto;
-        }
-
-        &__name,
-        &__role {
-            font-size: rem(28);
-            color: $tertiary-color;
-            font-weight: $font-bold;
-        }
-
-        &__role {
-            color: $testimonial-role-color;
-            font-size: $font-xl;
         }
 
         &__rating {
@@ -165,7 +158,7 @@
                 font-size: $font-xl;
                 line-height: 1.6em;
 
-                max-width: 48ch;
+                max-width: 44ch;
 
                 margin-block: rem(56);
             }
@@ -189,7 +182,7 @@
 
         .testimonial {
             &__description {
-                max-width: 62ch;
+                max-width: 58ch;
                 margin-block: 4rem;
             }
         }

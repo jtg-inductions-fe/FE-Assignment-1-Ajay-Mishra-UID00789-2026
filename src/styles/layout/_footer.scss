@@ -2,10 +2,6 @@
 .footer {
     padding-block: 4rem;
 
-    a {
-        color: $text-color;
-    }
-
     &__decoration {
         display: none;
     }
@@ -31,17 +27,17 @@
     }
 
     &__brand-name {
-        font-family: $font-primary;
-        font-weight: $font-bold;
-        font-size: $font-xl;
-        color: $gray-dark-color;
+        @include typography(
+            $font-primary,
+            $font-xl,
+            rem(40),
+            $font-bolder,
+            $gray-dark-color
+        );
     }
 
     &__brand-description {
-        line-height: 1.6em;
-        font-size: $font-base;
         margin-block-start: 2rem;
-        color: $text-color;
     }
 
     &__social-links {
@@ -80,12 +76,6 @@
             display: none;
             flex-direction: column;
             gap: 2rem;
-
-            li,
-            a {
-                line-height: 1.6em;
-                color: $footer-nav-link-color;
-            }
         }
 
         div:has(.accordian-btn) {
@@ -105,7 +95,7 @@
     }
 
     @include tablet {
-        margin-block-start: 7rem;
+        margin-block-start: 6.5rem;
 
         &__decoration {
             display: block;
@@ -137,8 +127,6 @@
                 flex-direction: column;
                 gap: 2rem;
                 margin-block-start: 2rem;
-                font-size: $font-lg;
-                color: $text-color;
             }
         }
 
@@ -148,8 +136,9 @@
     }
 
     @include desktop {
-        margin-block-start: rem(160);
+        margin-block-start: rem(144);
         padding-block-start: rem(45);
+
         &__container {
             display: grid;
             grid-template-columns: 1fr 1fr;

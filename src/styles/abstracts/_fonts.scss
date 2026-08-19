@@ -1,7 +1,8 @@
 @use 'mixins' as *;
 
-@include font-face('Circular Std', 'CircularStd-Book', 400);
+@include font-face('Circular Std', 'CircularStd-Reg', 400);
 @include font-face('Circular Std', 'CircularStd-Medium', 500);
 @include font-face('Circular Std', 'CircularStd-Bold', 700);
+@include font-face('Circular Std', 'CircularStd-Bold', 900);
 
 @include font-face('Inter', 'Inter-Regular', 400);

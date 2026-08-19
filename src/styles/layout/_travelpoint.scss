@@ -20,18 +20,13 @@
 
     &__title {
         margin-block-start: 1rem;
+
         text-wrap: wrap;
     }
 
     &__description {
         margin-block-start: 2rem;
         padding-inline: rem(40);
-
-        color: $text-color;
-        font-family: $font-secondary;
-        font-size: $font-base;
-        font-weight: $font-reg;
-        line-height: 1.6em;
     }
 
     &__label {
@@ -41,9 +36,9 @@
     &__media {
         width: 100%;
         max-width: rem(428);
-        margin-inline: auto;
-
         aspect-ratio: 428 / 342;
+
+        margin-inline: auto;
 
         picture,
         img {
@@ -81,17 +76,8 @@
             text-align: center;
         }
 
-        &__value {
-            color: $tertiary-color;
-            font-size: $font-2xl;
-            font-weight: 700;
-        }
-
         &__label {
             margin-block-start: rem(16);
-
-            color: $travel-point-card-text-color;
-            font-size: rem(16);
         }
 
         &__badge {
@@ -127,8 +113,7 @@
         }
 
         &__description {
-            font-size: $font-lg;
-            line-height: 1.6em;
+            padding-inline: rem(38);
         }
 
         &__media {
@@ -155,16 +140,13 @@
             &__item {
                 min-height: rem(150);
             }
-
-            &__label {
-                line-height: 1.6em;
-            }
         }
     }
 
     @include desktop {
         padding-block-end: 4rem;
         padding-block-start: rem(77.64);
+
         &__container {
             max-width: rem(1440);
 
@@ -175,8 +157,9 @@
         }
 
         &__content {
-            max-width: rem(455);
+            max-width: rem(433);
             margin-inline-end: rem(141);
+            transform: translateY(-0.6rem);
         }
 
         &__description {
@@ -184,9 +167,8 @@
         }
 
         &__media {
-            width: min(100%, rem(866));
+            flex: 0 0 rem(866);
             aspect-ratio: 866/675;
-            flex-grow: 1;
         }
 
         .stats {
@@ -198,8 +180,9 @@
                 display: block;
 
                 position: absolute;
-                top: rem(-61);
-                left: rem(74);
+                left: rem(85);
+                top: rem(-65);
+                //transform: translate(-50% -50%);
             }
         }
     }

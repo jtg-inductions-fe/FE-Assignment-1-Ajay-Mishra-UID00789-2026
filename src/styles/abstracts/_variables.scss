@@ -1,56 +1,19 @@
 @use 'functions' as *;
 
-// Colors
+// Deprecated colors and variables still usable for Backward compatibility
 $primary-color: #5d50c6;
 $secondary-color: #f85e9f;
 $tertiary-color: #ff5722;
-$purple-color: #5d50c6;
-$pink-color: #f85e9f;
-$orange-color: #ff5722;
-$yellow-color: #facd49;
+$quaternary-color: #facd49;
 $neutral-color: #ffffff;
 $dark-color: #000000;
 $gray-color: #eeeeee;
-
-$gray-dark-color: #191825;
-$testimonial-description-color: #191825;
-$testimonial-role-color: #191825bf;
-
 $text-color: #19182580;
 $text-nav-link: #19182580;
 $text-nav-link-active: #222831;
 
-$travel-point-card-text-color: #191825;
-$travel-point-card-border-color: #1918251a;
-
-$accordian-btn-text-color: #292d32;
-$accordian-btn-border-color: #292d32;
-
-$footer-nav-link-color: #191825bf;
-
 $primary-btn-text-color: #eeeeee;
 $secondary-btn-text-color: #222831;
-
-// Typography
-$font-primary: 'Circular Std', sans-serif;
-
-$font-secondary: 'Inter', sans-serif;
-
-// Font sizes
-$font-sm: rem(14);
-$font-base: rem(16);
-$font-lg: rem(18);
-$font-xl: rem(23);
-$font-2xl: rem(35);
-$font-3xl: rem(44);
-$font-4xl: rem(69);
-
-// Font weights
-$font-thin: 300;
-$font-reg: 400;
-$font-medium: 500;
-$font-semibold: 600;
-$font-bold: 700;
 
 // Shadows
 $btn-shadow-1:
@@ -68,6 +31,90 @@ $btn-shadow-2:
     0 308px 185px 0 rgba(0, 0, 0, 0.04),
     0 548px 219px 0 rgba(0, 0, 0, 0.01),
     0 856px 240px 0 rgba(0, 0, 0, 0);
+
+$gray-dark-color: #191825;
+$testimonial-description-color: #191825;
+$testimonial-role-color: #191825bf;
+
+$travel-point-card-text-color: #191825;
+$travel-point-card-border-color: #1918251a;
+
+$accordian-btn-text-color: #292d32;
+$accordian-btn-border-color: #292d32;
+
+$footer-nav-link-color: #191825bf;
+//
+
+// colors
+$primary: #5d50c6;
+$secondary: #f85e9f;
+
+$purple: #5d50c6;
+$pink: #f85e9f;
+$orange: #ff5722;
+$yellow: #facd49;
+
+$neutral-100: #ffffff;
+$neutral-0: #000000;
+
+$dark-100: #222831;
+
+$gray-0: #eeeeee;
+$gray-50: #19182580;
+$gray-75: #191825bf;
+
+$gray-100: #191825;
+
+// Text colors
+$text: #19182580;
+$link: #19182580;
+$link-active: #222831;
+$footer-link: #191825bf;
+$footer-link-active: #222831;
+
+// Button colors
+$btn-primary-text: #eeeeee;
+$btn-ghost-text: #222831;
+$btn-outline-text: #222831;
+
+$btn-primary-shadow:
+    0 0 0 0 rgba(0, 0, 0, 0.1),
+    0 5px 11px 0 rgba(0, 0, 0, 0.1),
+    0 20px 20px 0 rgba(0, 0, 0, 0.09),
+    0 45px 27px 0 rgba(0, 0, 0, 0.05),
+    0 81px 32px 0 rgba(0, 0, 0, 0.01),
+    0 126px 35px 0 rgba(0, 0, 0, 0);
+
+$btn-outline-shadow:
+    0 0 0 0 rgba(0, 0, 0, 0.07),
+    0 34px 75px 0 rgba(0, 0, 0, 0.07),
+    0 137px 137px 0 rgba(0, 0, 0, 0.06),
+    0 308px 185px 0 rgba(0, 0, 0, 0.04),
+    0 548px 219px 0 rgba(0, 0, 0, 0.01),
+    0 856px 240px 0 rgba(0, 0, 0, 0);
+
+// Typography
+
+// Font families
+$font-primary: 'Circular Std', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+// Font sizes
+$font-sm: rem(14);
+$font-base: rem(16);
+$font-lg: rem(18);
+$font-xl: rem(23);
+$font-2xl: rem(35);
+$font-3xl: rem(44);
+$font-4xl: rem(69);
+
+// Font weights
+$font-thin: 300;
+$font-reg: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-bolder: 900;
 
 // Breakpoints
 $tablet: 431px;
