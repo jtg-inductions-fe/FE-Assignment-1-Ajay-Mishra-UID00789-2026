@@ -1,5 +1,7 @@
 @use '../abstracts/' as *;
 .footer {
+    padding-block: 4rem;
+
     a {
         color: $text-color;
     }
@@ -12,9 +14,6 @@
         max-width: rem(1440);
         margin-inline: auto;
         padding-inline: 2rem;
-        padding-block: 4rem;
-
-        padding-block-start: 5rem;
     }
 
     &__brand {
@@ -63,7 +62,7 @@
     }
 
     &__navigation {
-        margin-block-start: rem(79);
+        margin-block-start: rem(87);
 
         display: flex;
         flex-direction: column;
@@ -106,7 +105,7 @@
     }
 
     @include tablet {
-        margin-block-start: 6.5rem;
+        margin-block-start: 7rem;
 
         &__decoration {
             display: block;
@@ -130,7 +129,8 @@
         &__navigation {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-            row-gap: 2rem;
+            gap: 2rem;
+            margin-block-start: 4rem;
 
             ul {
                 display: flex;
@@ -148,8 +148,8 @@
     }
 
     @include desktop {
-        margin-block-start: 9rem;
-
+        margin-block-start: rem(160);
+        padding-block-start: rem(45);
         &__container {
             display: grid;
             grid-template-columns: 1fr 1fr;

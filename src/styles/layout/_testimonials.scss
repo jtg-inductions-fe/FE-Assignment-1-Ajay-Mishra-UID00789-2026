@@ -120,7 +120,7 @@
 
         &__description {
             margin-block: 4rem;
-            margin-block-start: 4.4rem;
+            margin-block-start: 4.5rem;
             margin-inline: auto;
             font-size: $font-lg;
             color: $testimonial-description-color;
@@ -189,6 +189,7 @@
         .testimonial {
             &__description {
                 max-width: 62ch;
+                margin-block: 4rem;
             }
         }
 
