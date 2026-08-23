@@ -193,10 +193,9 @@
 
     @include desktop {
         margin-block-start: rem(34);
-
         &__container {
             grid-template-columns: auto 1fr auto;
-            max-width: rem(1193);
+            max-width: min(90%, rem(1193));
             margin: 0 auto;
             padding: 0;
         }
