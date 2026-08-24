@@ -32,7 +32,42 @@ $clr-border-ui: $clr-ui-dark;
 
 $clr-neutral-subtle: #1918251a;
 
-// Shadows
+$modal-eyebrow: #f4436c;
+$modal-title: #111827;
+$modal-subtitle: #9ca3af;
+$modal-loading: #000000;
+
+
+// Wheel colors
+
+$wheel-section-1: #f4436c;
+$wheel-section-2: #7c3aed;
+$wheel-section-3: #fbbf24;
+$wheel-section-4: #06b6d4;
+$wheel-muted: #eeeeee;
+$wheel-pointer: #aaaaaa;
+
+// Deal colors
+$deal: #1f2937; // deal text color
+$deal-primary: #f4436c;
+$deal-secondary: #7c3aed;
+$deal-tertiary: #999999;
+$deal-bg-muted: #eeeeee;
+$deal-border: #f4436c33;
+$deal-border-muted: #999999;
+
+// Modal button
+$modal-btn: #222831;
+$modal-btn-border: #eeeeee;
+
+$deal-active: #7c3aed;
+$deal-expired: #999999;
+
+// Button colors
+$btn-primary-text: #eeeeee;
+$btn-ghost-text: #222831;
+$btn-outline-text: #222831;
+
 $btn-primary-shadow:
     0 0 0 0 rgba($clr-black, 0.1),
     0 5px 11px 0 rgba($clr-black, 0.1),
@@ -52,6 +87,8 @@ $btn-outline-shadow:
 // font families
 $font-primary: 'Circular Std', sans-serif;
 $font-secondary: 'Inter', sans-serif;
+$font-tertiary: 'Figtree', sans-serif;
+$font-special: 'Roboto Mono', sans-serif;
 
 // font sizes
 $font-xxs: rem(10);
@@ -86,3 +123,13 @@ $fade-transition:
 // break points
 $tablet: 441px;
 $desktop: 1025px;
+
+// Border radius
+$radius-none: 0;
+$radius-xs: rem(2);
+$radius-sm: rem(4);
+$radius-md: rem(8);
+$radius-lg: rem(12);
+$radius-xl: rem(16);
+$radius-2xl: rem(24);
+$radius-full: 9999px;
