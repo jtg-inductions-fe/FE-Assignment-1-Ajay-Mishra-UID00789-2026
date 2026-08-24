@@ -1,4 +1,12 @@
-@use '../abstracts/' as *;
+@use '../abstracts' as *;
+
+body {
+    font-family: $ff-primary;
+}
+
+a {
+    text-decoration: none;
+}
 
 .container {
     max-width: rem(1440);
