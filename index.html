@@ -5,16 +5,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
             integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
     </head>
 
@@ -171,8 +172,302 @@
                     </ul>
                 </div>
             </section>
-            <section class="travel-point"></section>
+
+            <!-- Travel point -->
+            <section class="travelpoint">
+                <div class="travelpoint__container">
+                    <div class="travelpoint__decoration"></div>
+                    <div class="travelpoint__media">
+                        <picture>
+                            <source
+                                srcset="assets/images/travelpoint-desktop.webp"
+                                media="(min-width:1024px)"
+                            />
+                            <source
+                                srcset="assets/images/travelpoint-tablet.webp"
+                                media="(min-width:430px)"
+                            />
+                            <img
+                                src="assets/images/travelpoint-mobile.webp"
+                                alt="hero image"
+                            />
+                        </picture>
+                    </div>
+
+                    <div class="travelpoint__content">
+                        <div class="travelpoint__heading">
+                            <h3 class="label travelpoint__label">
+                                TRAVEL POINT
+                            </h3>
+
+                            <h2 class="travelpoint__title heading-2">
+                                We helping you find your dream location
+                            </h2>
+                        </div>
+
+                        <p class="travelpoint__description">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+
+                        <ul class="stats">
+                            <li class="stats__item">
+                                <span class="stats__value">500+</span>
+                                <span class="stats__label"
+                                    >Holiday Package</span
+                                >
+                            </li>
+
+                            <li class="stats__item">
+                                <img
+                                    class="stats__badge"
+                                    src="/assets/images/badge.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                                <span class="stats__value">100</span>
+                                <span class="stats__label">Luxury Hotel</span>
+                            </li>
+
+                            <li class="stats__item">
+                                <span class="stats__value">7</span>
+                                <span class="stats__label"
+                                    >Premium Airlines</span
+                                >
+                            </li>
+
+                            <li class="stats__item">
+                                <span class="stats__value">2k+</span>
+                                <span class="stats__label"
+                                    >Happy Customers</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials" aria-labelledby="testimonials-title">
+                <div class="testimonials__container">
+                    <div class="testimonials__content">
+                        <p class="testimonials__label label">TESTIMONIALS</p>
+
+                        <h2
+                            id="testimonials-title"
+                            class="testimonials__title heading-2"
+                        >
+                            Trust our clients
+                        </h2>
+                    </div>
+
+                    <div class="testimonials__carousel">
+                        <!-- Slick slider -->
+                        <button
+                            class="btn btn--icon testimonials__control testimonials__control--prev"
+                            type="button"
+                            aria-label="Previous Testimonial"
+                        >
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+
+                        <button
+                            class="btn btn--icon testimonials__control testimonials__control--next"
+                            type="button"
+                            aria-label="Next Testimonial"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div
+                            class="testimonials__slider"
+                            aria-label="Client testimonials"
+                        >
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span class="testimonial__name">
+                                            Mark Smith
+                                        </span>
+                                        <span class="testimonial__role">
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span class="testimonial__name">
+                                            Mark Smith
+                                        </span>
+                                        <span class="testimonial__role">
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span class="testimonial__name">
+                                            Mark Smith
+                                        </span>
+                                        <span class="testimonial__role">
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
