@@ -156,3 +156,73 @@
         text-decoration: underline;
     }
 }
+
+.text-modal-eyebrow {
+    @include typography(
+        $font-secondary,
+        rem(12),
+        1em,
+        $font-semibold,
+        $modal-eyebrow
+    );
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.text-modal-title {
+    @include typography(
+        $font-secondary,
+        rem(20),
+        1em,
+        $font-bold,
+        $modal-title
+    );
+}
+
+.text-modal-subtitle {
+    @include typography(
+        $font-secondary,
+        rem(12),
+        1em,
+        $font-reg,
+        $modal-subtitle
+    );
+}
+
+.text-modal-loading {
+    @include typography(
+        $font-secondary,
+        rem(12),
+        1em,
+        $font-reg,
+        $modal-loading
+    );
+}
+
+.text-modal-wheel {
+    @include typography(
+        $font-secondary,
+        rem(12),
+        1em,
+        $font-bold,
+        $neutral-100
+    );
+}
+.text-deal {
+    @include typography($font-secondary, rem(14), 1em, $font-semibold, $deal);
+}
+
+.text-deal-expiry {
+    @include typography(
+        $font-secondary,
+        rem(12),
+        1em,
+        $font-reg,
+        $deal-secondary
+    );
+}
+
+.text-deal-coupon {
+    @include typography($font-special, rem(12), 1em, $font-bold, $neutral-0);
+}
