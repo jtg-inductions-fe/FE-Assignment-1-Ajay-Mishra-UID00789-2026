@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.brands {
+    &__container {
+        padding-block: rem(64);
+    }
+}
+
+.brands-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: rem(27);
+    row-gap: rem(32);
+
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        height: rem(20);
+
+        img {
+            display: block;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @include tablet {
+        max-width: 70%;
+        margin-inline: auto;
+
+        &__item {
+            height: rem(32);
+        }
+    }
+
+    @include desktop {
+        max-width: none;
+        justify-content: space-between;
+
+        column-gap: 0;
+        row-gap: 0;
+    }
+}

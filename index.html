@@ -29,10 +29,7 @@
                         class="header__logo"
                         aria-label="Go to home page"
                     >
-                        <img
-                            src="./public/assets/images/logo.svg"
-                            alt="Travlog"
-                        />
+                        <img src="/assets/images/logo.svg" alt="Travlog" />
                     </a>
                 </div>
                 <div class="header__nav-overlay" aria-hidden="true"></div>
@@ -83,6 +80,98 @@
 
         <main>
             <!-- Hero -->
+            <section class="hero">
+                <div class="hero__container">
+                    <img
+                        src="assets/images/triangles.svg"
+                        class="hero__triangles"
+                        aria-hidden="true"
+                    />
+                    <div class="hero__media">
+                        <picture>
+                            <source
+                                srcset="assets/images/hero-desktop.webp"
+                                media="(min-width: 430px)"
+                            />
+
+                            <img
+                                src="assets/images/hero-mobile.webp"
+                                alt="Travel destination"
+                            />
+                        </picture>
+                    </div>
+
+                    <div class="hero__content">
+                        <div class="hero__tag btn">
+                            <span>Explore the world!</span>
+                            <i
+                                class="color-secondary fa-solid fa-briefcase"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h1 class="hero__title heading-1">
+                            Travel <span>top destination</span> of the world
+                        </h1>
+
+                        <p class="hero__description">
+                            We always make our customer happy by
+                            <span>providing</span> as many choices as possible
+                        </p>
+
+                        <div class="hero__actions">
+                            <button type="button" class="btn btn--primary">
+                                Get Started
+                            </button>
+
+                            <button type="button" class="btn btn--outline">
+                                <i
+                                    class="btn__icon fa-solid fa-circle-play"
+                                    aria-hidden="true"
+                                ></i>
+                                <span>Watch Demo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brands -->
+            <section class="brands">
+                <div class="container brands__container">
+                    <ul class="brands-list">
+                        <li class="brands-list__item">
+                            <img
+                                src="assets/images/brand-1.svg"
+                                alt="Tripadvisor"
+                            />
+                        </li>
+
+                        <li class="brands-list__item">
+                            <img
+                                src="assets/images/brand-2.svg"
+                                alt="Expedia"
+                            />
+                        </li>
+
+                        <li class="brands-list__item">
+                            <img
+                                src="assets/images/brand-3.svg"
+                                alt="Booking.com"
+                            />
+                        </li>
+
+                        <li class="brands-list__item">
+                            <img src="assets/images/brand-4.svg" alt="Airbnb" />
+                        </li>
+
+                        <li class="brands-list__item">
+                            <img src="assets/images/brand-5.svg" alt="Orbitz" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="travel-point"></section>
         </main>
         <script type="module" src="./src/script/index.js"></script>
     </body>
