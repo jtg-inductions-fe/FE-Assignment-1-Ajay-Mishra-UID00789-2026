@@ -75,7 +75,6 @@
         line-height: 1.6;
         text-align: center;
         text-wrap: wrap;
-        font-family: $ff-secondary;
     }
 
     &__actions {
@@ -90,6 +89,7 @@
             @include flex-center;
             gap: rem(8);
             width: 100%;
+            padding-block: rem(24);
 
             i {
                 font-size: rem(20);
@@ -111,6 +111,14 @@
     @include tablet {
         padding: rem(64);
 
+        &__triangles {
+            display: block;
+            position: absolute;
+            bottom: rem(-100);
+            left: -1.3rem;
+            z-index: 100;
+        }
+
         &__container {
             max-width: 100%;
         }
@@ -121,6 +129,7 @@
 
         &__description {
             font-size: rem(18);
+            max-width: 42ch;
         }
         &__media {
             width: min(100%, rem(772));
