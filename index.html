@@ -757,6 +757,74 @@
                 </nav>
             </div>
         </footer>
+        <div
+            class="modal"
+            id="spin-wheel-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="spin-wheel-title"
+            aria-hidden="true"
+        >
+            <div class="modal__container">
+                <header class="modal__header">
+                    <p class="modal__eyebrow text-modal-eyebrow">
+                        <i class="fa-solid fa-gift" aria-hidden="true"></i>
+                        <span>Special deals</span>
+                    </p>
+
+                    <h2 class="modal__title text-modal-title">Spin & Win!</h2>
+
+                    <p class="modal__subtitle text-modal-subtitle">
+                        Tap the center of the wheel to win
+                    </p>
+
+                    <button
+                        class="modal__close"
+                        type="button"
+                        aria-label="Close"
+                    >
+                        <i class="fa-solid fa-x" aria-hidden="true"></i>
+                    </button>
+                </header>
+                <div class="modal__body">
+                    <div class="wheel">
+                        <!-- Wheel -->
+                    </div>
+
+                    <ul class="deals">
+                        <li class="deal expired" data-coupon="rght">
+                            <div class="deal__left">
+                                <h4 class="deal__title text-deal">
+                                    20% Off Flights
+                                </h4>
+                                <p class="deal__expiry text-deal-expiry">
+                                    Expires in 7d
+                                </p>
+                            </div>
+                            <div class="deal__right">
+                                <div class="deal__coupon text-deal-coupon">
+                                    FLY20-ABCD
+                                </div>
+                                <button
+                                    class="deal__copy"
+                                    type="button"
+                                    aria-label="Copy coupon code"
+                                >
+                                    <i
+                                        class="fa-regular fa-clone"
+                                        aria-hidden="true"
+                                    ></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <footer class="modal__footer">
+                    <button class="modal__btn" type="button"></button>
+                </footer>
+            </div>
+        </div>
         <script
             type="text/javascript"
             src="//code.jquery.com/jquery-1.11.0.min.js"
@@ -767,5 +835,6 @@
         ></script>
         <script type="text/javascript" src="./src/script/slick.min.js"></script>
         <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="./src/script/deals.js"></script>
     </body>
 </html>
