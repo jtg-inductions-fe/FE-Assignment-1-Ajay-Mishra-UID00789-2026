@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin font-face(
+    $name,
+    $path,
+    $weight: normal,
+    $style: normal,
+    $display: swap
+) {
+    @font-face {
+        font-family: quote($name);
+        src: url('../assets/fonts/#{$path}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: $display;
+    }
+}

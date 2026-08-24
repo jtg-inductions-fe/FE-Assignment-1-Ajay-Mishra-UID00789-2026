@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.heading-1 {
+    font-size: rem(40);
+    font-weight: $fw-bold;
+    line-height: 1.2;
+
+    @include tablet {
+        font-size: rem(56);
+    }
+
+    @include desktop {
+        font-size: rem(69);
+    }
+}
+
+.heading-2 {
+    font-size: rem(32);
+    font-weight: $fw-bold;
+    line-height: 1.2;
+
+    @include tablet {
+        font-size: rem(40);
+    }
+
+    @include desktop {
+        font-size: rem(44);
+    }
+}
+
+.heading-3 {
+    font-size: rem(24);
+    font-weight: $fw-bold;
+}
+
+.label {
+    font-size: rem(16);
+    font-weight: $fw-bold;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+
+    @include tablet {
+        font-size: rem(23);
+    }
+}
