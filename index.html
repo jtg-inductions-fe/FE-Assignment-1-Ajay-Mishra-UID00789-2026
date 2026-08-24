@@ -37,8 +37,6 @@
                         <button
                             class="header__nav-close-btn"
                             aria-label="Close navigation menu"
-                            aria-expanded="true"
-                            aria-controls="main-navigation"
                         >
                             <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                         </button>
@@ -81,7 +79,9 @@
                     <img
                         src="assets/images/triangles.svg"
                         class="hero__triangles"
+                        alt=""
                         aria-hidden="true"
+                        role="presentation"
                     />
                     <div class="hero__media">
                         <picture>
@@ -566,8 +566,12 @@
                                 aria-expanded="false"
                                 class="accordian-btn"
                                 aria-controls="company"
+                                aria-label="show company links"
                             >
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
                             </button>
                         </div>
 
@@ -597,8 +601,12 @@
                                 aria-expanded="false"
                                 class="accordian-btn"
                                 aria-controls="contact-links"
+                                aria-label="show contact links"
                             >
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
                             </button>
                         </div>
                         <ul id="contact-links">
@@ -630,8 +638,12 @@
                                 aria-expanded="false"
                                 class="accordian-btn"
                                 aria-controls="meetus"
+                                aria-label="show address information"
                             >
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
                             </button>
                         </div>
                         <ul id="meetus">

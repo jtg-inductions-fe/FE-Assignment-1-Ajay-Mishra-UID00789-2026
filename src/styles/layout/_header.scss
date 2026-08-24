@@ -13,8 +13,6 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
 
-        margin-inline: auto;
-
         position: relative;
     }
 
@@ -182,7 +180,6 @@
         }
         &__cta {
             @include flex-center;
-            display: block;
             justify-self: end;
 
             .btn--ghost {

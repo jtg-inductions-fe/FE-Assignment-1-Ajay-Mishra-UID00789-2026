@@ -6,9 +6,11 @@ const overlay = document.querySelector('.header__nav-overlay');
 const closeBtn = document.querySelector('.header__nav-close-btn');
 const accordianBtns = document.querySelectorAll('.accordian-btn');
 const mobileMedia = window.matchMedia('(width <= 1024px)');
+const footerLinks = document.querySelectorAll('.footer__navigation ul');
 
 if (mobileMedia.matches) {
     nav.inert = true;
+    hideFooterLinks();
 }
 
 menu.addEventListener('click', (e) => {
@@ -33,6 +35,11 @@ accordianBtns.forEach((btn) =>
     }),
 );
 
+window.addEventListener('resize', () => {
+    debounce(showFooterLinks, 300)();
+    debounce(handleNavInertNess, 300)();
+});
+
 /**
  * Opens the navigation sidebar and enables the overlay.
  *
@@ -46,6 +53,8 @@ function openSidebar(e) {
     closeBtn.focus();
     overlay.style.visibility = 'visible';
     overlay.style.pointerEvents = 'auto';
+
+    menu.setAttribute('aria-expanded', 'true');
 
     document.body.style.height = '100vh';
 
@@ -63,6 +72,8 @@ function closeSidebar(e) {
     nav.classList.remove('open');
     overlay.style.visibility = 'hidden';
     overlay.style.pointerEvents = 'none';
+
+    menu.setAttribute('aria-expanded', 'false');
 
     document.body.style.height = 'auto';
     document.body.style.overflow = 'auto';
@@ -82,9 +93,9 @@ function toggleDisclosure() {
     this.setAttribute('aria-expanded', !isExpanded);
 
     if (isExpanded) {
-        document.getElementById(controls).style.display = 'none';
+        document.getElementById(controls).classList.add('hidden');
     } else {
-        document.getElementById(controls).style.display = 'flex';
+        document.getElementById(controls).classList.remove('hidden');
     }
 }
 
@@ -130,3 +141,60 @@ $(document).ready(function () {
         nextArrow: $('.testimonials__control--next'),
     });
 });
+
+/**
+ * hides footer links
+ * @returns {void}
+ */
+function hideFooterLinks() {
+    const media = window.matchMedia('(width < 441px)');
+    if (media.matches) {
+        footerLinks.forEach((el) => el.classList.add('hidden'));
+    }
+}
+
+/**
+ * makes footer links visible on resizing window
+ * @returns {void}
+ */
+function showFooterLinks() {
+    const media = window.matchMedia('(width > 440px)');
+    if (media.matches) {
+        footerLinks.forEach((el) => el.classList.remove('hidden'));
+    } else {
+        footerLinks.forEach((el) => el.classList.add('hidden'));
+    }
+}
+
+/**
+ * Handles inertness of nav during resizing window
+ * @returns {void}
+ */
+function handleNavInertNess() {
+    const media = window.matchMedia('(width <= 1024px)');
+    if (media.matches) {
+        nav.inert = true;
+    } else {
+        nav.inert = false;
+    }
+}
+
+/**
+ *
+ * @param {*} func function to debounce
+ * @param {*} delay time in ms
+ * @returns @function
+ */
+function debounce(func, delay) {
+    let timeoutId;
+
+    return function (...args) {
+        // Clear the previous timer if the function is called again within the delay window
+        clearTimeout(timeoutId);
+
+        // Set a new timer to execute the function after the delay
+        timeoutId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
+}
