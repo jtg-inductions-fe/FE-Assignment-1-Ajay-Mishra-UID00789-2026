@@ -3,7 +3,6 @@
 
 .hero {
     position: relative;
-    overflow: hidden;
     padding: rem(29) rem(16) 0;
 
     overflow: visible;
@@ -67,8 +66,9 @@
     }
 
     &__description {
-        max-width: 47ch;
-        margin-top: rem(24);
+        margin-top: 24px;
+        padding: 0 10px;
+        font-family: $ff-secondary;
         color: $text-color;
         font-size: $fs-base;
         font-weight: $fw-reg;
