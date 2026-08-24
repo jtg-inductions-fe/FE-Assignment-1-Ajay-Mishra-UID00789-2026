@@ -1,0 +1,187 @@
+@use '../abstracts' as *;
+
+.testimonials {
+    padding-block: rem(64);
+    padding-inline: 1rem;
+    overflow: clip;
+
+    &__container {
+        max-width: rem(430);
+        margin-inline: auto;
+
+        text-align: center;
+
+        position: relative;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__label {
+        color: $secondary-color;
+    }
+
+    &__title {
+        margin-block-start: 1rem;
+        text-wrap: wrap;
+    }
+
+    &__control {
+        border-color: $travel-point-card-border-color;
+        position: absolute;
+        top: 10.5rem;
+        z-index: 100;
+
+        background-color: $neutral-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $neutral-color;
+        }
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+    }
+
+    .rating {
+        @include flex-center;
+        gap: rem(18.6);
+
+        &__star {
+            font-size: rem(24);
+            color: rgba(250, 205, 73, 1);
+        }
+    }
+
+    .slick-dots {
+        width: fit-content;
+
+        display: flex;
+        flex-direction: row;
+        gap: rem(24);
+
+        margin-inline: auto;
+        li {
+            height: rem(24);
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            background-color: $travel-point-card-border-color;
+        }
+
+        .slick-active {
+            background-color: $secondary-color;
+        }
+        button {
+            font-size: 0;
+        }
+    }
+
+    .testimonial {
+        text-align: center;
+
+        &__avatar {
+            width: rem(128);
+            height: rem(128);
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            overflow: hidden;
+            object-position: center;
+            object-fit: cover;
+            display: block;
+            margin-block: 4rem;
+            margin-inline: auto;
+        }
+
+        &__name,
+        &__role {
+            font-size: rem(28);
+            color: $tertiary-color;
+            font-weight: $fw-bold;
+        }
+
+        &__role {
+            color: $text-color;
+        }
+
+        &__rating {
+            margin-block-start: 2rem;
+        }
+
+        &__description {
+            margin-block: 4rem;
+            margin-inline: auto;
+            font-size: $fs-lg;
+            color: $testimonial-description-color;
+            line-height: 1.6em;
+        }
+    }
+
+    @include tablet {
+        padding-inline: 4rem;
+
+        position: relative;
+
+        &__container {
+            max-width: rem(1024);
+            gap: 4rem;
+
+            overflow: hidden;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background-image: url('../../assets/images/testimonial-bg.webp');
+                background-position: center;
+                background-size: cover;
+                inset: 0;
+            }
+        }
+
+        &__content {
+            max-width: rem(894);
+            margin-inline: auto;
+            margin-block-start: 1rem;
+        }
+
+        &__control--prev {
+            left: 3rem;
+        }
+
+        &__control--next {
+            right: 3rem;
+        }
+
+        .testimonial {
+            &__avatar {
+                margin-block: rem(56);
+            }
+
+            &__description {
+                font-size: $fs-xl;
+                line-height: 1.6em;
+
+                max-width: 48ch;
+
+                margin-block: rem(56);
+            }
+        }
+    }
+
+    @include desktop {
+        &__container {
+            max-width: rem(1440);
+        }
+
+        .testimonial {
+            &__description {
+                max-width: 62ch;
+            }
+        }
+    }
+}

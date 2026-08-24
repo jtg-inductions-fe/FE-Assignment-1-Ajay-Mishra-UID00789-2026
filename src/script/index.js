@@ -1,3 +1,5 @@
+/* global $ */
+
 const menu = document.querySelector('.header__menu');
 const nav = document.querySelector('.header__nav');
 const overlay = document.querySelector('.header__nav-overlay');
@@ -42,3 +44,14 @@ function closeSidebar(e) {
     overlay.style.visibility = 'hidden';
     overlay.style.pointerEvents = 'none';
 }
+
+$(document).ready(function () {
+    $('.testimonials__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        prevArrow: $('.testimonials__control--prev'),
+        nextArrow: $('.testimonials__control--next'),
+    });
+});
