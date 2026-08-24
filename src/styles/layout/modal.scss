@@ -1,0 +1,127 @@
+@use '../abstracts' as *;
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: none;
+    background-color: rgba($neutral-0, 0.5);
+
+    &.is-open {
+        display: block;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 0.75rem;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__container {
+        padding: 1.5rem;
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        width: min(100% - 2rem, rem(360));
+        margin-inline: auto;
+
+        overflow: hidden;
+
+        background: $neutral-100;
+
+        border-radius: $radius-2xl;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    .wheel__pointer {
+        clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    }
+
+    .deals {
+        margin-block: 0.5rem;
+    }
+
+    .deal {
+        padding: 1rem;
+
+        border-radius: $radius-xl;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto;
+
+        background-image: linear-gradient(
+            linear-gradient($deal-primary, 0.2),
+            linear-gradient($deal-secondary, 0.2)
+        );
+
+        border: 1px solid $deal-border;
+    }
+
+    .deal__copy {
+        color: $deal-primary;
+        padding: rem(6);
+    }
+
+    .deal__expiry {
+        margin-top: rem(3);
+    }
+
+    .deal__right {
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .deal__coupon {
+        background-color: $neutral-100;
+
+        padding-block: rem(4);
+        padding-inline: rem(10);
+
+        border: 1px solid #e5e7eb;
+        border-radius: $radius-md;
+    }
+
+    .deal.expired {
+        border-color: $deal-border-muted;
+        background: $deal-bg-muted;
+        .deal__expiry {
+            color: $deal-expired;
+        }
+        .deal__copy {
+            color: $gray-secondary;
+        }
+    }
+
+    @include tablet {
+        &__container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            bottom: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+
+            border-bottom-right-radius: $radius-2xl;
+            border-bottom-left-radius: $radius-2xl;
+        }
+    }
+}
