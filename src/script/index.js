@@ -4,6 +4,7 @@ const menu = document.querySelector('.header__menu');
 const nav = document.querySelector('.header__nav');
 const overlay = document.querySelector('.header__nav-overlay');
 const closeBtn = document.querySelector('.header__nav-close-btn');
+const accordianBtns = document.querySelectorAll('.accordian-btn');
 
 menu.addEventListener('click', (e) => {
     if (nav.classList.contains('open')) closeSidebar(e);
@@ -18,6 +19,12 @@ document.addEventListener('keydown', (e) => {
         closeSidebar(e);
     }
 });
+
+accordianBtns.forEach((btn) =>
+    btn.addEventListener('click', () => {
+        toggleDisclosure.call(btn);
+    }),
+);
 
 /**
  * Opens the navigation sidebar and enables the overlay.
@@ -43,6 +50,23 @@ function closeSidebar(e) {
     nav.classList.remove('open');
     overlay.style.visibility = 'hidden';
     overlay.style.pointerEvents = 'none';
+}
+
+/**
+ * Controls Footer accordian
+ * @returns {void}
+ */
+function toggleDisclosure() {
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    const controls = this.getAttribute('aria-controls');
+
+    this.setAttribute('aria-expanded', !isExpanded);
+
+    if (isExpanded) {
+        document.getElementById(controls).style.display = 'none';
+    } else {
+        document.getElementById(controls).style.display = 'flex';
+    }
 }
 
 $(document).ready(function () {

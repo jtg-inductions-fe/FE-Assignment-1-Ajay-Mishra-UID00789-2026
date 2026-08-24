@@ -36,6 +36,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-block-start: -0.5rem;
     }
 
     &__tag {
@@ -59,7 +60,7 @@
         margin-top: rem(16);
         text-align: center;
         text-wrap: wrap;
-        font-family: $ff-primary;
+        font-family: $font-primary;
         span {
             color: $secondary-color;
         }
@@ -68,10 +69,10 @@
     &__description {
         margin-top: 24px;
         padding: 0 10px;
-        font-family: $ff-secondary;
+        font-family: $font-secondary;
         color: $text-color;
-        font-size: $fs-base;
-        font-weight: $fw-reg;
+        font-size: $font-base;
+        font-weight: $font-reg;
         line-height: 1.6;
         text-align: center;
         text-wrap: wrap;

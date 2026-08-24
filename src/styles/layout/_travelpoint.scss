@@ -1,7 +1,8 @@
 @use '../abstracts' as *;
 
 .travelpoint {
-    padding: rem(64) rem(1);
+    padding-block: 4rem;
+    padding-block-start: 2rem;
 
     &__container {
         position: relative;
@@ -27,9 +28,9 @@
         padding-inline: rem(40);
 
         color: $text-color;
-        font-family: $ff-secondary;
-        font-size: $fs-base;
-        font-weight: $fw-reg;
+        font-family: $font-secondary;
+        font-size: $font-base;
+        font-weight: $font-reg;
         line-height: 1.6em;
     }
 
@@ -82,7 +83,7 @@
 
         &__value {
             color: $tertiary-color;
-            font-size: $fs-2xl;
+            font-size: $font-2xl;
             font-weight: 700;
         }
 
@@ -99,6 +100,8 @@
     }
 
     @include tablet {
+        padding-block-end: 0;
+        padding-block-start: 4rem;
         &__container {
             max-width: rem(1024);
             gap: 4rem;
@@ -124,7 +127,7 @@
         }
 
         &__description {
-            font-size: $fs-lg;
+            font-size: $font-lg;
             line-height: 1.6em;
         }
 
@@ -160,6 +163,8 @@
     }
 
     @include desktop {
+        padding-block-end: 4rem;
+        padding-block-start: rem(77.64);
         &__container {
             max-width: rem(1440);
 
@@ -179,7 +184,8 @@
         }
 
         &__media {
-            max-width: 100%;
+            width: min(100%, rem(866));
+            aspect-ratio: 866/675;
             flex-grow: 1;
         }
 

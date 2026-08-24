@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Travlog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
@@ -143,31 +143,37 @@
                     <ul class="brands-list">
                         <li class="brands-list__item">
                             <img
-                                src="assets/images/brand-1.svg"
+                                src="assets/images/partner-brand-tripadvisor.svg"
                                 alt="Tripadvisor"
                             />
                         </li>
 
                         <li class="brands-list__item">
                             <img
-                                src="assets/images/brand-2.svg"
+                                src="assets/images/partner-brand-expedia.svg"
                                 alt="Expedia"
                             />
                         </li>
 
                         <li class="brands-list__item">
                             <img
-                                src="assets/images/brand-3.svg"
+                                src="assets/images/partner-brand-booking-dot-com.svg"
                                 alt="Booking.com"
                             />
                         </li>
 
                         <li class="brands-list__item">
-                            <img src="assets/images/brand-4.svg" alt="Airbnb" />
+                            <img
+                                src="assets/images/partner-brand-airbnb.svg"
+                                alt="Airbnb"
+                            />
                         </li>
 
                         <li class="brands-list__item">
-                            <img src="assets/images/brand-5.svg" alt="Orbitz" />
+                            <img
+                                src="assets/images/partner-brand-orbitz.svg"
+                                alt="Orbitz"
+                            />
                         </li>
                     </ul>
                 </div>
@@ -208,7 +214,7 @@
                         <p class="travelpoint__description">
                             Contrary to popular belief, Lorem Ipsum is not
                             simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC.
+                            classical Latin Literature from 45 BC.
                         </p>
 
                         <ul class="stats">
@@ -465,6 +471,143 @@
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <img
+                    class="footer__decoration"
+                    src="/assets/images/footer-pattern.svg"
+                    alt=""
+                    aria-hidden="true"
+                />
+                <section
+                    class="footer__brand"
+                    aria-labelledby="footer-brand-name"
+                >
+                    <a href="/" class="footer__logo">
+                        <img
+                            src="/assets/images/logo.svg"
+                            alt=""
+                            width="32"
+                            height="32"
+                        />
+                        <span id="footer-brand-name" class="footer__brand-name">
+                            Travlog
+                        </span>
+                    </a>
+
+                    <p class="footer__brand-description">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+
+                    <nav aria-label="Social media">
+                        <ul class="footer__social-links">
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://facebook.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Facebook"
+                                >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://twitter.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Twitter"
+                                >
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://instagram.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Instagram"
+                                >
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <nav class="footer__navigation" aria-label="Footer">
+                    <section class="footer__group">
+                        <div>
+                            <h4>Company</h4>
+                            <button
+                                aria-expanded="false"
+                                class="accordian-btn"
+                                aria-controls="company"
+                            >
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <ul id="company">
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/careers">Career</a></li>
+                            <li><a href="/mobile">Mobile</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer__group">
+                        <div>
+                            <h4>Contact</h4>
+                            <button
+                                aria-expanded="false"
+                                class="accordian-btn"
+                                aria-controls="contact"
+                            >
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <ul id="contact">
+                            <li><a href="/why-travlog">Why Travlog?</a></li>
+                            <li><a href="/partners">Partner with us</a></li>
+                            <li><a href="/faq">FAQs</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer__group">
+                        <div>
+                            <h4>Meet Us</h4>
+                            <button
+                                aria-expanded="false"
+                                class="accordian-btn"
+                                aria-controls="meetus"
+                            >
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <ul id="meetus">
+                            <li>
+                                <a href="tel:+0092123456789"
+                                    >+00 92 1234 56789</a
+                                >
+                            </li>
+                            <li>
+                                <a href="mailto:info@travlog.com"
+                                    >info@travlog.com</a
+                                >
+                            </li>
+                            <li>
+                                205. R Street,<br />
+                                New York<br />
+                                BD23200
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+        </footer>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
