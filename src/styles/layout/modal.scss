@@ -6,9 +6,10 @@
     z-index: 1000;
 
     display: none;
+
     background-color: rgba($neutral-0, 0.5);
 
-    // Make display block when modal opens
+    // make display block when modal opens
     &.is-open {
         display: block;
     }
@@ -48,6 +49,10 @@
 
     .wheel__wrapper {
         position: relative;
+
+        &:has(.wheel--loading) .wheel__pointer {
+            background-color: $gray-secondary;
+        }
     }
 
     // Wheel
@@ -58,95 +63,100 @@
         height: rem(227);
         margin: rem(26) auto rem(30);
 
-        transition: transform 3s ease-out;
-        transform-origin: center;
-
-        background: conic-gradient(
-            $wheel-section-1 0deg 90deg,
-            $wheel-section-2 90deg 180deg,
-            $wheel-section-3 180deg 270deg,
-            $wheel-section-4 270deg 360deg
-        );
-
         border: rem(2) solid $neutral-100;
         border-radius: 50%;
+        overflow: hidden;
 
-        box-shadow: 0 0 50px 7px rgba($neutral-0, 0.25);
+        box-shadow: 0 0 rem(50) rem(7) rgba($neutral-0, 0.25);
 
-        &::before,
-        &::after {
-            content: '';
+        // The wheel itself stays fixed.
+        // Only .wheel__content rotates.
 
-            position: absolute;
-            z-index: 1;
+        // Wheel loading state
+        &--loading {
+            background: $wheel-muted;
+            box-shadow: none;
 
-            background-color: $neutral-100;
+            .wheel__content {
+                display: none;
+            }
+
+            .wheel__spin {
+                display: none;
+            }
         }
 
-        // Vertical divider
-        &::before {
-            top: 0;
-            bottom: 0;
-            left: 50%;
-
-            width: rem(2);
-
-            transform: translateX(-50%);
-        }
-
-        // Horizontal divider
-        &::after {
-            top: 50%;
-            right: 0;
-            left: 0;
-
-            height: rem(2);
-
-            transform: translateY(-50%);
-        }
-
-        // Wheel sections
+        // Rotating internal grid
         &__content {
             position: absolute;
             inset: 0;
-            z-index: 2;
+
+            display: grid;
+
+            width: 100%;
+            height: 100%;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            transform-origin: center;
+            transition: transform 3s ease-out;
         }
 
-        &__label {
-            position: absolute;
-            text-align: center;
+        // Wheel sections
+        &__section {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
 
             &--1 {
-                top: 25%;
-                left: 25%;
-
-                transform: translate(-50%, -50%) rotate(-45deg);
+                background: $wheel-section-1;
             }
-
             &--2 {
-                top: 25%;
-                left: 75%;
-
-                transform: translate(-50%, -50%) rotate(45deg);
+                background: $wheel-section-2;
+            }
+            &--4 {
+                background: $wheel-section-4;
             }
 
             &--3 {
-                top: 75%;
-                left: 75%;
+                background: $wheel-section-3;
+            }
+        }
 
-                transform: translate(-50%, -50%) rotate(-45deg);
+        // Labels
+        &__label {
+            width: 70%;
+
+            text-align: center;
+
+            pointer-events: none;
+
+            &--1 {
+                transform: rotate(-45deg);
+            }
+
+            &--2 {
+                transform: rotate(45deg);
+            }
+
+            &--3 {
+                transform: rotate(135deg);
             }
 
             &--4 {
-                top: 75%;
-                left: 25%;
-
-                transform: translate(-50%, -50%) rotate(45deg);
+                transform: rotate(-135deg);
             }
         }
+
+        // Fixed pointer
         &__pointer {
             position: absolute;
-            top: rem(-12);
+            top: rem(-8);
             left: 50%;
             z-index: 5;
 
@@ -160,6 +170,7 @@
             transform: translateX(-50%);
         }
 
+        // Fixed spin button
         &__spin {
             @include typography(
                 $font-secondary,
@@ -168,8 +179,6 @@
                 $font-bold,
                 $wheel-section-1
             );
-
-            letter-spacing: 0.04em;
 
             position: absolute;
             top: 50%;
@@ -182,10 +191,14 @@
 
             width: rem(43);
             height: rem(43);
+            padding: 0;
+
+            letter-spacing: 0.04em;
 
             background-color: $neutral-100;
             border: 3px solid $wheel-section-1;
             border-radius: 50%;
+
             cursor: pointer;
 
             transform: translate(-50%, -50%);
@@ -209,8 +222,43 @@
         }
     }
 
+    .wheel--loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wheel__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .wheel__loading-text {
+        @include typography(
+            $font-secondary,
+            rem(14),
+            1em,
+            $font-bold,
+            $gray-secondary
+        );
+    }
+
+    .wheel__spin {
+        display: none;
+    }
+
+    box-shadow: none;
+}
+
+    // Deals
     .deals {
-        margin-block: 0.5rem;
+        margin-block: rem(20);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     // Deal card
@@ -218,14 +266,14 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-
+        gap: rem(12);
         margin-inline: auto;
         padding: 1rem;
-
+        width: 100%;
         background: linear-gradient(
-            135deg,
-            rgba($deal-primary, 0.2),
-            rgba($deal-secondary, 0.2)
+            90deg,
+            rgba($deal-primary, 0.05),
+            rgba($deal-secondary, 0.05)
         );
 
         border: 1px solid $deal-border;
@@ -239,7 +287,7 @@
         }
 
         &__expiry {
-            margin-top: rem(3);
+            margin-block-start: rem(3);
         }
 
         &__right {
@@ -258,7 +306,8 @@
             border-radius: $radius-md;
         }
 
-        &.expired {
+        // Expired deal
+        &--expired {
             background: $deal-bg-muted;
             border-color: $deal-border-muted;
 
@@ -270,6 +319,57 @@
                 color: $deal-expired;
             }
         }
+    }
+
+    .resultBox,
+    .modal__footer {
+        display: none;
+        margin-block-start: rem(20);
+    }
+
+    .resultBox.is-visible {
+        display: block;
+    }
+
+    .modal__footer.is-visible {
+        display: block;
+    }
+
+    .wheel__result {
+        @include typography(
+            $font-secondary,
+            rem(12),
+            1em,
+            $font-bold,
+            $neutral-0
+        );
+        text-align: center;
+        margin-block: 0.5rem;
+    }
+
+    // Modal button
+    .btn--modal {
+        width: 100%;
+    }
+
+    // Deal count
+    .deal__count {
+        @include flex-center;
+
+        display: inline-flex;
+
+        width: rem(18);
+        height: rem(18);
+        aspect-ratio: 1 / 1;
+        margin-inline-start: rem(8);
+
+        font-size: rem(12);
+        font-weight: $font-medium;
+
+        color: $neutral-100;
+        background: $deal-secondary;
+
+        border-radius: 100%;
     }
 
     @include tablet {

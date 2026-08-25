@@ -770,49 +770,42 @@
                         <i class="fa-solid fa-x" aria-hidden="true"></i>
                     </button>
                 </header>
-                <div class="modal__body">
-                    <div class="wheel__wrapper">
-                        <div class="wheel__pointer"></div>
-                        <div class="wheel">
-                            <div class="wheel__content">
-                                <span
-                                    class="text-modal-wheel wheel__label wheel__label--1"
-                                >
-                                    20% Off<br />
-                                    Flights
-                                </span>
 
-                                <span
-                                    class="text-modal-wheel wheel__label wheel__label--2"
-                                >
-                                    Free Hotel<br />
-                                    Nights
-                                </span>
+                <div class="modal__body"></div>
 
-                                <span
-                                    class="text-modal-wheel wheel__label wheel__label--3"
-                                >
-                                    VIP Lounge<br />
-                                    Access
-                                </span>
+                <div class="resultBox">
+                    <p class="wheel__result">You Won!</p>
 
-                                <span
-                                    class="text-modal-wheel wheel__label wheel__label--4"
-                                >
-                                    10% Off<br />
-                                    Packages
-                                </span>
-                            </div>
+                    <div class="deal">
+                        <div class="deal__left">
+                            <div class="text-deal deal__title"></div>
 
-                            <button class="wheel__spin" type="button">
-                                Spin
+                            <div class="text-deal-expiry deal__expiry"></div>
+                        </div>
+
+                        <div class="deal__right">
+                            <span class="text-deal-coupon deal__coupon"></span>
+
+                            <button
+                                class="deal__copy"
+                                type="button"
+                                aria-label="Copy coupon code"
+                            >
+                                <i class="fa-regular fa-copy"></i>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <footer class="modal__footer">
-                    <button class="modal__btn" type="button"></button>
+                    <button
+                        id="view-all-deals"
+                        class="btn btn--modal"
+                        type="button"
+                    >
+                        View all Unlocked Deals
+                        <span class="deal__count">0</span>
+                    </button>
                 </footer>
             </div>
         </div>
@@ -829,3 +822,85 @@
         <script type="module" src="./src/script/deals.js"></script>
     </body>
 </html>
+
+<!-- <div class="modal__body">
+                    <div class="wheel__wrapper">
+                        <div class="wheel__pointer"></div>
+                        <div class="wheel">
+                            <div class="wheel__content">
+                                <div class="wheel__section wheel__section--1">
+                                    <span
+                                        class="text-modal-wheel wheel__label wheel__label--1"
+                                    >
+                                        20% Off<br />
+                                        Flights
+                                    </span>
+                                </div>
+
+                                <div class="wheel__section wheel__section--2">
+                                    <span
+                                        class="text-modal-wheel wheel__label wheel__label--2"
+                                    >
+                                        Free Hotel<br />
+                                        Night
+                                    </span>
+                                </div>
+
+                                <div class="wheel__section wheel__section--4">
+                                    <span
+                                        class="text-modal-wheel wheel__label wheel__label--4"
+                                    >
+                                        15% Off<br />
+                                        Hotels
+                                    </span>
+                                </div>
+
+                                <div class="wheel__section wheel__section--3">
+                                    <span
+                                        class="text-modal-wheel wheel__label wheel__label--3"
+                                    >
+                                        10% Off<br />
+                                        Packages
+                                    </span>
+                                </div>
+                            </div>
+                            <button class="wheel__spin" type="button" disabled>
+                                Spin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultBox">
+                    <p class="text-result"></p>
+                    <div class="deal">
+                        <div class="deal__left">
+                            <div class="text-deal deal__title">
+                                20% Off Flights
+                            </div>
+                            <div class="text-deal-expiry deal__expiry">
+                                Expires in 7d
+                            </div>
+                        </div>
+
+                        <div class="tdeal__right">
+                            <span class="text-deal-coupon deal__coupon">
+                                FLY20-ABCD
+                            </span>
+
+                            <button
+                                class="deal__copy"
+                                type="button"
+                                aria-label="Copy coupon code"
+                            >
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <footer class="modal__footer">
+                    <button class="btn btn--modal" type="button">
+                        View all Unlocked Deals
+                        <span class="deal__count">4</span>
+                    </button>
+                </footer> -->
