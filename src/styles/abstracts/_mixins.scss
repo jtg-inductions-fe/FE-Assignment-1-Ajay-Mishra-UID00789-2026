@@ -112,29 +112,15 @@
 ///     );
 ///   }
 @mixin typography(
-    $family: null,
-    $size: null,
-    $height: null,
-    $weight: null,
-    $color: null
+    $family: $font-primary,
+    $size: $font-base,
+    $height: $line-height-tight,
+    $weight: $font-reg,
+    $color: $text
 ) {
-    @if $family {
-        font-family: $family;
-    }
-
-    @if $size {
-        font-size: $size;
-    }
-
-    @if $height {
-        line-height: $height;
-    }
-
-    @if $weight {
-        font-weight: $weight;
-    }
-
-    @if $color {
-        color: $color;
-    }
+    font-family: $family;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    color: $color;
 }

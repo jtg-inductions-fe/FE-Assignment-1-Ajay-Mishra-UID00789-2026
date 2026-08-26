@@ -96,9 +96,7 @@
         background-color: rgba($clr-black, 0.3);
 
         visibility: hidden;
-        transition:
-            opacity 300ms ease,
-            visibility 300ms ease;
+        transition: $fade-transition;
 
         pointer-events: none;
 
@@ -142,7 +140,7 @@
 
         pointer-events: none;
 
-        background: #ff5722;
+        background: $clr-orange;
         filter: blur(rem(125));
         opacity: 50%;
     }
@@ -178,13 +176,10 @@
             top: rem(-174);
             left: rem(-163);
         }
+
         &__cta {
             @include flex-center;
             justify-self: end;
-
-            .btn--ghost {
-                border: none;
-            }
         }
     }
 

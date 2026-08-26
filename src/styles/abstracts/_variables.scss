@@ -72,6 +72,17 @@ $font-semibold: 600;
 $font-bold: 700;
 $font-bolder: 900;
 
+// line heights
+$line-height-none: 1;
+$line-height-tight: 1.2;
+$line-height-normal: 1.4;
+$line-height-relaxed: 1.6;
+
+// transitions
+$fade-transition:
+    opacity 300ms ease,
+    visibility 300ms ease;
+
 // break points
 $tablet: 441px;
 $desktop: 1025px;

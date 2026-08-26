@@ -5,7 +5,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="icon" type="image/x-icon" href="/assets/images/logo.svg" />
     </head>
 
@@ -135,36 +141,36 @@
             <!-- Brands -->
             <section class="brands">
                 <div class="container brands__container">
-                    <ul class="brands-list">
-                        <li class="brands-list__item">
+                    <ul class="brands__list">
+                        <li class="brands__item">
                             <img
                                 src="assets/images/partner-brand-tripadvisor.svg"
                                 alt="Tripadvisor"
                             />
                         </li>
 
-                        <li class="brands-list__item">
+                        <li class="brands__item">
                             <img
                                 src="assets/images/partner-brand-expedia.svg"
                                 alt="Expedia"
                             />
                         </li>
 
-                        <li class="brands-list__item">
+                        <li class="brands__item">
                             <img
                                 src="assets/images/partner-brand-booking-dot-com.svg"
                                 alt="Booking.com"
                             />
                         </li>
 
-                        <li class="brands-list__item">
+                        <li class="brands__item">
                             <img
                                 src="assets/images/partner-brand-airbnb.svg"
                                 alt="Airbnb"
                             />
                         </li>
 
-                        <li class="brands-list__item">
+                        <li class="brands__item">
                             <img
                                 src="assets/images/partner-brand-orbitz.svg"
                                 alt="Orbitz"
@@ -495,17 +501,20 @@
                     alt=""
                     aria-hidden="true"
                 />
+
                 <section
                     class="footer__brand"
                     aria-labelledby="footer-brand-name"
                 >
                     <a href="/" class="footer__logo">
                         <img
+                            class="footer__logo-image"
                             src="/assets/images/logos/logo.svg"
                             alt=""
                             width="32"
                             height="32"
                         />
+
                         <span id="footer-brand-name" class="footer__brand-name">
                             Travlog
                         </span>
@@ -517,15 +526,18 @@
                         literature from 45 BC.
                     </p>
 
-                    <nav aria-label="Social media">
-                        <ul class="footer__social-links">
+                    <nav class="footer__social" aria-label="Social media">
+                        <ul class="footer__social-list">
                             <li class="footer__social-item">
                                 <a
                                     href="https://facebook.com/"
                                     class="footer__social-link"
                                     aria-label="Travlog on Facebook"
                                 >
-                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i
+                                        class="fa-brands fa-facebook footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
                                 </a>
                             </li>
 
@@ -535,7 +547,10 @@
                                     class="footer__social-link"
                                     aria-label="Travlog on Twitter"
                                 >
-                                    <i class="fa-brands fa-twitter"></i>
+                                    <i
+                                        class="fa-brands fa-twitter footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
                                 </a>
                             </li>
 
@@ -545,7 +560,10 @@
                                     class="footer__social-link"
                                     aria-label="Travlog on Instagram"
                                 >
-                                    <i class="fa-brands fa-instagram"></i>
+                                    <i
+                                        class="fa-brands fa-instagram footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
                                 </a>
                             </li>
                         </ul>
@@ -554,13 +572,15 @@
 
                 <nav class="footer__navigation" aria-label="Footer">
                     <section class="footer__group">
-                        <div>
-                            <h4>Company</h4>
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Company</h4>
+
                             <button
+                                type="button"
+                                class="footer__accordion-btn"
                                 aria-expanded="false"
-                                class="accordian-btn"
-                                aria-controls="company"
-                                aria-label="show company links"
+                                aria-controls="footer-company-links"
+                                aria-label="Show company links"
                             >
                                 <i
                                     class="fa-solid fa-chevron-down"
@@ -569,33 +589,49 @@
                             </button>
                         </div>
 
-                        <ul id="company">
-                            <li>
-                                <a class="text-link-secondary" href="/about"
-                                    >About</a
+                        <ul
+                            id="footer-company-links"
+                            class="footer__group-links"
+                        >
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/about"
                                 >
+                                    About
+                                </a>
                             </li>
-                            <li>
-                                <a class="text-link-secondary" href="/careers"
-                                    >Career</a
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/careers"
                                 >
+                                    Career
+                                </a>
                             </li>
-                            <li>
-                                <a class="text-link-secondary" href="/mobile"
-                                    >Mobile</a
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/mobile"
                                 >
+                                    Mobile
+                                </a>
                             </li>
                         </ul>
                     </section>
 
-                    <section id="contact" class="footer__group">
-                        <div>
-                            <h4>Contact</h4>
+                    <section class="footer__group">
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Contact</h4>
+
                             <button
+                                type="button"
+                                class="footer__accordion-btn"
                                 aria-expanded="false"
-                                class="accordian-btn"
-                                aria-controls="contact-links"
-                                aria-label="show contact links"
+                                aria-controls="footer-contact-links"
+                                aria-label="Show contact links"
                             >
                                 <i
                                     class="fa-solid fa-chevron-down"
@@ -603,40 +639,59 @@
                                 ></i>
                             </button>
                         </div>
-                        <ul id="contact-links">
-                            <li>
+
+                        <ul
+                            id="footer-contact-links"
+                            class="footer__group-links"
+                        >
+                            <li class="footer__group-item">
                                 <a
-                                    class="text-link-secondary"
+                                    class="footer__group-link text-link-secondary"
                                     href="/why-travlog"
-                                    >Why Travlog?</a
                                 >
+                                    Why Travlog?
+                                </a>
                             </li>
-                            <li>
-                                <a class="text-link-secondary" href="/partners"
-                                    >Partner with us</a
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/partners"
                                 >
+                                    Partner with us
+                                </a>
                             </li>
-                            <li>
-                                <a class="text-link-secondary" href="/faq"
-                                    >FAQs</a
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/faq"
                                 >
+                                    FAQs
+                                </a>
                             </li>
-                            <li>
-                                <a class="text-link-secondary" href="/blog"
-                                    >Blog</a
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/blog"
                                 >
+                                    Blog
+                                </a>
                             </li>
                         </ul>
                     </section>
 
                     <address class="footer__group">
-                        <div>
-                            <h4>Meet Us</h4>
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Meet Us</h4>
+
                             <button
+                                type="button"
+                                class="footer__accordion-btn"
                                 aria-expanded="false"
-                                class="accordian-btn"
-                                aria-controls="meetus"
-                                aria-label="show address information"
+                                aria-controls="footer-meet-us"
+                                aria-label="Show address information"
                             >
                                 <i
                                     class="fa-solid fa-chevron-down"
@@ -644,25 +699,33 @@
                                 ></i>
                             </button>
                         </div>
-                        <ul id="meetus">
-                            <li>
+
+                        <ul id="footer-meet-us" class="footer__group-links">
+                            <li class="footer__group-item">
                                 <a
-                                    class="text-link-secondary"
+                                    class="footer__group-link text-link-secondary"
                                     href="tel:+0092123456789"
-                                    >+00 92 1234 56789</a
                                 >
+                                    +00 92 1234 56789
+                                </a>
                             </li>
-                            <li>
+
+                            <li class="footer__group-item">
                                 <a
-                                    class="text-link-secondary"
+                                    class="footer__group-link text-link-secondary"
                                     href="mailto:info@travlog.com"
-                                    >info@travlog.com</a
                                 >
+                                    info@travlog.com
+                                </a>
                             </li>
-                            <li class="text-link-secondary">
-                                205. R Street,<br />
-                                New York<br />
-                                BD23200
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="https://google.com"
+                                >
+                                    205. R Street, New York BD23200
+                                </a>
                             </li>
                         </ul>
                     </address>

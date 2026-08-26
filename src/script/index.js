@@ -4,9 +4,9 @@ const menu = document.querySelector('.header__menu');
 const nav = document.querySelector('.header__nav');
 const overlay = document.querySelector('.header__nav-overlay');
 const closeBtn = document.querySelector('.header__nav-close-btn');
-const accordianBtns = document.querySelectorAll('.accordian-btn');
+const accordianBtns = document.querySelectorAll('.footer__accordion-btn');
 const mobileMedia = window.matchMedia('(width <= 1024px)');
-const footerLinks = document.querySelectorAll('.footer__navigation ul');
+const footerLinks = document.querySelectorAll('.footer__group-links');
 
 if (mobileMedia.matches) {
     nav.inert = true;
