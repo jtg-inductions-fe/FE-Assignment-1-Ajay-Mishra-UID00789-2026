@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(12);
+
+    width: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+
+    background: linear-gradient(
+        90deg,
+        rgba($clr-accent-1, 0.05),
+        rgba($clr-accent-2, 0.05)
+    );
+
+    border: 1px solid $clr-border-accent;
+    border-radius: $radius-xl;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include typography(
+            $font-secondary,
+            rem(14),
+            1em,
+            $font-semibold,
+            $clr-gray-600
+        );
+    }
+
+    &__meta {
+        @include typography(
+            $font-secondary,
+            rem(12),
+            1em,
+            $font-reg,
+            $clr-accent-2
+        );
+
+        margin-block-start: rem(3);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    &__code {
+        @include typography(
+            $font-special,
+            rem(12),
+            1em,
+            $font-bold,
+            $clr-black
+        );
+
+        padding-block: rem(4);
+        padding-inline: rem(10);
+
+        background-color: $clr-white;
+        border: 1px solid #e5e7eb;
+        border-radius: $radius-md;
+    }
+
+    &__action {
+        padding: rem(6);
+
+        color: $clr-accent-1;
+
+        transition: transform 150ms ease;
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        &:focus-visible {
+            outline: rem(2) solid $clr-accent-1;
+            outline-offset: rem(2);
+        }
+    }
+
+    &--muted {
+        background: $clr-gray-0;
+        border-color: $clr-gray-300;
+
+        .card__action {
+            color: $clr-gray-200;
+        }
+
+        .card__meta {
+            color: $clr-gray-300;
+        }
+    }
+}

@@ -17,6 +17,11 @@ let currentRotation = 0;
 const totalSections = 4;
 const spinDuration = 3000;
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+    }
+});
 specialDealsBtn.addEventListener('click', openModal);
 
 modal.addEventListener('click', (e) => {
@@ -474,18 +479,15 @@ function showAllWonDeals() {
 
                               return `
                               <div
-                                  class="
-                                      deal
-                                      ${expired ? 'expired' : ''}
-                                  "
+                                  class="card deal ${expired ? 'expired' : ''}"
                                   data-coupon="${deal.promoCode}"
                               >
-                                  <div class="deal__left">
-                                      <div class="text-deal deal__title">
+                                  <div class="card__content deal__left">
+                                      <div class="card__title text-deal deal__title">
                                           ${deal.label}
                                       </div>
 
-                                      <div class="text-deal-expiry deal__expiry">
+                                      <div class="card__meta text-deal-expiry deal__expiry">
                                           ${
                                               expired
                                                   ? 'Expired'
@@ -494,19 +496,20 @@ function showAllWonDeals() {
                                       </div>
                                   </div>
 
-                                  <div class="deal__right">
-                                      <span class="text-deal-coupon deal__coupon">
+                                  <div class="card__actions deal__right">
+                                      <span class="card__code text-deal-coupon deal__coupon">
                                           ${deal.promoCode}
                                       </span>
 
                                       <button
-                                          class="deal__copy"
+                                          class="card__action deal__copy"
                                           type="button"
                                           aria-label="Copy coupon code"
                                           ${expired ? 'disabled' : ''}
                                       >
                                           <i
                                               class="fa-regular fa-copy"
+                                              aria-hidden="true"
                                           ></i>
                                       </button>
                                   </div>

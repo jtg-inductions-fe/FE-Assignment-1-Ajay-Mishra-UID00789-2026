@@ -40,33 +40,19 @@ $modal-loading: #000000;
 
 // Wheel colors
 
-$wheel-section-1: #f4436c;
-$wheel-section-2: #7c3aed;
-$wheel-section-3: #fbbf24;
-$wheel-section-4: #06b6d4;
-$wheel-muted: #eeeeee;
-$wheel-pointer: #aaaaaa;
+$clr-accent-1: #f4436c;
+$clr-accent-2: #7c3aed;
+$clr-accent-3: #fbbf24;
+$clr-accent-4: #06b6d4;
+$clr-muted: $clr-gray-0;
+$clr-muted-dark: $clr-gray-200;
 
-// Deal colors
-$deal: #1f2937; // deal text color
-$deal-primary: #f4436c;
-$deal-secondary: #7c3aed;
-$deal-tertiary: #999999;
-$deal-bg-muted: #eeeeee;
-$deal-border: #f4436c33;
-$deal-border-muted: #999999;
+$clr-gray-300: #999999;
+$clr-gray-400: #9ca3af;
+$clr-gray-500: #111827;
+$clr-gray-600: #1f2937;
 
-// Modal button
-$modal-btn: #222831;
-$modal-btn-border: #eeeeee;
-
-$deal-active: #7c3aed;
-$deal-expired: #999999;
-
-// Button colors
-$btn-primary-text: #eeeeee;
-$btn-ghost-text: #222831;
-$btn-outline-text: #222831;
+$clr-border-accent: #f4436c33;
 
 $btn-primary-shadow:
     0 0 0 0 rgba($clr-black, 0.1),

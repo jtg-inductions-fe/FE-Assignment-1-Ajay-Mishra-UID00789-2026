@@ -192,7 +192,13 @@
     @include typography($font-secondary, rem(12), 1em, $font-bold, $clr-white);
 }
 .text-deal {
-    @include typography($font-secondary, rem(14), 1em, $font-semibold, $deal);
+    @include typography(
+        $font-secondary,
+        rem(14),
+        1em,
+        $font-semibold,
+        $clr-gray-600
+    );
 }
 
 .text-deal-expiry {
@@ -201,7 +207,7 @@
         rem(12),
         1em,
         $font-reg,
-        $deal-secondary
+        $clr-accent-2
     );
 }
 
