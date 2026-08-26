@@ -201,13 +201,7 @@
 }
 
 .text-modal-wheel {
-    @include typography(
-        $font-secondary,
-        rem(12),
-        1em,
-        $font-bold,
-        $neutral-100
-    );
+    @include typography($font-secondary, rem(12), 1em, $font-bold, $clr-white);
 }
 .text-deal {
     @include typography($font-secondary, rem(14), 1em, $font-semibold, $deal);
@@ -224,5 +218,5 @@
 }
 
 .text-deal-coupon {
-    @include typography($font-special, rem(12), 1em, $font-bold, $neutral-0);
+    @include typography($font-special, rem(12), 1em, $font-bold, $clr-black);
 }
