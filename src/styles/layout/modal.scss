@@ -7,7 +7,7 @@
 
     display: none;
 
-    background-color: rgba($neutral-0, 0.5);
+    background-color: rgba($clr-black, 0.5);
 
     // make display block when modal opens
     &.is-open {
@@ -25,7 +25,7 @@
 
         overflow: hidden;
 
-        background-color: $neutral-100;
+        background-color: $clr-white;
         border-radius: $radius-2xl;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
@@ -51,7 +51,7 @@
         position: relative;
 
         &:has(.wheel--loading) .wheel__pointer {
-            background-color: $gray-secondary;
+            background-color: $clr-gray-200;
         }
     }
 
@@ -63,11 +63,11 @@
         height: rem(227);
         margin: rem(26) auto rem(30);
 
-        border: rem(2) solid $neutral-100;
+        border: rem(2) solid $clr-white;
         border-radius: 50%;
         overflow: hidden;
 
-        box-shadow: 0 0 rem(50) rem(7) rgba($neutral-0, 0.25);
+        box-shadow: 0 0 rem(50) rem(7) rgba($clr-black, 0.25);
 
         // The wheel itself stays fixed.
         // Only .wheel__content rotates.
@@ -195,7 +195,7 @@
 
             letter-spacing: 0.04em;
 
-            background-color: $neutral-100;
+            background-color: $clr-white;
             border: 3px solid $wheel-section-1;
             border-radius: 50%;
 
@@ -203,7 +203,7 @@
 
             transform: translate(-50%, -50%);
 
-            box-shadow: 0 rem(2) rem(8) rgba($neutral-0, 0.12);
+            box-shadow: 0 rem(2) rem(8) rgba($clr-black, 0.12);
 
             transition: transform 150ms ease;
 
@@ -242,7 +242,7 @@
             rem(14),
             1em,
             $font-bold,
-            $gray-secondary
+            $clr-gray-200
         );
     }
 
@@ -301,7 +301,7 @@
             padding-block: rem(4);
             padding-inline: rem(10);
 
-            background-color: $neutral-100;
+            background-color: $clr-white;
             border: 1px solid #e5e7eb;
             border-radius: $radius-md;
         }
@@ -312,7 +312,7 @@
             border-color: $deal-border-muted;
 
             .deal__copy {
-                color: $gray-secondary;
+                color: $clr-gray-200;
             }
 
             .deal__expiry {
@@ -341,7 +341,7 @@
             rem(12),
             1em,
             $font-bold,
-            $neutral-0
+            $clr-black
         );
         text-align: center;
         margin-block: 0.5rem;
@@ -366,7 +366,7 @@
         font-size: rem(12);
         font-weight: $font-medium;
 
-        color: $neutral-100;
+        color: $clr-white;
         background: $deal-secondary;
 
         border-radius: 100%;
