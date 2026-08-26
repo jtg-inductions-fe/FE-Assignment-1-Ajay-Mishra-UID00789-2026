@@ -87,6 +87,9 @@
             transform: translateX(0);
         }
     }
+    &__mobile-cta {
+        text-align: center;
+    }
 
     &__nav-overlay {
         position: fixed;
@@ -150,12 +153,16 @@
     }
 
     @include tablet {
-        padding: rem(32) 0;
+        padding-block: rem(32);
 
         &__container {
             grid-template-columns: repeat(3, auto);
             justify-content: space-between;
             padding-inline: 4rem;
+        }
+
+        &__mobile-cta {
+            display: none;
         }
 
         &__menu {

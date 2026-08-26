@@ -106,27 +106,31 @@ function toggleDisclosure() {
  * @returns {void}
  */
 function trapFocus(e) {
-    if (!mobileMedia.matches) return;
     if (!nav.classList.contains('open')) return;
     if (e.key !== 'Tab') return;
 
+    const isMobile = window.matchMedia('(width <= 430px)').matches;
+    const isTablet = window.matchMedia('(width <= 1024px)').matches;
+
+    if (!isMobile && !isTablet) return;
+
     const focusable = nav.querySelectorAll(
-        '.header__nav-close-btn, .header__nav-link',
+        '.header__nav-close-btn, .header__nav-link, .header__mobile-cta .btn',
     );
 
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
+    const focusableElements = isMobile
+        ? Array.from(focusable).slice(0, 7)
+        : Array.from(focusable).slice(0, 5);
 
-    if (e.shiftKey) {
-        if (document.activeElement === first) {
-            last.focus();
-            e.preventDefault();
-        }
-    } else {
-        if (document.activeElement === last) {
-            first.focus();
-            e.preventDefault();
-        }
+    const first = focusableElements[0];
+    const last = focusableElements[focusableElements.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
     }
 }
 
