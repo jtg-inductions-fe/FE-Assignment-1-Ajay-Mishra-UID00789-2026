@@ -223,35 +223,35 @@
     }
 
     .wheel--loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .wheel__content {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        width: 100%;
-        height: 100%;
-    }
+        .wheel__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    .wheel__loading-text {
-        @include typography(
-            $font-secondary,
-            rem(14),
-            1em,
-            $font-bold,
-            $clr-gray-200
-        );
-    }
+            width: 100%;
+            height: 100%;
+        }
 
-    .wheel__spin {
-        display: none;
-    }
+        .wheel__loading-text {
+            @include typography(
+                $font-secondary,
+                rem(14),
+                1em,
+                $font-bold,
+                $clr-gray-200
+            );
+        }
 
-    box-shadow: none;
-}
+        .wheel__spin {
+            display: none;
+        }
+
+        box-shadow: none;
+    }
 
     // Deals
     .deals {
@@ -284,6 +284,12 @@
             padding: rem(6);
 
             color: $deal-primary;
+
+            transition: transform 150ms ease;
+
+            &:active {
+                transform: scale(0.9);
+            }
         }
 
         &__expiry {
