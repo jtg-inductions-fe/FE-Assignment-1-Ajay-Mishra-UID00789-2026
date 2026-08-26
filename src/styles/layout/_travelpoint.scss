@@ -30,7 +30,7 @@
     }
 
     &__label {
-        color: $secondary-color;
+        color: $clr-secondary;
     }
 
     &__media {
@@ -70,7 +70,7 @@
 
             min-height: rem(130);
 
-            border: 1px solid $travel-point-card-border-color;
+            border: 1px solid $clr-neutral-subtle;
             border-radius: rem(32);
 
             text-align: center;

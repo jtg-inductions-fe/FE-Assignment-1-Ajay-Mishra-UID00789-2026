@@ -47,9 +47,9 @@
         width: fit-content;
         margin-inline: auto;
 
-        color: $secondary-color;
+        color: $clr-secondary;
         border: 0;
-        box-shadow: $btn-shadow-2;
+        box-shadow: $btn-outline-shadow;
 
         i {
             font-size: rem(20);
@@ -61,7 +61,7 @@
         text-align: center;
         text-wrap: wrap;
         span {
-            color: $secondary-color;
+            color: $clr-secondary;
         }
     }
 
@@ -92,12 +92,12 @@
         }
 
         .btn--primary {
-            box-shadow: $btn-shadow-1;
+            box-shadow: $btn-primary-shadow;
         }
     }
 
     &__actions .btn__icon {
-        color: $primary-color;
+        color: $clr-primary;
         .btn__icon {
             font-size: rem(20);
         }

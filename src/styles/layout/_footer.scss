@@ -32,7 +32,7 @@
             $font-xl,
             rem(40),
             $font-bolder,
-            $gray-dark-color
+            $clr-gray-100
         );
     }
 
@@ -51,9 +51,9 @@
         height: 2rem;
         width: 2rem;
         border-radius: 100%;
-        background-color: $primary-color;
+        background-color: $clr-primary;
         i {
-            color: $neutral-color;
+            color: $clr-white;
         }
     }
 
@@ -67,7 +67,7 @@
         h4 {
             font-family: $font-primary;
             font-weight: $font-bold;
-            color: $gray-dark-color;
+            color: $clr-gray-100;
             font-size: rem(23);
         }
 
@@ -90,8 +90,8 @@
         height: rem(24);
         width: rem(24);
         border-radius: 100%;
-        border: 1px solid $accordian-btn-border-color;
-        color: $accordian-btn-text-color;
+        border: 1px solid $clr-border-ui;
+        color: $clr-text-ui;
     }
 
     @include tablet {

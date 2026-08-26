@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .text-display {
-    @include typography($font-primary, rem(40), 1.2em, $font-bold, $neutral-0);
+    @include typography($font-primary, rem(40), 1.2em, $font-bold, $clr-black);
 
     @include tablet {
         font-size: rem(56);
@@ -12,8 +12,8 @@
     }
 }
 
-.text-heading-lg {
-    @include typography($font-primary, 2rem, 1.2em, $font-bold, $gray-100);
+.text-heading--lg {
+    @include typography($font-primary, 2rem, 1.2em, $font-bold, $clr-gray-100);
 
     @include tablet {
         font-size: rem(40);
@@ -24,16 +24,28 @@
     }
 }
 
-.text-heading-md {
-    @include typography($font-primary, rem(24), 1.2em, $font-bolder, $gray-100);
+.text-heading--md {
+    @include typography(
+        $font-primary,
+        rem(24),
+        1.2em,
+        $font-bolder,
+        $clr-gray-100
+    );
 }
 
-.text-heading-sm {
-    @include typography($font-primary, rem(23), 1.2em, $font-bold, $gray-100);
+.text-heading--sm {
+    @include typography(
+        $font-primary,
+        rem(23),
+        1.2em,
+        $font-bold,
+        $clr-gray-100
+    );
 }
 
-.text-label {
-    @include typography($font-primary, 1rem, 1.2em, $font-bold, $pink);
+.text-eyebrow {
+    @include typography($font-primary, 1rem, 1.2em, $font-bold, $clr-secondary);
     letter-spacing: 0.2em;
     text-transform: uppercase;
 
@@ -42,8 +54,8 @@
     }
 }
 
-.text-section {
-    @include typography($font-secondary, 1rem, 1.6em, $font-reg, $gray-50);
+.text-body-primary {
+    @include typography($font-secondary, 1rem, 1.6em, $font-reg, $clr-gray-50);
 
     @include tablet {
         font-size: rem(18);
@@ -52,41 +64,47 @@
 
 .text-link {
     width: max-content;
-    @include typography($font-primary, rem(14), 1.2em, $font-bold, $link);
+    @include typography($font-primary, rem(14), 1.2em, $font-bold, $clr-link);
 
     &:hover {
-        color: $link-active;
+        color: $clr-link-active;
     }
 
     &--active {
-        color: $link-active;
+        color: $clr-link-active;
     }
 }
 
-.text-testimonial {
-    @include typography($font-primary, rem(18), 1.6em, $font-reg, $gray-75);
+.text-body-secondary {
+    @include typography(
+        $font-primary,
+        rem(18),
+        1.6em,
+        $font-reg,
+        $clr-text-secondary
+    );
 
     @include tablet {
         font-size: rem(23);
     }
 }
 
-.text-stat-value {
-    @include typography($font-primary, rem(35), 1.2em, $font-bold, $orange);
+.text-value {
+    @include typography($font-primary, rem(35), 1.2em, $font-bold, $clr-orange);
 }
 
-.text-stat-label {
-    @include typography($font-secondary, rem(18), 1.6em, $font-reg, $gray-100);
+.text-label {
+    @include typography(
+        $font-secondary,
+        rem(18),
+        1.6em,
+        $font-reg,
+        $clr-gray-100
+    );
 }
 
 .text-name {
-    @include typography(
-        $font-primary,
-        rem(28),
-        1.2em,
-        $font-bold,
-        $tertiary-color
-    );
+    @include typography($font-primary, rem(28), 1.2em, $font-bold, $clr-orange);
 }
 
 .text-role {
@@ -95,20 +113,26 @@
         rem(23),
         1.2em,
         $font-bold,
-        $testimonial-role-color
+        $clr-text-secondary
     );
 }
 
-.text-footer {
-    @include typography($font-primary, 1rem, 1.6em, $font-reg, $gray-50);
+.text-body-tertiary {
+    @include typography($font-primary, 1rem, 1.6em, $font-reg, $clr-gray-50);
 
     @include tablet {
         font-size: rem(23);
     }
 }
 
-.text-footer-link {
-    @include typography($font-secondary, 1rem, 1.6em, $font-reg, $gray-75);
+.text-link-secondary {
+    @include typography(
+        $font-secondary,
+        1rem,
+        1.6em,
+        $font-reg,
+        $clr-text-secondary
+    );
 
     @include tablet {
         font-size: rem(18);
@@ -116,7 +140,7 @@
 
     &:hover,
     &:active {
-        color: $gray-100;
+        color: $clr-link-active;
         text-decoration: underline;
     }
 }
