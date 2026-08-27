@@ -12,7 +12,7 @@
     }
 }
 
-.text-heading--lg {
+.text-heading-lg {
     @include typography($font-primary, 2rem, 1.2em, $font-bold, $clr-gray-100);
 
     @include tablet {
@@ -24,7 +24,7 @@
     }
 }
 
-.text-heading--md {
+.text-heading-md {
     @include typography(
         $font-primary,
         rem(24),
@@ -34,7 +34,7 @@
     );
 }
 
-.text-heading--sm {
+.text-heading-sm {
     @include typography(
         $font-primary,
         rem(23),
