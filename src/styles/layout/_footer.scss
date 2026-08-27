@@ -2,7 +2,7 @@
 
 .footer {
     padding-block: 4rem;
-
+    padding-block-start: 3.6rem;
     &__decoration {
         display: none;
     }
@@ -110,7 +110,7 @@
     }
 
     @include tablet {
-        margin-block-start: 6.5rem;
+        margin-block-start: 6rem;
 
         &__decoration {
             display: block;

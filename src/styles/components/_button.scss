@@ -92,7 +92,7 @@
     @include tablet {
         width: fit-content;
 
-        &--icon {
+        &--with-icon-only {
             width: rem(100);
             height: rem(100);
         }
