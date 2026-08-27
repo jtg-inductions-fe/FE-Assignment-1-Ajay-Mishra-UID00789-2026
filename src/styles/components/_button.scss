@@ -27,6 +27,10 @@
         border-color: $clr-primary;
         color: $clr-gray-0;
         background-color: $clr-primary;
+
+        &:hover {
+            background-color: $clr-primary-dark;
+        }
     }
 
     &--outline {
@@ -34,15 +38,47 @@
         color: $clr-dark;
         background-color: transparent;
         box-shadow: none;
+
+        &:hover {
+            background-color: $clr-primary;
+            color: $clr-white;
+        }
+
+        &:active {
+            transform: scale(1);
+        }
     }
 
     &--ghost {
         background-color: transparent;
-        color: $clr-dark;
+        color: $clr-text-primary-50;
         border-color: transparent;
+
+        &:hover {
+            color: $clr-text-primary;
+        }
     }
 
-    &--icon {
+    &--with-icon {
+        @include flex-center;
+        gap: rem(8);
+
+        .btn__icon {
+            @include flex-center;
+            color: $clr-primary;
+            height: rem(20);
+            width: rem(20);
+        }
+
+        &:hover {
+            color: $clr-white;
+            .btn__icon {
+                color: $clr-white;
+            }
+        }
+    }
+
+    &--with-icon-only {
         width: rem(64);
         height: rem(64);
         padding: 0;

@@ -13,7 +13,13 @@
 }
 
 .text-heading-lg {
-    @include typography($font-primary, 2rem, 1.2em, $font-bold, $clr-gray-100);
+    @include typography(
+        $font-primary,
+        2rem,
+        1.2em,
+        $font-bold,
+        $clr-text-primary
+    );
 
     @include tablet {
         font-size: rem(40);
@@ -30,7 +36,7 @@
         rem(24),
         1.2em,
         $font-bolder,
-        $clr-gray-100
+        $clr-text-primary
     );
 }
 
@@ -40,7 +46,7 @@
         rem(23),
         1.2em,
         $font-bold,
-        $clr-gray-100
+        $clr-text-primary
     );
 }
 
@@ -81,7 +87,7 @@
         rem(18),
         1.6em,
         $font-reg,
-        $clr-text-secondary
+        $clr-text-primary-75
     );
 
     @include tablet {
@@ -113,12 +119,18 @@
         rem(23),
         1.2em,
         $font-bold,
-        $clr-text-secondary
+        $clr-text-primary-50
     );
 }
 
 .text-body-tertiary {
-    @include typography($font-primary, 1rem, 1.6em, $font-reg, $clr-gray-50);
+    @include typography(
+        $font-primary,
+        1rem,
+        1.6em,
+        $font-reg,
+        $clr-text-primary-50
+    );
 
     @include tablet {
         font-size: rem(23);
@@ -131,7 +143,7 @@
         1rem,
         1.6em,
         $font-reg,
-        $clr-text-secondary
+        $clr-text-primary-75
     );
 
     @include tablet {

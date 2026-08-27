@@ -81,25 +81,8 @@
         margin-top: rem(32);
 
         .btn {
-            @include flex-center;
-            gap: rem(8);
             width: 100%;
             padding-block: rem(24);
-
-            i {
-                font-size: rem(20);
-            }
-        }
-
-        .btn--primary {
-            box-shadow: $btn-primary-shadow;
-        }
-    }
-
-    &__actions .btn__icon {
-        color: $clr-primary;
-        .btn__icon {
-            font-size: rem(20);
         }
     }
 

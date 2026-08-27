@@ -55,6 +55,10 @@
         height: 2rem;
         border-radius: 100%;
         background-color: $clr-primary;
+
+        &:hover {
+            background-color: $clr-primary-dark;
+        }
     }
 
     &__social-link {
@@ -100,9 +104,9 @@
 
         width: rem(24);
         height: rem(24);
-        border: 1px solid $clr-border-ui;
+        border: 1px solid $clr-ui-dark;
         border-radius: 100%;
-        color: $clr-text-ui;
+        color: $clr-ui-dark;
     }
 
     @include tablet {

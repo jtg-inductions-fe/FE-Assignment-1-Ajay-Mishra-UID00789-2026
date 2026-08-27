@@ -2,6 +2,7 @@
 
 // colors
 $clr-primary: #5d50c6;
+$clr-primary-dark: #463c99;
 $clr-secondary: #f85e9f;
 
 $clr-orange: #ff5722;
@@ -11,6 +12,8 @@ $clr-white: #ffffff;
 $clr-black: #000000;
 
 $clr-gray-0: #eeeeee;
+$clr-gray-5: #1918250d;
+$clr-gray-10: #1918251a;
 $clr-gray-50: #19182580;
 $clr-gray-75: #191825bf;
 $clr-gray-100: #191825;
@@ -20,15 +23,11 @@ $clr-dark: #222831;
 $clr-ui-dark: #292d32;
 
 // text colors
-$clr-text: $clr-gray-50;
-$clr-text-secondary: $clr-gray-75;
 $clr-text-primary: $clr-gray-100;
+$clr-text-primary-50: $clr-gray-50;
+$clr-text-primary-75: $clr-gray-75;
 $clr-link: $clr-gray-50;
 $clr-link-active: $clr-dark;
-$clr-text-ui: $clr-ui-dark;
-
-// borders
-$clr-border-ui: $clr-ui-dark;
 
 $clr-neutral-subtle: #1918251a;
 
