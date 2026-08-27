@@ -115,7 +115,7 @@ function trapFocus(e) {
     if (!isMobile && !isTablet) return;
 
     const focusable = nav.querySelectorAll(
-        '.header__nav-close-btn, .header__nav-link, .header__mobile-cta .btn',
+        '.header__nav-close-btn, .header__nav-link, .header__cta .btn',
     );
 
     const focusableElements = isMobile

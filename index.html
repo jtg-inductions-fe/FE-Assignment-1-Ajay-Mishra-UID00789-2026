@@ -20,65 +20,83 @@
         <header class="header">
             <div class="header__container">
                 <div class="header__decoration" aria-hidden="true"></div>
-                <div class="header__logo-wrapper">
-                    <a
-                        href="/"
-                        class="header__logo"
-                        aria-label="Go to home page"
-                    >
-                        <img
-                            src="/assets/images/logos/logo.svg"
-                            alt="Travlog"
-                        />
-                    </a>
-                </div>
                 <div class="header__nav-overlay" aria-hidden="true"></div>
+
+                <div class="header__group--brand">
+                    <div class="header__logo-wrapper">
+                        <a
+                            href="/"
+                            class="header__logo"
+                            aria-label="Go to home page"
+                        >
+                            <img
+                                src="/assets/images/logos/logo.svg"
+                                alt="Travlog"
+                            />
+                        </a>
+                    </div>
+                    <button
+                        class="header__menu"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false"
+                        aria-controls="main-navigation"
+                    >
+                        <span
+                            class="header__menu-line header__menu-line--1"
+                        ></span>
+                        <span
+                            class="header__menu-line header__menu-line--2"
+                        ></span>
+                        <span
+                            class="header__menu-line header__menu-line--3"
+                        ></span>
+                    </button>
+                </div>
 
                 <nav
                     class="header__nav"
                     id="main-navigation"
                     aria-label="Main navigation"
                 >
-                    <div class="header__menu-wrapper">
-                        <button
-                            class="header__nav-close-btn"
-                            aria-label="Close navigation menu"
-                        >
-                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                        </button>
+                    <div class="tablet-sidebar">
+                        <div class="header__menu-wrapper">
+                            <button
+                                class="header__nav-close-btn"
+                                aria-label="Close navigation menu"
+                            >
+                                <i
+                                    class="fa-solid fa-xmark"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+                        </div>
+
+                        <ul class="header__links">
+                            <a href="#hero" class="header__nav-link text-link"
+                                >Home</a
+                            >
+                            <a
+                                href="#discover"
+                                class="header__nav-link text-link"
+                                >Discover</a
+                            >
+                            <a href="#" class="header__nav-link text-link"
+                                >Special Deals</a
+                            >
+                            <a
+                                href="#contact"
+                                class="header__nav-link text-link"
+                                >Contact</a
+                            >
+                        </ul>
                     </div>
-                    <a href="#hero" class="header__nav-link text-link">Home</a>
-                    <a href="#discover" class="header__nav-link text-link"
-                        >Discover</a
-                    >
-                    <a href="#" class="header__nav-link text-link"
-                        >Special Deals</a
-                    >
-                    <a href="#contact" class="header__nav-link text-link"
-                        >Contact</a
-                    >
-                    <div class="header__mobile-cta">
+
+                    <div class="header__cta">
                         <button class="btn btn--ghost">Log in</button>
                         <button class="btn btn--primary">Sign up</button>
                     </div>
                 </nav>
-
-                <button
-                    class="header__menu"
-                    type="button"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false"
-                    aria-controls="main-navigation"
-                >
-                    <span class="header__menu-line header__menu-line--1"></span>
-                    <span class="header__menu-line header__menu-line--2"></span>
-                    <span class="header__menu-line header__menu-line--3"></span>
-                </button>
-
-                <div class="header__cta">
-                    <button class="btn btn--ghost">Log in</button>
-                    <button class="btn btn--primary">Sign up</button>
-                </div>
             </div>
         </header>
 
