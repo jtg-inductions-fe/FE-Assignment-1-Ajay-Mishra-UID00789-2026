@@ -1,0 +1,8 @@
+@use 'sass:math';
+
+@function rem($px, $base: 16) {
+    $pixel-unitless: math.div($px, (0 * $px + 1));
+    $base-unitless: math.div($base, (0 * $base + 1));
+
+    @return math.div($pixel-unitless, $base-unitless) * 1rem;
+}

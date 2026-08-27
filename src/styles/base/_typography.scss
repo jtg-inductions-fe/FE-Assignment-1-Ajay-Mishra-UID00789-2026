@@ -1,0 +1,158 @@
+@use '../abstracts' as *;
+
+.text-display {
+    @include typography($font-primary, rem(40), 1.2em, $font-bold, $clr-black);
+
+    @include tablet {
+        font-size: rem(56);
+    }
+
+    @include desktop {
+        font-size: rem(69);
+    }
+}
+
+.text-heading-lg {
+    @include typography(
+        $font-primary,
+        2rem,
+        1.2em,
+        $font-bold,
+        $clr-text-primary
+    );
+
+    @include tablet {
+        font-size: rem(40);
+    }
+
+    @include desktop {
+        font-size: rem(44);
+    }
+}
+
+.text-heading-md {
+    @include typography(
+        $font-primary,
+        rem(24),
+        1.2em,
+        $font-bolder,
+        $clr-text-primary
+    );
+}
+
+.text-heading-sm {
+    @include typography(
+        $font-primary,
+        rem(23),
+        1.2em,
+        $font-bold,
+        $clr-text-primary
+    );
+}
+
+.text-eyebrow {
+    @include typography($font-primary, 1rem, 1.2em, $font-bold, $clr-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: rem(23);
+    }
+}
+
+.text-body-primary {
+    @include typography($font-secondary, 1rem, 1.6em, $font-reg, $clr-gray-50);
+
+    @include tablet {
+        font-size: rem(18);
+    }
+}
+
+.text-link {
+    width: max-content;
+    @include typography($font-primary, rem(14), 1.2em, $font-bold, $clr-link);
+
+    &:hover {
+        color: $clr-link-active;
+    }
+
+    &--active {
+        color: $clr-link-active;
+    }
+}
+
+.text-body-secondary {
+    @include typography(
+        $font-primary,
+        rem(18),
+        1.6em,
+        $font-reg,
+        $clr-text-primary-75
+    );
+
+    @include tablet {
+        font-size: rem(23);
+    }
+}
+
+.text-value {
+    @include typography($font-primary, rem(35), 1.2em, $font-bold, $clr-orange);
+}
+
+.text-label {
+    @include typography(
+        $font-secondary,
+        rem(18),
+        1.6em,
+        $font-reg,
+        $clr-gray-100
+    );
+}
+
+.text-name {
+    @include typography($font-primary, rem(28), 1.2em, $font-bold, $clr-orange);
+}
+
+.text-role {
+    @include typography(
+        $font-primary,
+        rem(23),
+        1.2em,
+        $font-bold,
+        $clr-text-primary-50
+    );
+}
+
+.text-body-tertiary {
+    @include typography(
+        $font-primary,
+        1rem,
+        1.6em,
+        $font-reg,
+        $clr-text-primary-50
+    );
+
+    @include tablet {
+        font-size: rem(23);
+    }
+}
+
+.text-link-secondary {
+    @include typography(
+        $font-secondary,
+        1rem,
+        1.6em,
+        $font-reg,
+        $clr-text-primary-75
+    );
+
+    @include tablet {
+        font-size: rem(18);
+    }
+
+    &:hover,
+    &:active {
+        color: $clr-link-active;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,199 @@
+@use '../abstracts' as *;
+
+.testimonials {
+    padding-block: 4rem;
+    overflow: clip;
+
+    &__container {
+        max-width: rem(1440);
+
+        padding-inline: 1rem;
+        margin-inline: auto;
+
+        text-align: center;
+
+        position: relative;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__label {
+        color: $clr-secondary;
+    }
+
+    &__title {
+        margin-block-start: 1rem;
+        text-wrap: wrap;
+    }
+
+    &__control {
+        background-color: $clr-white;
+
+        border-color: $clr-neutral-subtle;
+
+        position: absolute;
+        top: 20%;
+        transform: translateY(50%);
+        z-index: 10;
+
+        &:hover {
+            background-color: $clr-primary;
+
+            color: $clr-white;
+        }
+
+        &--prev {
+            left: 1rem;
+        }
+
+        &--next {
+            right: 1rem;
+        }
+    }
+
+    .rating {
+        @include flex-center;
+        gap: rem(18.6);
+
+        height: 2rem;
+
+        &__star {
+            font-size: rem(24);
+            color: rgba(250, 205, 73, 1);
+        }
+    }
+
+    .slick-dots {
+        width: fit-content;
+
+        display: flex;
+        flex-direction: row;
+        gap: rem(24);
+
+        margin-inline: auto;
+        li {
+            height: rem(24);
+            aspect-ratio: 1/1;
+
+            border-radius: 100%;
+
+            background-color: $clr-neutral-subtle;
+        }
+
+        .slick-active {
+            background-color: $clr-secondary;
+        }
+        button {
+            font-size: 0;
+        }
+    }
+
+    .testimonial {
+        text-align: center;
+
+        padding-block-start: 0;
+
+        &__avatar {
+            width: rem(128);
+            height: rem(128);
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            overflow: hidden;
+            object-position: center;
+            object-fit: cover;
+            display: block;
+            margin-block: 4rem;
+            margin-inline: auto;
+        }
+
+        &__rating {
+            margin-block-start: 2rem;
+        }
+
+        &__description {
+            margin-block: 4rem;
+            margin-block-start: 4.5rem;
+            margin-inline: auto;
+            font-size: $font-lg;
+            line-height: 1.6em;
+        }
+    }
+
+    @include tablet {
+        padding-block-start: 0.5rem;
+
+        position: relative;
+
+        &__container {
+            background-image: url('../../assets/images/testimonial-bg.webp');
+            background-position: center;
+            background-size: cover;
+            gap: 4rem;
+            padding-inline: 4rem;
+        }
+
+        &__content {
+            max-width: rem(894);
+            margin-inline: auto;
+            margin-block-start: 1rem;
+        }
+
+        &__control--prev {
+            left: 3rem;
+        }
+
+        &__control--next {
+            right: 3rem;
+        }
+
+        .testimonial {
+            &__avatar {
+                margin-block: rem(56);
+            }
+
+            &__description {
+                font-size: $font-xl;
+                line-height: 1.6em;
+
+                max-width: 44ch;
+
+                margin-block: rem(56);
+            }
+        }
+
+        &__control {
+            transform: translateY(-50%);
+            top: 50%;
+            &--prev {
+                left: 4rem;
+            }
+
+            &--next {
+                right: 4rem;
+            }
+        }
+    }
+
+    @include desktop {
+        padding-block-start: 2.5rem;
+
+        .testimonial {
+            &__description {
+                max-width: 58ch;
+                margin-block: 4rem;
+            }
+        }
+
+        &__control {
+            &--prev {
+                left: 8rem;
+            }
+
+            &--next {
+                right: 8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+@use 'variables' as *;
+
+/// Centers content horizontally and vertically using Flexbox.
+///
+/// @name flex-center
+/// @group layout
+///
+/// @example scss -
+///   .card {
+///     @include flex-center;
+///   }
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/// Applies styles at the tablet breakpoint.
+///
+/// @name tablet
+/// @group responsive
+/// @content Styles to apply at the tablet breakpoint.
+///
+/// @example scss -
+///   .container {
+///     padding: 1rem;
+///
+///     @include tablet {
+///       padding: 2rem;
+///     }
+///   }
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+/// Applies styles at the desktop breakpoint.
+///
+/// @name desktop
+/// @group responsive
+/// @content Styles to apply at the desktop breakpoint.
+///
+/// @example scss -
+///   .container {
+///     padding: 2rem;
+///
+///     @include desktop {
+///       padding: 3rem;
+///     }
+///   }
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+/// Defines a custom font face.
+///
+/// @name font-face
+/// @group typography
+///
+/// @param {String} $name - Font family name.
+/// @param {String} $path - Font file path relative to the fonts directory.
+/// @param {Number|String} $weight [normal] - Font weight.
+/// @param {String} $style [normal] - Font style.
+/// @param {String} $display [swap] - Font loading strategy.
+///
+/// @example scss -
+///   @include font-face(
+///     'Inter',
+///     'Inter-Regular',
+///     400
+///   );
+@mixin font-face(
+    $name,
+    $path,
+    $weight: normal,
+    $style: normal,
+    $display: swap
+) {
+    @font-face {
+        font-family: $name;
+        src: url('/assets/fonts/#{$path}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: $display;
+    }
+}
+
+/// Applies typography properties selectively.
+///
+/// Only properties with a non-null value are output.
+///
+/// @name typography
+/// @group typography
+///
+/// @param {String} $family [null] - Font family.
+/// @param {Length} $size [null] - Font size.
+/// @param {Length|Number} $height [null] - Line height.
+/// @param {Number|String} $weight [null] - Font weight.
+/// @param {Color} $color [null] - Text color.
+///
+/// @example scss -
+///   .heading {
+///     @include typography(
+///       $family: 'Inter',
+///       $size: 2rem,
+///       $height: 1.2,
+///       $weight: 700,
+///       $color: #000
+///     );
+///   }
+@mixin typography(
+    $family: $font-primary,
+    $size: $font-base,
+    $height: $line-height-tight,
+    $weight: $font-reg,
+    $color: $text
+) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    color: $color;
+}

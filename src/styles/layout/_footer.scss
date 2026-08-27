@@ -1,0 +1,169 @@
+@use '../abstracts/' as *;
+
+.footer {
+    padding-block: 4rem;
+
+    &__decoration {
+        display: none;
+    }
+
+    &__container {
+        max-width: rem(1440);
+        margin-inline: auto;
+        padding-inline: 2rem;
+    }
+
+    &__brand {
+        text-align: left;
+    }
+
+    &__logo {
+        @include flex-center;
+
+        justify-content: flex-start;
+        width: fit-content;
+        gap: 1rem;
+    }
+
+    &__logo-image {
+        width: rem(40);
+        height: rem(40);
+    }
+
+    &__brand-name {
+        @include typography(
+            $font-primary,
+            $font-xl,
+            rem(40),
+            $font-bolder,
+            $clr-gray-100
+        );
+    }
+
+    &__brand-description {
+        margin-block-start: 2rem;
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 2rem;
+        margin-block-start: 2rem;
+    }
+
+    &__social-item {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        background-color: $clr-primary;
+
+        &:hover {
+            background-color: $clr-primary-dark;
+        }
+    }
+
+    &__social-link {
+        @include flex-center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &__social-icon {
+        color: $clr-white;
+    }
+
+    &__group-title {
+        font-family: $font-primary;
+        font-weight: $font-bold;
+        font-size: rem(23);
+        color: $clr-gray-100;
+    }
+
+    &__group-links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-block-start: 2rem;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        gap: rem(79);
+        margin-block-start: rem(87);
+    }
+
+    &__group-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__accordion-btn {
+        @include flex-center;
+
+        width: rem(24);
+        height: rem(24);
+        border: 1px solid $clr-ui-dark;
+        border-radius: 100%;
+        color: $clr-ui-dark;
+    }
+
+    @include tablet {
+        margin-block-start: 6.5rem;
+
+        &__decoration {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 7rem;
+        }
+
+        &__container {
+            position: relative;
+            padding-inline: 4rem;
+        }
+
+        &__brand-description {
+            font-size: $font-xl;
+        }
+
+        &__navigation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+            gap: 2rem;
+            margin-block-start: 4rem;
+        }
+
+        &__group-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-block-start: 2rem;
+        }
+
+        &__accordion-btn {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        margin-block-start: rem(144);
+        padding-block-start: rem(45);
+
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding-inline: 8rem;
+        }
+
+        &__navigation {
+            margin-block-start: 0;
+        }
+
+        &__social-list {
+            margin-block-start: 4rem;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use '../abstracts' as *;
+
+.btn {
+    border-radius: rem(100);
+    font-family: $font-primary;
+    font-weight: $font-bold;
+    font-size: $font-sm;
+    padding: rem(16) rem(32);
+    width: 100%;
+    line-height: 1.2;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+
+    .btn:focus-visible {
+        outline: rem(2) dotted currentColor;
+        outline-offset: rem(4);
+    }
+
+    &__icon {
+        @include flex-center;
+        width: rem(24);
+        height: rem(24);
+    }
+
+    &--primary {
+        border-color: $clr-primary;
+        color: $clr-gray-0;
+        background-color: $clr-primary;
+
+        &:hover {
+            background-color: $clr-primary-dark;
+        }
+    }
+
+    &--outline {
+        border-color: $clr-gray-0;
+        color: $clr-dark;
+        background-color: transparent;
+        box-shadow: none;
+
+        &:hover {
+            background-color: $clr-primary;
+            color: $clr-white;
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &--ghost {
+        background-color: transparent;
+        color: $clr-text-primary-50;
+        border-color: transparent;
+
+        &:hover {
+            color: $clr-text-primary;
+        }
+    }
+
+    &--with-icon {
+        @include flex-center;
+        gap: rem(8);
+
+        .btn__icon {
+            @include flex-center;
+            color: $clr-primary;
+            height: rem(20);
+            width: rem(20);
+        }
+
+        &:hover {
+            color: $clr-white;
+            .btn__icon {
+                color: $clr-white;
+            }
+        }
+    }
+
+    &--with-icon-only {
+        width: rem(64);
+        height: rem(64);
+        padding: 0;
+        border-radius: 50%;
+
+        .btn__icon {
+            font-size: rem(16);
+        }
+    }
+
+    @include tablet {
+        width: fit-content;
+
+        &--icon {
+            width: rem(100);
+            height: rem(100);
+        }
+    }
+}

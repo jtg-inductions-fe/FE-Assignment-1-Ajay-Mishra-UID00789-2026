@@ -1,0 +1,87 @@
+@use 'functions' as *;
+
+// colors
+$clr-primary: #5d50c6;
+$clr-primary-dark: #463c99;
+$clr-secondary: #f85e9f;
+
+$clr-orange: #ff5722;
+$clr-yellow: #facd49;
+
+$clr-white: #ffffff;
+$clr-black: #000000;
+
+$clr-gray-0: #eeeeee;
+$clr-gray-5: #1918250d;
+$clr-gray-10: #1918251a;
+$clr-gray-50: #19182580;
+$clr-gray-75: #191825bf;
+$clr-gray-100: #191825;
+
+$clr-dark: #222831;
+
+$clr-ui-dark: #292d32;
+
+// text colors
+$clr-text-primary: $clr-gray-100;
+$clr-text-primary-50: $clr-gray-50;
+$clr-text-primary-75: $clr-gray-75;
+$clr-link: $clr-gray-50;
+$clr-link-active: $clr-dark;
+
+$clr-neutral-subtle: #1918251a;
+
+// Shadows
+$btn-primary-shadow:
+    0 0 0 0 rgba($clr-black, 0.1),
+    0 5px 11px 0 rgba($clr-black, 0.1),
+    0 20px 20px 0 rgba($clr-black, 0.09),
+    0 45px 27px 0 rgba($clr-black, 0.05),
+    0 81px 32px 0 rgba($clr-black, 0.01),
+    0 126px 35px 0 rgba($clr-black, 0);
+
+$btn-outline-shadow:
+    0 0 0 0 rgba($clr-black, 0.07),
+    0 34px 75px 0 rgba($clr-black, 0.07),
+    0 137px 137px 0 rgba($clr-black, 0.06),
+    0 308px 185px 0 rgba($clr-black, 0.04),
+    0 548px 219px 0 rgba($clr-black, 0.01),
+    0 856px 240px 0 rgba($clr-black, 0);
+
+// font families
+$font-primary: 'Circular Std', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+// font sizes
+$font-xxs: rem(10);
+$font-xs: rem(12);
+$font-sm: rem(14);
+$font-base: rem(16);
+$font-lg: rem(18);
+$font-xl: rem(23);
+$font-2xl: rem(35);
+$font-3xl: rem(44);
+$font-4xl: rem(69);
+
+// font weights
+$font-thin: 300;
+$font-reg: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-bolder: 900;
+
+// line heights
+$line-height-none: 1;
+$line-height-tight: 1.2;
+$line-height-normal: 1.4;
+$line-height-relaxed: 1.6;
+
+// transitions
+$fade-transition:
+    opacity 300ms ease,
+    visibility 300ms ease;
+
+// break points
+$tablet: 441px;
+$desktop: 1025px;

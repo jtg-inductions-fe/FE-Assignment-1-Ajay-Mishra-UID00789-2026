@@ -1,13 +1,771 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Travlog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+            integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="icon" type="image/x-icon" href="/assets/images/logo.svg" />
     </head>
+
     <body>
-        <div>Hello World</div>
+        <!-- Header -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__decoration" aria-hidden="true"></div>
+                <div class="header__nav-overlay" aria-hidden="true"></div>
+
+                <div class="header__group--brand">
+                    <div class="header__logo-wrapper">
+                        <a
+                            href="/"
+                            class="header__logo"
+                            aria-label="Go to home page"
+                        >
+                            <img
+                                src="/assets/images/logos/logo.svg"
+                                alt="Travlog"
+                            />
+                        </a>
+                    </div>
+                    <button
+                        class="header__menu"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false"
+                        aria-controls="main-navigation"
+                    >
+                        <span
+                            class="header__menu-line header__menu-line--1"
+                        ></span>
+                        <span
+                            class="header__menu-line header__menu-line--2"
+                        ></span>
+                        <span
+                            class="header__menu-line header__menu-line--3"
+                        ></span>
+                    </button>
+                </div>
+
+                <nav
+                    class="header__nav"
+                    id="main-navigation"
+                    aria-label="Main navigation"
+                >
+                    <div class="tablet-sidebar">
+                        <div class="header__menu-wrapper">
+                            <button
+                                class="header__nav-close-btn"
+                                aria-label="Close navigation menu"
+                            >
+                                <i
+                                    class="fa-solid fa-xmark"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+                        </div>
+
+                        <ul class="header__links">
+                            <a href="#hero" class="header__nav-link text-link"
+                                >Home</a
+                            >
+                            <a
+                                href="#discover"
+                                class="header__nav-link text-link"
+                                >Discover</a
+                            >
+                            <a href="#" class="header__nav-link text-link"
+                                >Special Deals</a
+                            >
+                            <a
+                                href="#contact"
+                                class="header__nav-link text-link"
+                                >Contact</a
+                            >
+                        </ul>
+                    </div>
+
+                    <div class="header__cta">
+                        <button class="btn btn--ghost">Log in</button>
+                        <button class="btn btn--primary">Sign up</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero__container">
+                    <img
+                        src="assets/images/triangles.svg"
+                        class="hero__triangles"
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                    />
+                    <div class="hero__media">
+                        <picture>
+                            <source
+                                srcset="assets/images/hero-desktop.webp"
+                                media="(min-width: 430px)"
+                            />
+
+                            <img
+                                src="assets/images/hero-mobile.webp"
+                                alt="Travel destination"
+                            />
+                        </picture>
+                    </div>
+
+                    <div class="hero__content">
+                        <div class="hero__tag btn">
+                            <span>Explore the world!</span>
+                            <i
+                                class="color-secondary fa-solid fa-briefcase"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h1 class="hero__title text-display">
+                            Travel <span>top destination</span> of the world
+                        </h1>
+
+                        <p class="hero__description text-body-primary">
+                            We always make our customer happy by
+                            <span>providing</span> as many choices as possible
+                        </p>
+
+                        <div class="hero__actions">
+                            <button type="button" class="btn btn--primary">
+                                Get Started
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn btn--outline btn--with-icon"
+                            >
+                                <i
+                                    class="btn__icon fa-solid fa-circle-play"
+                                    aria-hidden="true"
+                                ></i>
+                                <span>Watch Demo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brands -->
+            <section class="brands">
+                <div class="container brands__container">
+                    <ul class="brands__list">
+                        <li class="brands__item">
+                            <img
+                                src="assets/images/partner-brand-tripadvisor.svg"
+                                alt="Tripadvisor"
+                            />
+                        </li>
+
+                        <li class="brands__item">
+                            <img
+                                src="assets/images/partner-brand-expedia.svg"
+                                alt="Expedia"
+                            />
+                        </li>
+
+                        <li class="brands__item">
+                            <img
+                                src="assets/images/partner-brand-booking-dot-com.svg"
+                                alt="Booking.com"
+                            />
+                        </li>
+
+                        <li class="brands__item">
+                            <img
+                                src="assets/images/partner-brand-airbnb.svg"
+                                alt="Airbnb"
+                            />
+                        </li>
+
+                        <li class="brands__item">
+                            <img
+                                src="assets/images/partner-brand-orbitz.svg"
+                                alt="Orbitz"
+                            />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Travel point -->
+            <section id="discover" class="travelpoint">
+                <div class="travelpoint__container">
+                    <div class="travelpoint__decoration"></div>
+                    <div class="travelpoint__media">
+                        <picture>
+                            <source
+                                srcset="assets/images/travelpoint-desktop.webp"
+                                media="(min-width:1024px)"
+                            />
+                            <source
+                                srcset="assets/images/travelpoint-tablet.webp"
+                                media="(min-width:430px)"
+                            />
+                            <img
+                                src="assets/images/travelpoint-mobile.webp"
+                                alt="hero image"
+                            />
+                        </picture>
+                    </div>
+
+                    <div class="travelpoint__content">
+                        <div class="travelpoint__heading text-heading-lg">
+                            <h3 class="label travelpoint__label text-eyebrow">
+                                TRAVEL POINT
+                            </h3>
+
+                            <h2 class="travelpoint__title heading-2">
+                                We helping you find your dream location
+                            </h2>
+                        </div>
+
+                        <p class="travelpoint__description text-body-primary">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin Literature from 45 BC.
+                        </p>
+
+                        <ul class="stats">
+                            <li class="stats__item">
+                                <span class="stats__value text-value"
+                                    >500+</span
+                                >
+                                <span class="stats__label text-label"
+                                    >Holiday Package</span
+                                >
+                            </li>
+
+                            <li class="stats__item">
+                                <img
+                                    class="stats__badge"
+                                    src="/assets/images/badge.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                                <span class="stats__value text-value">100</span>
+                                <span class="stats__label text-label"
+                                    >Luxury Hotel</span
+                                >
+                            </li>
+
+                            <li class="stats__item">
+                                <span class="stats__value text-value">7</span>
+                                <span class="stats__label text-label"
+                                    >Premium Airlines</span
+                                >
+                            </li>
+
+                            <li class="stats__item">
+                                <span class="stats__value text-value">2k+</span>
+                                <span class="stats__label text-label"
+                                    >Happy Customer</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials" aria-labelledby="testimonials-title">
+                <div class="testimonials__container">
+                    <div class="testimonials__content">
+                        <p class="testimonials__label text-eyebrow">
+                            TESTIMONIALS
+                        </p>
+
+                        <h2
+                            id="testimonials-title"
+                            class="testimonials__title text-heading-lg"
+                        >
+                            Trust our clients
+                        </h2>
+                    </div>
+
+                    <div class="testimonials__carousel">
+                        <!-- Slick slider -->
+                        <button
+                            class="btn btn--icon testimonials__control testimonials__control--prev"
+                            type="button"
+                            aria-label="Previous Testimonial"
+                        >
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+
+                        <button
+                            class="btn btn--icon testimonials__control testimonials__control--next"
+                            type="button"
+                            aria-label="Next Testimonial"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div
+                            class="testimonials__slider"
+                            aria-label="Client testimonials"
+                        >
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
+                                            Mark Smith
+                                        </span>
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description text-body-secondary"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
+                                            Mark Smith
+                                        </span>
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description text-body-secondary"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+
+                            <article class="testimonial">
+                                <figure class="testimonial__content">
+                                    <img
+                                        class="testimonial__avatar"
+                                        src="/assets/images/user.webp"
+                                        alt="Bob bobber"
+                                        width="128"
+                                        height="128"
+                                    />
+
+                                    <figcaption class="testimonial__author">
+                                        <span
+                                            class="testimonial__name text-name"
+                                        >
+                                            Mark Smith
+                                        </span>
+                                        <span
+                                            class="testimonial__role text-role"
+                                        >
+                                            / Travel Enthusiast
+                                        </span>
+                                    </figcaption>
+
+                                    <div
+                                        class="testimonial__rating"
+                                        role="img"
+                                        aria-label="5 out of 5 stars"
+                                    >
+                                        <div class="rating" aria-hidden="true">
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <i
+                                                class="rating__star fa-solid fa-star"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                    </div>
+
+                                    <blockquote
+                                        class="testimonial__description text-body-secondary"
+                                    >
+                                        Contrary to popular belief, Lorem Ipsum
+                                        is not simply random text. It has roots
+                                        in a piece of classical Latin Literature
+                                        from 45 BC.
+                                    </blockquote>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <img
+                    class="footer__decoration"
+                    src="/assets/images/footer-pattern.svg"
+                    alt=""
+                    aria-hidden="true"
+                />
+
+                <section
+                    class="footer__brand"
+                    aria-labelledby="footer-brand-name"
+                >
+                    <a href="/" class="footer__logo">
+                        <img
+                            class="footer__logo-image"
+                            src="/assets/images/logos/logo.svg"
+                            alt=""
+                            width="32"
+                            height="32"
+                        />
+
+                        <span id="footer-brand-name" class="footer__brand-name">
+                            Travlog
+                        </span>
+                    </a>
+
+                    <p class="footer__brand-description text-body-tertiary">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+
+                    <nav class="footer__social" aria-label="Social media">
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://facebook.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Facebook"
+                                >
+                                    <i
+                                        class="fa-brands fa-facebook footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
+                                </a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://twitter.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Twitter"
+                                >
+                                    <i
+                                        class="fa-brands fa-twitter footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
+                                </a>
+                            </li>
+
+                            <li class="footer__social-item">
+                                <a
+                                    href="https://instagram.com/"
+                                    class="footer__social-link"
+                                    aria-label="Travlog on Instagram"
+                                >
+                                    <i
+                                        class="fa-brands fa-instagram footer__social-icon"
+                                        aria-hidden="true"
+                                    ></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <nav class="footer__navigation" aria-label="Footer">
+                    <section class="footer__group">
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Company</h4>
+
+                            <button
+                                type="button"
+                                class="footer__accordion-btn"
+                                aria-expanded="false"
+                                aria-controls="footer-company-links"
+                                aria-label="Show company links"
+                            >
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+                        </div>
+
+                        <ul
+                            id="footer-company-links"
+                            class="footer__group-links"
+                        >
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/about"
+                                >
+                                    About
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/careers"
+                                >
+                                    Career
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/mobile"
+                                >
+                                    Mobile
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="footer__group">
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Contact</h4>
+
+                            <button
+                                type="button"
+                                class="footer__accordion-btn"
+                                aria-expanded="false"
+                                aria-controls="footer-contact-links"
+                                aria-label="Show contact links"
+                            >
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+                        </div>
+
+                        <ul
+                            id="footer-contact-links"
+                            class="footer__group-links"
+                        >
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/why-travlog"
+                                >
+                                    Why Travlog?
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/partners"
+                                >
+                                    Partner with us
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/faq"
+                                >
+                                    FAQs
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="/blog"
+                                >
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <address class="footer__group">
+                        <div class="footer__group-header">
+                            <h4 class="footer__group-title">Meet Us</h4>
+
+                            <button
+                                type="button"
+                                class="footer__accordion-btn"
+                                aria-expanded="false"
+                                aria-controls="footer-meet-us"
+                                aria-label="Show address information"
+                            >
+                                <i
+                                    class="fa-solid fa-chevron-down"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+                        </div>
+
+                        <ul id="footer-meet-us" class="footer__group-links">
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="tel:+0092123456789"
+                                >
+                                    +00 92 1234 56789
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="mailto:info@travlog.com"
+                                >
+                                    info@travlog.com
+                                </a>
+                            </li>
+
+                            <li class="footer__group-item">
+                                <a
+                                    class="footer__group-link text-link-secondary"
+                                    href="https://google.com"
+                                >
+                                    205. R Street, New York BD23200
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </nav>
+            </div>
+        </footer>
+        <script
+            type="text/javascript"
+            src="//code.jquery.com/jquery-1.11.0.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+        ></script>
+        <script type="text/javascript" src="./src/script/slick.min.js"></script>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
