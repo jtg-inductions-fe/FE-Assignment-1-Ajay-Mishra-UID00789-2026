@@ -13,6 +13,7 @@ $clr-black: #000000;
 
 $clr-gray-0: #eeeeee;
 $clr-gray-5: #1918250d;
+
 $clr-gray-10: #1918251a;
 $clr-gray-50: #19182580;
 $clr-gray-75: #191825bf;
@@ -102,7 +103,9 @@ $fade-transition:
 
 // break points
 $tablet: 441px;
+$tablet-large: 768px;
 $desktop: 1025px;
+$desktop-large: 1440px;
 
 // Border radius
 $radius-none: 0;
@@ -113,3 +116,7 @@ $radius-lg: rem(12);
 $radius-xl: rem(16);
 $radius-2xl: rem(24);
 $radius-full: 9999px;
+
+// Focus
+$focus-outline: 2px solid $clr-primary;
+$focus-outline-offset: 2px;

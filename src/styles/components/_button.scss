@@ -12,10 +12,10 @@
     border-style: solid;
     cursor: pointer;
 
-    .btn:focus-visible {
-        outline: rem(2) dotted currentColor;
-        outline-offset: rem(4);
-    }
+    // .btn:focus-visible {
+    //     outline: rem(2) dotted currentColor;
+    //     outline-offset: rem(4);
+    // }
 
     &__icon {
         @include flex-center;

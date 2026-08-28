@@ -35,6 +35,27 @@
     }
 }
 
+/// Applies styles at the large tablet breakpoint.
+///
+/// @name tablet-lg
+/// @group responsive
+/// @content Styles to apply at the large tablet breakpoint.
+///
+/// @example scss -
+///   .container {
+///     padding: 2rem;
+///
+///     @include tablet-lg {
+///       padding: 3rem;
+///     }
+///   }
+
+@mixin tablet-large {
+    @media screen and (min-width: $tablet-large) {
+        @content;
+    }
+}
+
 /// Applies styles at the desktop breakpoint.
 ///
 /// @name desktop
@@ -51,6 +72,12 @@
 ///   }
 @mixin desktop {
     @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media screen and (min-width: $desktop-large) {
         @content;
     }
 }

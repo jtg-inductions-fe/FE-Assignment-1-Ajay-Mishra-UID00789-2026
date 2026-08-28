@@ -59,7 +59,7 @@
                     id="main-navigation"
                     aria-label="Main navigation"
                 >
-                    <div class="tablet-sidebar">
+                    <div class="header__tablet-sidebar">
                         <div class="header__menu-wrapper">
                             <button
                                 class="header__nav-close-btn"
@@ -71,27 +71,37 @@
                                 ></i>
                             </button>
                         </div>
-
                         <ul class="header__links">
-                            <a href="#hero" class="header__nav-link text-link"
-                                >Home</a
-                            >
-                            <a
-                                href="#discover"
-                                class="header__nav-link text-link"
-                                >Discover</a
-                            >
-                            <a
-                                id="special-deals"
-                                href="#"
-                                class="header__nav-link text-link"
-                                >Special Deals</a
-                            >
-                            <a
-                                href="#contact"
-                                class="header__nav-link text-link"
-                                >Contact</a
-                            >
+                            <li>
+                                <a
+                                    href="#hero"
+                                    class="header__nav-link text-link"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#discover"
+                                    class="header__nav-link text-link"
+                                    >Discover</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    id="special-deals"
+                                    href="#"
+                                    class="header__nav-link text-link"
+                                >
+                                    Special Deals
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#contact"
+                                    class="header__nav-link text-link"
+                                    >Contact</a
+                                >
+                            </li>
                         </ul>
                     </div>
 
@@ -146,7 +156,7 @@
                             <span>providing</span> as many choices as possible
                         </p>
 
-                        <div class="hero__actions">
+                        <div class="hero__cta">
                             <button type="button" class="btn btn--primary">
                                 Get Started
                             </button>
@@ -563,7 +573,7 @@
                                     aria-label="Travlog on Facebook"
                                 >
                                     <i
-                                        class="fa-brands fa-facebook footer__social-icon"
+                                        class="fa-brands fa-facebook-f footer__social-icon"
                                         aria-hidden="true"
                                     ></i>
                                 </a>
@@ -845,7 +855,12 @@
             type="text/javascript"
             src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
         ></script>
-        <script type="text/javascript" src="./src/script/slick.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
         <script type="module" src="./src/script/index.js"></script>
         <script type="module" src="./src/script/deals.js"></script>
     </body>
