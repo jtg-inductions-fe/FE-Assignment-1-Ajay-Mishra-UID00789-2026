@@ -479,7 +479,7 @@ function showAllWonDeals() {
 
                               return `
                               <div
-                                  class="card deal ${expired ? 'expired' : ''}"
+                                  class="card deal ${expired ? 'card--muted' : ''}"
                                   data-coupon="${deal.promoCode}"
                               >
                                   <div class="card__content deal__left">
