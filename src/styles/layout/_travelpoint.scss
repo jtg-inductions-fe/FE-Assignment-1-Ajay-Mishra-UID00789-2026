@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .travelpoint {
-    padding-block: 4rem;
+    padding-block-end: 4rem;
     padding-block-start: 2rem;
 
     &__container {
@@ -37,18 +37,18 @@
         width: 100%;
         max-width: rem(428);
         aspect-ratio: 428 / 342;
-
         margin-inline: auto;
+    }
 
-        picture,
-        img {
-            display: block;
-            margin-inline: auto;
-        }
+    &__picture {
+        display: block;
+    }
 
-        img {
-            height: auto;
-        }
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-inline: auto;
     }
 
     .stats {
@@ -88,6 +88,7 @@
     @include tablet {
         padding-block-end: 0;
         padding-block-start: 4rem;
+
         &__container {
             gap: 4rem;
         }
@@ -117,15 +118,10 @@
 
         &__media {
             max-width: 100%;
+        }
 
-            picture,
-            img {
-                width: 100%;
-            }
-
-            img {
-                height: auto;
-            }
+        &__img {
+            height: auto;
         }
 
         .stats {

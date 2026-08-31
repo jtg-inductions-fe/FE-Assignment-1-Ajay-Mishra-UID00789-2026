@@ -125,13 +125,15 @@
                         role="presentation"
                     />
                     <div class="hero__media">
-                        <picture>
+                        <picture class="hero__picture">
                             <source
+                                class="hero__image-source"
                                 srcset="assets/images/hero-desktop.webp"
                                 media="(min-width: 430px)"
                             />
 
                             <img
+                                class="hero__img"
                                 src="assets/images/hero-mobile.webp"
                                 alt="Travel destination"
                             />
@@ -140,30 +142,42 @@
 
                     <div class="hero__content">
                         <div class="hero__tag btn">
-                            <span>Explore the world!</span>
+                            <span class="hero__tag-text"
+                                >Explore the world!</span
+                            >
                             <i
-                                class="color-secondary fa-solid fa-briefcase"
+                                class="color-secondary fa-solid fa-briefcase hero__tag-icon"
                                 aria-hidden="true"
                             ></i>
                         </div>
 
                         <h1 class="hero__title text-display">
-                            Travel <span>top destination</span> of the world
+                            Travel
+                            <span class="hero__title-highlight"
+                                >top destination</span
+                            >
+                            of the world
                         </h1>
 
                         <p class="hero__description text-body-primary">
                             We always make our customer happy by
-                            <span>providing</span> as many choices as possible
+                            <span class="hero__description-break"
+                                >providing</span
+                            >
+                            as many choices as possible
                         </p>
 
                         <div class="hero__cta">
-                            <button type="button" class="btn btn--primary">
+                            <button
+                                type="button"
+                                class="hero__cta-btn btn btn--primary"
+                            >
                                 Get Started
                             </button>
 
                             <button
                                 type="button"
-                                class="btn btn--outline btn--with-icon"
+                                class="hero__cta-btn btn btn--outline btn--with-icon"
                             >
                                 <i
                                     class="btn__icon fa-solid fa-circle-play"
@@ -182,6 +196,7 @@
                     <ul class="brands__list">
                         <li class="brands__item">
                             <img
+                                class="brands__img"
                                 src="assets/images/partner-brand-tripadvisor.svg"
                                 alt="Tripadvisor"
                             />
@@ -189,6 +204,7 @@
 
                         <li class="brands__item">
                             <img
+                                class="brands__img"
                                 src="assets/images/partner-brand-expedia.svg"
                                 alt="Expedia"
                             />
@@ -196,6 +212,7 @@
 
                         <li class="brands__item">
                             <img
+                                class="brands__img"
                                 src="assets/images/partner-brand-booking-dot-com.svg"
                                 alt="Booking.com"
                             />
@@ -203,6 +220,7 @@
 
                         <li class="brands__item">
                             <img
+                                class="brands__img"
                                 src="assets/images/partner-brand-airbnb.svg"
                                 alt="Airbnb"
                             />
@@ -210,6 +228,7 @@
 
                         <li class="brands__item">
                             <img
+                                class="brands__img"
                                 src="assets/images/partner-brand-orbitz.svg"
                                 alt="Orbitz"
                             />
@@ -223,7 +242,7 @@
                 <div class="travelpoint__container">
                     <div class="travelpoint__decoration"></div>
                     <div class="travelpoint__media">
-                        <picture>
+                        <picture class="travelpoint__picture">
                             <source
                                 srcset="assets/images/travelpoint-desktop.webp"
                                 media="(min-width:1024px)"
@@ -233,6 +252,7 @@
                                 media="(min-width:430px)"
                             />
                             <img
+                                class="travelpoint__img"
                                 src="assets/images/travelpoint-mobile.webp"
                                 alt="hero image"
                             />
@@ -316,7 +336,7 @@
                     <div class="testimonials__carousel">
                         <!-- Slick slider -->
                         <button
-                            class="btn btn--with-icon-only testimonials__control testimonials__control--prev"
+                            class="btn btn--icon-only testimonials__control testimonials__control--prev"
                             type="button"
                             aria-label="Previous Testimonial"
                         >
@@ -327,7 +347,7 @@
                         </button>
 
                         <button
-                            class="btn btn--with-icon-only testimonials__control testimonials__control--next"
+                            class="btn btn--icon-only testimonials__control testimonials__control--next"
                             type="button"
                             aria-label="Next Testimonial"
                         >
@@ -780,14 +800,14 @@
         >
             <div class="modal__container">
                 <header class="modal__header">
-                    <p class="modal__eyebrow text-modal-eyebrow">
+                    <p class="modal__eyebrow text-xs">
                         <i class="fa-solid fa-gift" aria-hidden="true"></i>
                         <span>Special deals</span>
                     </p>
 
-                    <h2 class="modal__title text-modal-title">Spin & Win!</h2>
+                    <h2 class="modal__title text-lg-plus">Spin & Win!</h2>
 
-                    <p class="modal__subtitle text-modal-subtitle">
+                    <p class="modal__subtitle text-xs">
                         Tap the center of the wheel to win
                     </p>
 
@@ -807,18 +827,14 @@
 
                     <div class="card deal">
                         <div class="card__content deal__left">
-                            <div
-                                class="card__title text-deal deal__title"
-                            ></div>
+                            <div class="card__title text-sm deal__title"></div>
 
-                            <div
-                                class="card__meta text-deal-expiry deal__expiry"
-                            ></div>
+                            <div class="card__meta text-xs deal__expiry"></div>
                         </div>
 
                         <div class="card__actions deal__right">
                             <span
-                                class="card__code text-deal-coupon deal__coupon"
+                                class="card__badge text-xs deal__coupon"
                             ></span>
 
                             <button
@@ -862,6 +878,7 @@
             referrerpolicy="no-referrer"
         ></script>
         <script type="module" src="./src/script/index.js"></script>
+        <script src="./src/script/slick.js"></script>
         <script type="module" src="./src/script/deals.js"></script>
     </body>
 </html>

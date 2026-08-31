@@ -10,12 +10,6 @@
     margin-inline: auto;
     padding: 1rem;
 
-    background: linear-gradient(
-        90deg,
-        rgba($clr-accent-1, 0.05),
-        rgba($clr-accent-2, 0.05)
-    );
-
     border: 1px solid $clr-border-accent;
     border-radius: $radius-xl;
 
@@ -52,7 +46,7 @@
         gap: 0.5rem;
     }
 
-    &__code {
+    &__badge {
         @include typography(
             $font-special,
             rem(12),

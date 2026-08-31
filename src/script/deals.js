@@ -1,21 +1,23 @@
+import {
+    API_URL,
+    TOTAL_SECTIONS as totalSections,
+    SPIN_DURATION as spinDuration,
+} from './constants.js';
+import { getWonDeals, saveWonDeals, clearWonDeals } from './storage.js';
+import { getDeals } from './api.js';
+import { isDealExpired, getDaysLeft, copy } from './utils.js';
+
 const specialDealsBtn = document.querySelector('#special-deals');
 const modal = document.querySelector('.modal');
 const modalBody = document.querySelector('.modal__body');
 
-const API_URL =
-    'https://gist.githubusercontent.com/ameer-wajid-ali/1f29ebee4295cede36f8d74b45e576df/raw/122966c9a123861249f173911d8d93a76dc06d7a/';
-
 let deals = [];
 let wheelDeals = [];
-let wonDeals = JSON.parse(localStorage.getItem('wonDeals')) || [];
-
+let wonDeals = getWonDeals();
 let currentWin = null;
 let isLoading = false;
 let isSpinning = false;
 let currentRotation = 0;
-
-const totalSections = 4;
-const spinDuration = 3000;
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) {
@@ -48,6 +50,7 @@ modal.addEventListener('click', (e) => {
     } else if (e.target.closest('.wheel__spin')) {
         spinWheel();
     } else if (e.target.closest('#view-all-deals')) {
+        if (isSpinning) return;
         showAllWonDeals();
     } else if (e.target.closest('#back-to-spin')) {
         showWheelView();
@@ -60,6 +63,8 @@ modal.addEventListener('click', (e) => {
  * closes the modal
  */
 function closeModal() {
+    specialDealsBtn.focus();
+
     modal.setAttribute('aria-hidden', 'true');
     modal.classList.remove('is-open');
 
@@ -120,7 +125,7 @@ function renderLoadingWheel() {
 
             <div class="wheel wheel--loading">
                 <div class="wheel__content">
-                    <span class="text-modal-loading">
+                    <span class="wheel__text text-xs">
                         Loading...
                     </span>
                 </div>
@@ -164,7 +169,7 @@ function renderWheel(dealsToRender) {
                                 >
                                     <span
                                         class="
-                                            text-modal-wheel
+                                            text-xs
                                             wheel__label
                                             wheel__label--${dealIndex + 1}
                                         "
@@ -229,7 +234,7 @@ function getWheelDeals() {
     if (availableDeals.length < totalSections) {
         wonDeals = [];
 
-        localStorage.removeItem('wonDeals');
+        clearWonDeals();
 
         availableDeals = [...deals];
     }
@@ -237,30 +242,6 @@ function getWheelDeals() {
     return availableDeals
         .sort(() => Math.random() - 0.5)
         .slice(0, totalSections);
-}
-
-/**
- * gets the deals from the API
- *
- * @returns {Promise<Array>} available deals
- */
-async function getDeals() {
-    if (deals.length) {
-        return deals;
-    }
-
-    const response = await fetch(API_URL);
-
-    if (!response.ok) {
-        throw new Error('Failed to fetch deals');
-    }
-
-    const data = await response.json();
-
-    return data.map((deal) => ({
-        ...deal,
-        validFor: deal.validFor ?? 7,
-    }));
 }
 
 /**
@@ -304,7 +285,7 @@ async function spinWheel() {
 
         wonDeals.push(redeemedDeal);
 
-        localStorage.setItem('wonDeals', JSON.stringify(wonDeals));
+        saveWonDeals(wonDeals);
 
         updateDealCount();
 
@@ -483,7 +464,7 @@ function showAllWonDeals() {
                                   data-coupon="${deal.promoCode}"
                               >
                                   <div class="card__content deal__left">
-                                      <div class="card__title text-deal deal__title">
+                                      <div class="card__title text-sm deal__title">
                                           ${deal.label}
                                       </div>
 
@@ -497,7 +478,7 @@ function showAllWonDeals() {
                                   </div>
 
                                   <div class="card__actions deal__right">
-                                      <span class="card__code text-deal-coupon deal__coupon">
+                                      <span class="card__badge text-xs deal__coupon">
                                           ${deal.promoCode}
                                       </span>
 
@@ -554,53 +535,6 @@ function showWheelView() {
                 ${wonDeals.length}
             </span>
         `;
-    }
-}
-
-/**
- * checks if a won deal has expired
- *
- * @param {Object} deal won deal to check
- * @returns {boolean} true if the deal has expired
- */
-function isDealExpired(deal) {
-    if (!deal.expiresAt) {
-        return false;
-    }
-
-    return Date.now() >= deal.expiresAt;
-}
-
-/**
- * gets the number of days left on a deal.
- *
- * @param {Object} deal won deal to check
- * @returns {number} num of days remaining
- */
-function getDaysLeft(deal) {
-    if (!deal.expiresAt) {
-        return deal.validFor ?? 0;
-    }
-
-    const remaining = deal.expiresAt - Date.now();
-
-    if (remaining <= 0) {
-        return 0;
-    }
-
-    return Math.ceil(remaining / (1000 * 60 * 60 * 24));
-}
-
-/**
- * copies text to the clipboard
- *
- * @param {string} text to copy
- */
-async function copy(text) {
-    try {
-        await navigator.clipboard.writeText(text);
-    } catch (error) {
-        console.error('Failed to copy:', error);
     }
 }
 

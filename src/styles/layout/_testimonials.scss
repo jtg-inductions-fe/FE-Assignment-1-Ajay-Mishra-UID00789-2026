@@ -6,12 +6,9 @@
 
     &__container {
         max-width: rem(1440);
-
         padding-inline: 1rem;
         margin-inline: auto;
-
         text-align: center;
-
         position: relative;
     }
 
@@ -30,9 +27,9 @@
 
     &__control {
         background-color: $clr-white;
-
         border-color: $clr-neutral-subtle;
-
+        height: rem(64);
+        width: rem(64);
         position: absolute;
         top: 20%;
         transform: translateY(50%);
@@ -40,7 +37,6 @@
 
         &:hover {
             background-color: $clr-primary;
-
             color: $clr-white;
         }
 
@@ -56,7 +52,6 @@
     .rating {
         @include flex-center;
         gap: rem(18.6);
-
         height: 2rem;
 
         &__star {
@@ -67,24 +62,22 @@
 
     .slick-dots {
         width: fit-content;
-
         display: flex;
         flex-direction: row;
         gap: rem(24);
-
         margin-inline: auto;
+
         li {
             height: rem(24);
-            aspect-ratio: 1/1;
-
+            aspect-ratio: 1 / 1;
             border-radius: 100%;
-
             background-color: $clr-gray-5;
         }
 
         .slick-active {
             background-color: $clr-secondary;
         }
+
         button {
             font-size: 0;
         }
@@ -92,13 +85,12 @@
 
     .testimonial {
         text-align: center;
-
         padding-block-start: 0;
 
         &__avatar {
             width: rem(128);
             height: rem(128);
-            aspect-ratio: 1/1;
+            aspect-ratio: 1 / 1;
             border-radius: 100%;
             overflow: hidden;
             object-position: center;
@@ -123,7 +115,6 @@
 
     @include tablet {
         padding-block-start: 0.5rem;
-
         position: relative;
 
         &__container {
@@ -156,9 +147,7 @@
             &__description {
                 font-size: $font-xl;
                 line-height: 1.6em;
-
                 max-width: 44ch;
-
                 margin-block: rem(56);
             }
         }
@@ -166,6 +155,9 @@
         &__control {
             transform: translateY(-50%);
             top: 50%;
+            height: rem(100);
+            width: rem(100);
+
             &--prev {
                 left: 4rem;
             }

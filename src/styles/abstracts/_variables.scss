@@ -19,6 +19,10 @@ $clr-gray-50: #19182580;
 $clr-gray-75: #191825bf;
 $clr-gray-100: #191825;
 $clr-gray-200: #aaaaaa;
+$clr-gray-300: #999999;
+$clr-gray-400: #9ca3af;
+$clr-gray-500: #111827;
+$clr-gray-600: #1f2937;
 
 $clr-dark: #222831;
 
@@ -41,11 +45,6 @@ $clr-accent-3: #fbbf24;
 $clr-accent-4: #06b6d4;
 $clr-muted: $clr-gray-0;
 $clr-muted-dark: $clr-gray-200;
-
-$clr-gray-300: #999999;
-$clr-gray-400: #9ca3af;
-$clr-gray-500: #111827;
-$clr-gray-600: #1f2937;
 
 $clr-border-accent: #f4436c33;
 
@@ -77,6 +76,7 @@ $font-xs: rem(12);
 $font-sm: rem(14);
 $font-base: rem(16);
 $font-lg: rem(18);
+$font-lg-plus: rem(20);
 $font-xl: rem(23);
 $font-2xl: rem(35);
 $font-3xl: rem(44);
@@ -115,7 +115,7 @@ $radius-md: rem(8);
 $radius-lg: rem(12);
 $radius-xl: rem(16);
 $radius-2xl: rem(24);
-$radius-full: 9999px;
+$radius-full: rem(9999);
 
 // Focus
 $focus-outline: 2px solid $clr-primary;
