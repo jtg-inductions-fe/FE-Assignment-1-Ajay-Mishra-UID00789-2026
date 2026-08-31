@@ -12,11 +12,6 @@
     border-style: solid;
     cursor: pointer;
 
-    .btn:focus-visible {
-        outline: rem(2) dotted currentColor;
-        outline-offset: rem(4);
-    }
-
     &__icon {
         @include flex-center;
         width: rem(24);
@@ -78,7 +73,7 @@
         }
     }
 
-    &--with-icon-only {
+    &--icon-only {
         width: rem(64);
         height: rem(64);
         padding: 0;
@@ -92,9 +87,16 @@
     @include tablet {
         width: fit-content;
 
-        &--icon {
+        &--with-icon-only {
             width: rem(100);
             height: rem(100);
         }
+    }
+
+    &--modal {
+        padding-inline: 2rem;
+        padding-block: rem(10);
+        border: 1px solid $clr-gray-0;
+        font-family: $font-tertiary;
     }
 }

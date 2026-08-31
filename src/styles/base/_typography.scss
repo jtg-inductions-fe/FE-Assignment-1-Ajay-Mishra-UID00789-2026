@@ -156,3 +156,23 @@
         text-decoration: underline;
     }
 }
+
+.text-xs {
+    font-size: $font-xs;
+    line-height: 1em;
+}
+
+.text-sm {
+    font-size: $font-sm;
+    line-height: 1em;
+}
+
+.text-base {
+    font-size: $font-base;
+    line-height: 1em;
+}
+
+.text-lg-plus {
+    font-size: $font-lg-plus;
+    line-height: 1em;
+}

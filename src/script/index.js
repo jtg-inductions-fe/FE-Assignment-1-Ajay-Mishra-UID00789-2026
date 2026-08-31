@@ -1,15 +1,20 @@
-/* global $ */
-
 const menu = document.querySelector('.header__menu');
 const nav = document.querySelector('.header__nav');
 const overlay = document.querySelector('.header__nav-overlay');
 const closeBtn = document.querySelector('.header__nav-close-btn');
 const accordianBtns = document.querySelectorAll('.footer__accordion-btn');
-const mobileMedia = window.matchMedia('(width <= 1024px)');
 const footerLinks = document.querySelectorAll('.footer__group-links');
-const tabletSidebar = document.querySelector('.tablet-sidebar');
+const tabletSidebar = document.querySelector('.header__tablet-sidebar');
+const BREAKPOINTS = Object.freeze({
+    MOBILE: 440,
+    TABLET: 768,
+    DESKTOP: 1024,
+});
+const navigationMedia = window.matchMedia(
+    `(width <= ${BREAKPOINTS.DESKTOP}px)`,
+);
 
-if (mobileMedia.matches) {
+if (navigationMedia.matches) {
     nav.inert = true;
     hideFooterLinks();
 }
@@ -111,8 +116,13 @@ function trapFocus(e) {
     if (!nav.classList.contains('open')) return;
     if (e.key !== 'Tab') return;
 
-    const isMobile = window.matchMedia('(width <= 430px)').matches;
-    const isTablet = window.matchMedia('(width <= 1024px)').matches;
+    const isMobile = window.matchMedia(
+        `(width <= ${BREAKPOINTS.TABLET}px)`,
+    ).matches;
+
+    const isTablet = window.matchMedia(
+        `(width <= ${BREAKPOINTS.DESKTOP}px)`,
+    ).matches;
 
     if (!isMobile && !isTablet) return;
 
@@ -136,24 +146,12 @@ function trapFocus(e) {
     }
 }
 
-// Slick setup
-$(document).ready(function () {
-    $('.testimonials__slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        infinite: true,
-        prevArrow: $('.testimonials__control--prev'),
-        nextArrow: $('.testimonials__control--next'),
-    });
-});
-
 /**
  * hides footer links
  * @returns {void}
  */
 function hideFooterLinks() {
-    const media = window.matchMedia('(width < 441px)');
+    const media = window.matchMedia(`(width <= ${BREAKPOINTS.MOBILE}px)`);
     if (media.matches) {
         footerLinks.forEach((el) => el.classList.add('hidden'));
     }
@@ -164,7 +162,7 @@ function hideFooterLinks() {
  * @returns {void}
  */
 function showFooterLinks() {
-    const media = window.matchMedia('(width > 440px)');
+    const media = window.matchMedia(`(width > ${BREAKPOINTS.MOBILE}px)`);
     if (media.matches) {
         footerLinks.forEach((el) => el.classList.remove('hidden'));
     } else {
@@ -177,9 +175,11 @@ function showFooterLinks() {
  * @returns {void}
  */
 function handleNavInertNess() {
-    const mediaMobile = window.matchMedia('(width < 441px)');
-    const mediaTablet = window.matchMedia('(width < 1025)');
-    console.log('Window resized');
+    const mediaMobile = window.matchMedia(`(width <= ${BREAKPOINTS.MOBILE}px)`);
+    const mediaTablet = window.matchMedia(
+        `(width <= ${BREAKPOINTS.DESKTOP}px)`,
+    );
+
     if (mediaMobile.matches) {
         nav.inert = true;
     }
@@ -193,6 +193,9 @@ function handleNavInertNess() {
 }
 
 /**
+ * Creates a debounced version of a function that delays its execution
+ * until a specified amount of time has passed without the function
+ * being called again.
  *
  * @param {*} func function to debounce
  * @param {*} delay time in ms

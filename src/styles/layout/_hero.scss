@@ -20,16 +20,17 @@
         width: 100%;
         max-width: rem(396);
         margin-inline: auto;
+    }
 
-        picture,
-        img {
-            display: block;
-            margin: 0 auto;
-        }
+    &__picture {
+        display: block;
+    }
 
-        img {
-            height: auto;
-        }
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-inline: auto;
     }
 
     &__content {
@@ -50,40 +51,38 @@
         color: $clr-secondary;
         border: 0;
         box-shadow: $btn-outline-shadow;
+    }
 
-        i {
-            font-size: rem(20);
-        }
+    &__tag-icon {
+        font-size: rem(20);
     }
 
     &__title {
         margin-top: rem(16);
         text-align: center;
-        text-wrap: wrap;
-        span {
-            color: $clr-secondary;
-        }
+    }
+
+    &__title-highlight {
+        color: $clr-secondary;
     }
 
     &__description {
         margin-block-start: rem(24);
-        padding-inline: rem(10);
         text-align: center;
-        text-wrap: wrap;
     }
 
-    &__actions {
+    &__cta {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: rem(24);
         width: 100%;
         margin-top: rem(32);
+    }
 
-        .btn {
-            width: 100%;
-            padding-block: rem(24);
-        }
+    &__cta-btn {
+        width: 100%;
+        padding-block: rem(24);
     }
 
     @include tablet {
@@ -113,17 +112,13 @@
             width: min(100%, rem(772));
             max-width: rem(772);
             margin-inline: auto;
+        }
 
-            picture,
-            img {
-                width: 100%;
-            }
-
-            img {
-                aspect-ratio: 772 / 713;
-                object-fit: cover;
-                object-position: top;
-            }
+        &__img {
+            width: 100%;
+            aspect-ratio: 772 / 713;
+            object-fit: cover;
+            object-position: top;
         }
 
         &__content {
@@ -144,7 +139,7 @@
             padding: 0 1.5rem;
         }
 
-        &__actions {
+        &__cta {
             flex-direction: row;
             align-items: center;
             justify-content: center;
@@ -152,7 +147,7 @@
             width: auto;
             margin-top: 0;
 
-            .btn {
+            &-btn {
                 width: auto;
                 padding-block: rem(16);
             }
@@ -201,13 +196,13 @@
             margin-inline: 0;
             text-align: left;
             padding: 0;
-
-            span {
-                display: block;
-            }
         }
 
-        &__actions {
+        &__description-break {
+            display: block;
+        }
+
+        &__cta {
             justify-content: flex-start;
         }
     }

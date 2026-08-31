@@ -3,10 +3,9 @@
 .brands {
     &__container {
         max-width: rem(1440);
-
         margin-inline: auto;
         padding-block: rem(64);
-        padding-block-start: 3.4rem;
+        padding-block-start: 4rem;
     }
 
     &__list {
@@ -15,20 +14,18 @@
         justify-content: center;
         row-gap: 2rem;
         column-gap: rem(27);
-
         padding: 0;
-
         list-style: none;
     }
 
     &__item {
         height: rem(20);
+    }
 
-        img {
-            display: block;
-            width: auto;
-            height: 100%;
-        }
+    &__img {
+        display: block;
+        width: auto;
+        height: 100%;
     }
 
     @include tablet {
@@ -42,6 +39,10 @@
     }
 
     @include desktop {
+        &__container {
+            padding-block-start: 3.4rem;
+        }
+
         &__list {
             max-width: min(rem(1192), 90%);
             justify-content: space-between;

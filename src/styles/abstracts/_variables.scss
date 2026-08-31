@@ -13,10 +13,16 @@ $clr-black: #000000;
 
 $clr-gray-0: #eeeeee;
 $clr-gray-5: #1918250d;
+
 $clr-gray-10: #1918251a;
 $clr-gray-50: #19182580;
 $clr-gray-75: #191825bf;
 $clr-gray-100: #191825;
+$clr-gray-200: #aaaaaa;
+$clr-gray-300: #999999;
+$clr-gray-400: #9ca3af;
+$clr-gray-500: #111827;
+$clr-gray-600: #1f2937;
 
 $clr-dark: #222831;
 
@@ -31,7 +37,17 @@ $clr-link-active: $clr-dark;
 
 $clr-neutral-subtle: #1918251a;
 
-// Shadows
+// Wheel colors
+
+$clr-accent-1: #f4436c;
+$clr-accent-2: #7c3aed;
+$clr-accent-3: #fbbf24;
+$clr-accent-4: #06b6d4;
+$clr-muted: $clr-gray-0;
+$clr-muted-dark: $clr-gray-200;
+
+$clr-border-accent: #f4436c33;
+
 $btn-primary-shadow:
     0 0 0 0 rgba($clr-black, 0.1),
     0 5px 11px 0 rgba($clr-black, 0.1),
@@ -51,6 +67,8 @@ $btn-outline-shadow:
 // font families
 $font-primary: 'Circular Std', sans-serif;
 $font-secondary: 'Inter', sans-serif;
+$font-tertiary: 'Figtree', sans-serif;
+$font-special: 'Roboto Mono', sans-serif;
 
 // font sizes
 $font-xxs: rem(10);
@@ -58,6 +76,7 @@ $font-xs: rem(12);
 $font-sm: rem(14);
 $font-base: rem(16);
 $font-lg: rem(18);
+$font-lg-plus: rem(20);
 $font-xl: rem(23);
 $font-2xl: rem(35);
 $font-3xl: rem(44);
@@ -84,4 +103,20 @@ $fade-transition:
 
 // break points
 $tablet: 441px;
+$tablet-large: 768px;
 $desktop: 1025px;
+$desktop-large: 1440px;
+
+// Border radius
+$radius-none: 0;
+$radius-xs: rem(2);
+$radius-sm: rem(4);
+$radius-md: rem(8);
+$radius-lg: rem(12);
+$radius-xl: rem(16);
+$radius-2xl: rem(24);
+$radius-full: rem(9999);
+
+// Focus
+$focus-outline: 2px solid $clr-primary;
+$focus-outline-offset: 2px;
