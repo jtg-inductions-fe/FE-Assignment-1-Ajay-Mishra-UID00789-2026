@@ -163,7 +163,7 @@
         rem(12),
         1em,
         $font-semibold,
-        $modal-eyebrow
+        $clr-accent-1
     );
 
     text-transform: uppercase;
@@ -176,7 +176,7 @@
         rem(20),
         1em,
         $font-bold,
-        $modal-title
+        $clr-gray-500
     );
 }
 
@@ -186,25 +186,25 @@
         rem(12),
         1em,
         $font-reg,
-        $modal-subtitle
+        $clr-gray-400
     );
 }
 
 .text-modal-loading {
-    @include typography(
-        $font-secondary,
-        rem(12),
-        1em,
-        $font-reg,
-        $modal-loading
-    );
+    @include typography($font-secondary, rem(12), 1em, $font-reg, $clr-black);
 }
 
 .text-modal-wheel {
     @include typography($font-secondary, rem(12), 1em, $font-bold, $clr-white);
 }
 .text-deal {
-    @include typography($font-secondary, rem(14), 1em, $font-semibold, $deal);
+    @include typography(
+        $font-secondary,
+        rem(14),
+        1em,
+        $font-semibold,
+        $clr-gray-600
+    );
 }
 
 .text-deal-expiry {
@@ -213,7 +213,7 @@
         rem(12),
         1em,
         $font-reg,
-        $deal-secondary
+        $clr-accent-2
     );
 }
 
