@@ -7,7 +7,7 @@ const closeBtn = document.querySelector('.header__nav-close-btn');
 const accordianBtns = document.querySelectorAll('.footer__accordion-btn');
 const mobileMedia = window.matchMedia('(width <= 1024px)');
 const footerLinks = document.querySelectorAll('.footer__group-links');
-const tabletSidebar = document.querySelector('.tablet-sidebar');
+const tabletSidebar = document.querySelector('.header__tablet-sidebar');
 
 if (mobileMedia.matches) {
     nav.inert = true;
@@ -111,7 +111,7 @@ function trapFocus(e) {
     if (!nav.classList.contains('open')) return;
     if (e.key !== 'Tab') return;
 
-    const isMobile = window.matchMedia('(width <= 430px)').matches;
+    const isMobile = window.matchMedia('(width <= 768px)').matches;
     const isTablet = window.matchMedia('(width <= 1024px)').matches;
 
     if (!isMobile && !isTablet) return;
@@ -179,7 +179,6 @@ function showFooterLinks() {
 function handleNavInertNess() {
     const mediaMobile = window.matchMedia('(width < 441px)');
     const mediaTablet = window.matchMedia('(width < 1025)');
-    console.log('Window resized');
     if (mediaMobile.matches) {
         nav.inert = true;
     }

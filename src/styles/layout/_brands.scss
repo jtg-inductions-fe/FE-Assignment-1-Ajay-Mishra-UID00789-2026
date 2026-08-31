@@ -6,7 +6,7 @@
 
         margin-inline: auto;
         padding-block: rem(64);
-        padding-block-start: 3.4rem;
+        padding-block-start: 4rem;
     }
 
     &__list {
@@ -42,6 +42,10 @@
     }
 
     @include desktop {
+        &__container {
+            padding-block-start: 3.4rem;
+        }
+
         &__list {
             max-width: min(rem(1192), 90%);
             justify-content: space-between;

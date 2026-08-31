@@ -3,3 +3,9 @@
 body {
     font-family: $font-primary;
 }
+
+a:focus-visible,
+button:focus-visible {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+}

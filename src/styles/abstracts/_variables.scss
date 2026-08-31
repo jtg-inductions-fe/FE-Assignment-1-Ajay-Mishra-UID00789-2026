@@ -13,10 +13,12 @@ $clr-black: #000000;
 
 $clr-gray-0: #eeeeee;
 $clr-gray-5: #1918250d;
+
 $clr-gray-10: #1918251a;
 $clr-gray-50: #19182580;
 $clr-gray-75: #191825bf;
 $clr-gray-100: #191825;
+$clr-gray-200: #aaaaaa;
 
 $clr-dark: #222831;
 
@@ -31,41 +33,21 @@ $clr-link-active: $clr-dark;
 
 $clr-neutral-subtle: #1918251a;
 
-
-$modal-eyebrow: #f4436c;
-$modal-title: #111827;
-$modal-subtitle: #9ca3af;
-$modal-loading: #000000;
-
 // Wheel colors
 
-$wheel-section-1: #f4436c;
-$wheel-section-2: #7c3aed;
-$wheel-section-3: #fbbf24;
-$wheel-section-4: #06b6d4;
-$wheel-muted: #eeeeee;
-$wheel-pointer: #aaaaaa;
+$clr-accent-1: #f4436c;
+$clr-accent-2: #7c3aed;
+$clr-accent-3: #fbbf24;
+$clr-accent-4: #06b6d4;
+$clr-muted: $clr-gray-0;
+$clr-muted-dark: $clr-gray-200;
 
-// Deal colors
-$deal: #1f2937; // deal text color
-$deal-primary: #f4436c;
-$deal-secondary: #7c3aed;
-$deal-tertiary: #999999;
-$deal-bg-muted: #eeeeee;
-$deal-border: #f4436c33;
-$deal-border-muted: #999999;
+$clr-gray-300: #999999;
+$clr-gray-400: #9ca3af;
+$clr-gray-500: #111827;
+$clr-gray-600: #1f2937;
 
-// Modal button
-$modal-btn: #222831;
-$modal-btn-border: #eeeeee;
-
-$deal-active: #7c3aed;
-$deal-expired: #999999;
-
-// Button colors
-$btn-primary-text: #eeeeee;
-$btn-ghost-text: #222831;
-$btn-outline-text: #222831;
+$clr-border-accent: #f4436c33;
 
 $btn-primary-shadow:
     0 0 0 0 rgba($clr-black, 0.1),
@@ -121,7 +103,9 @@ $fade-transition:
 
 // break points
 $tablet: 441px;
+$tablet-large: 768px;
 $desktop: 1025px;
+$desktop-large: 1440px;
 
 // Border radius
 $radius-none: 0;
@@ -132,3 +116,7 @@ $radius-lg: rem(12);
 $radius-xl: rem(16);
 $radius-2xl: rem(24);
 $radius-full: 9999px;
+
+// Focus
+$focus-outline: 2px solid $clr-primary;
+$focus-outline-offset: 2px;

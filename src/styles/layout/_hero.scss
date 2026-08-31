@@ -59,7 +59,6 @@
     &__title {
         margin-top: rem(16);
         text-align: center;
-        text-wrap: wrap;
         span {
             color: $clr-secondary;
         }
@@ -67,12 +66,10 @@
 
     &__description {
         margin-block-start: rem(24);
-        padding-inline: rem(10);
         text-align: center;
-        text-wrap: wrap;
     }
 
-    &__actions {
+    &__cta {
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -144,7 +141,7 @@
             padding: 0 1.5rem;
         }
 
-        &__actions {
+        &__cta {
             flex-direction: row;
             align-items: center;
             justify-content: center;
@@ -207,7 +204,7 @@
             }
         }
 
-        &__actions {
+        &__cta {
             justify-content: flex-start;
         }
     }
